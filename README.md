@@ -1,6 +1,12 @@
 # Sunrise Client JS
 
-## Generate
+## Install
+
+```shell
+npm i @sunriselayer/client
+```
+
+## For library developers
 
 Installing [Ignite CLI](https://docs.ignite.com/welcome/install) is required.
 
