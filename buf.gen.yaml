@@ -1,0 +1,29 @@
+version: v2
+managed:
+  enabled: true
+
+plugins:
+  - local: protoc-gen-es
+    opt: target=ts
+    out: src/types
+    include_imports: true
+
+inputs:
+  - git_repo: https://github.com/sunriselayer/sunrise.git
+    branch: main
+    subdir: proto
+    paths:
+      - sunrise/da/metadata.proto
+      - sunrise/da/query.proto
+      - sunrise/da/tx.proto
+      - sunrise/fee/query.proto
+      - sunrise/fee/tx.proto
+      - sunrise/liquidityincentive/query.proto
+      - sunrise/liquidityincentive/tx.proto
+      - sunrise/liquiditypool/query.proto
+      - sunrise/liquiditypool/tx.proto
+      - sunrise/swap/metadata.proto
+      - sunrise/swap/query.proto
+      - sunrise/swap/tx.proto
+      - sunrise/tokenconverter/query.proto
+      - sunrise/tokenconverter/tx.proto
