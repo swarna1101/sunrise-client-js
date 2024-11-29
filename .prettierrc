@@ -1,0 +1,17 @@
+{
+	"printWidth": 100,
+	"plugins": [
+		"prettier-plugin-svelte",
+		"prettier-plugin-tailwindcss",
+		"@ianvs/prettier-plugin-sort-imports"
+	],
+	"importOrder": [
+		"^(svelte/(.*)$)|^(svelte$)",
+		"",
+		"<THIRD_PARTY_MODULES>",
+		"",
+		"^$lib/(.*)$",
+		"",
+		"^[.]"
+	]
+}
