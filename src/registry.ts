@@ -2,7 +2,7 @@ import { Message } from "@bufbuild/protobuf";
 import { GenMessage } from "@bufbuild/protobuf/codegenv1";
 import { Registry } from "@cosmjs/proto-signing";
 
-import { convertBufProtocGenEsTypeToPbJsType } from "./registry-adapter";
+import { convertBufProtocGenEsTypeToPbJsType } from "./internal/registry-adapter";
 import * as da from "./types/sunrise/da";
 import * as fee from "./types/sunrise/fee";
 import * as liquidityincentive from "./types/sunrise/liquidityincentive";
