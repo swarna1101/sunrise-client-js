@@ -1,16 +1,26 @@
-import { createProtobufRpcClient, ProtobufRpcClient, QueryClient } from "@cosmjs/stargate";
+import { createProtobufRpcClient, QueryClient } from "@cosmjs/stargate";
 
-export interface LiquidityPoolExtension {
-  readonly liquiditypool: {};
-}
+import { queryFactory } from "../internal/query-factory";
+import {
+  QueryParamsRequestSchema,
+  QueryParamsResponseSchema,
+} from "../types/sunrise/liquiditypool";
 
-export function setupLiquidityPoolExtension(base: QueryClient): LiquidityPoolExtension {
+export type LiquidityPoolExtension = ReturnType<typeof setupLiquidityPoolExtension>;
+
+export function setupLiquidityPoolExtension(base: QueryClient) {
   const rpc = createProtobufRpcClient(base);
-  return {
-    liquiditypool: {},
-  };
-}
+  const service = "sunrise.liquiditypool.Query";
 
-function request(rpc: ProtobufRpcClient, method: string, data: Uint8Array): Promise<Uint8Array> {
-  return rpc.request("sunrise.liquiditypool.Query", method, data);
+  return {
+    liquiditypool: {
+      params: queryFactory(
+        rpc,
+        service,
+        "Params",
+        QueryParamsRequestSchema,
+        QueryParamsResponseSchema,
+      ),
+    },
+  };
 }

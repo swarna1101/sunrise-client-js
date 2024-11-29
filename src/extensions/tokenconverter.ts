@@ -1,16 +1,26 @@
-import { createProtobufRpcClient, ProtobufRpcClient, QueryClient } from "@cosmjs/stargate";
+import { createProtobufRpcClient, QueryClient } from "@cosmjs/stargate";
 
-export interface TokenConverterExtension {
-  readonly tokenconverter: {};
-}
+import { queryFactory } from "../internal/query-factory";
+import {
+  QueryParamsRequestSchema,
+  QueryParamsResponseSchema,
+} from "../types/sunrise/tokenconverter";
 
-export function setupTokenConverterExtension(base: QueryClient): TokenConverterExtension {
+export type TokenConverterExtension = ReturnType<typeof setupTokenConverterExtension>;
+
+export function setupTokenConverterExtension(base: QueryClient) {
   const rpc = createProtobufRpcClient(base);
-  return {
-    tokenconverter: {},
-  };
-}
+  const service = "sunrise.tokenconverter.Query";
 
-function request(rpc: ProtobufRpcClient, method: string, data: Uint8Array): Promise<Uint8Array> {
-  return rpc.request("sunrise.tokenconverter.Query", method, data);
+  return {
+    tokenconverter: {
+      params: queryFactory(
+        rpc,
+        service,
+        "Params",
+        QueryParamsRequestSchema,
+        QueryParamsResponseSchema,
+      ),
+    },
+  };
 }

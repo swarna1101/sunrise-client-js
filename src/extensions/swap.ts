@@ -1,16 +1,23 @@
-import { createProtobufRpcClient, ProtobufRpcClient, QueryClient } from "@cosmjs/stargate";
+import { createProtobufRpcClient, QueryClient } from "@cosmjs/stargate";
 
-export interface SwapExtension {
-  readonly swap: {};
-}
+import { queryFactory } from "../internal/query-factory";
+import { QueryParamsRequestSchema, QueryParamsResponseSchema } from "../types/sunrise/swap";
 
-export function setupSwapExtension(base: QueryClient): SwapExtension {
+export type SwapExtension = ReturnType<typeof setupSwapExtension>;
+
+export function setupSwapExtension(base: QueryClient) {
   const rpc = createProtobufRpcClient(base);
-  return {
-    swap: {},
-  };
-}
+  const service = "sunrise.swap.Query";
 
-function request(rpc: ProtobufRpcClient, method: string, data: Uint8Array): Promise<Uint8Array> {
-  return rpc.request("sunrise.swap.Query", method, data);
+  return {
+    swap: {
+      params: queryFactory(
+        rpc,
+        service,
+        "Params",
+        QueryParamsRequestSchema,
+        QueryParamsResponseSchema,
+      ),
+    },
+  };
 }

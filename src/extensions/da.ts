@@ -12,11 +12,9 @@ import {
   QueryZkpProofThresholdResponseSchema,
 } from "../types/sunrise/da";
 
-export interface DaExtension {
-  readonly da: {};
-}
+export type DaExtension = ReturnType<typeof setupDaExtension>;
 
-export function setupDaExtension(base: QueryClient): DaExtension {
+export function setupDaExtension(base: QueryClient) {
   const rpc = createProtobufRpcClient(base);
   const service = "sunrise.da.Query";
 

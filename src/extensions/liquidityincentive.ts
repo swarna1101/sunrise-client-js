@@ -18,11 +18,9 @@ import {
   QueryVotesResponseSchema,
 } from "../types/sunrise/liquidityincentive";
 
-export interface LiquidityIncentiveExtension {
-  readonly liquidityincentive: {};
-}
+export type LiquidityIncentiveExtension = ReturnType<typeof setupLiquidityIncentiveExtension>;
 
-export function setupLiquidityIncentiveExtension(base: QueryClient): LiquidityIncentiveExtension {
+export function setupLiquidityIncentiveExtension(base: QueryClient) {
   const rpc = createProtobufRpcClient(base);
   const service = "sunrise.liquidityincentive.Query";
 
