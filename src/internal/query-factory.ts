@@ -11,7 +11,7 @@ export function queryFactory<Req extends Message, Res extends Message>(
 ): (req: MessageInitShape<GenMessage<Req>>) => Promise<Res> {
   return async (req) => {
     const reqBinary = toBinary(reqSchema, create(reqSchema, req));
-    const resBinary = await rpc.request("sunrise.da.Query", method, reqBinary);
+    const resBinary = await rpc.request(service, method, reqBinary);
     const res = fromBinary(resSchema, resBinary);
 
     return res;
