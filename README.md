@@ -14,7 +14,9 @@ npm i @sunriselayer/client
 import { SunriseClient } from "@sunriselayer/client";
 
 async function main() {
-    // See https://docs.cosmos.network/main/learn/advanced/grpc_rest
+    // See
+    // https://docs.cosmos.network/main/learn/advanced/grpc_rest
+    // https://github.com/cosmos/chain-registry
     const cometRpc = "http://localhost:26657";
     const client = await SunriseClient.create(cometRpc);
     const queryClient = client.getQueryClient();
