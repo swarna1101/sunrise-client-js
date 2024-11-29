@@ -1,7 +1,7 @@
 import { create, fromBinary, Message, MessageInitShape, toBinary } from "@bufbuild/protobuf";
 import { GenMessage } from "@bufbuild/protobuf/codegenv1";
 import { PbjsGeneratedType } from "@cosmjs/proto-signing";
-import protobuf from "protobufjs";
+import type protobuf from "protobufjs";
 
 export class convertBufProtocGenEsTypeToPbJsType<T extends Message> implements PbjsGeneratedType {
   constructor(public schema: GenMessage<T>) {}
