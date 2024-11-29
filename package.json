@@ -9,6 +9,7 @@
   ],
   "exports": {
     ".": "./dist/index.js",
+    "./data-server": "./dist/data-server/index.js",
     "./types/da": "./dist/types/sunrise/da/index.js",
     "./types/fee": "./dist/types/sunrise/fee/index.js",
     "./types/liquidityincentive": "./dist/types/sunrise/liquidityincentive/index.js",
