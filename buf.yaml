@@ -1,7 +1,5 @@
 version: v2
 
-modules:
-  - path: proto
 deps:
   - buf.build/cosmos/cosmos-sdk
   - buf.build/cosmos/cosmos-proto
