@@ -1,4 +1,16 @@
-import { createProtobufRpcClient, ProtobufRpcClient, QueryClient } from "@cosmjs/stargate";
+import { createProtobufRpcClient, QueryClient } from "@cosmjs/stargate";
+
+import {
+  QueryAllPublishedDataRequestSchema,
+  QueryAllPublishedDataResponseSchema,
+  QueryParamsRequestSchema,
+  QueryParamsResponseSchema,
+  QueryPublishedDataRequestSchema,
+  QueryPublishedDataResponseSchema,
+  QueryZkpProofThresholdRequestSchema,
+  QueryZkpProofThresholdResponseSchema,
+} from "../types/sunrise/da";
+import { queryFactory } from "./factory";
 
 export interface DaExtension {
   readonly da: {};
@@ -6,11 +18,38 @@ export interface DaExtension {
 
 export function setupDaExtension(base: QueryClient): DaExtension {
   const rpc = createProtobufRpcClient(base);
-  return {
-    da: {},
-  };
-}
+  const service = "sunrise.da.Query";
 
-function request(rpc: ProtobufRpcClient, method: string, data: Uint8Array): Promise<Uint8Array> {
-  return rpc.request("sunrise.da.Query", method, data);
+  return {
+    da: {
+      params: queryFactory(
+        rpc,
+        service,
+        "Params",
+        QueryParamsRequestSchema,
+        QueryParamsResponseSchema,
+      ),
+      publishedData: queryFactory(
+        rpc,
+        service,
+        "PublishedData",
+        QueryPublishedDataRequestSchema,
+        QueryPublishedDataResponseSchema,
+      ),
+      allPublishedData: queryFactory(
+        rpc,
+        service,
+        "AllPublishedData",
+        QueryAllPublishedDataRequestSchema,
+        QueryAllPublishedDataResponseSchema,
+      ),
+      zkpProofThreshold: queryFactory(
+        rpc,
+        service,
+        "ZkpProofThreshold",
+        QueryZkpProofThresholdRequestSchema,
+        QueryZkpProofThresholdResponseSchema,
+      ),
+    },
+  };
 }
