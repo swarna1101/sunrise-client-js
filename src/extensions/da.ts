@@ -1,5 +1,6 @@
 import { createProtobufRpcClient, QueryClient } from "@cosmjs/stargate";
 
+import { queryFactory } from "../internal/query-factory";
 import {
   QueryAllPublishedDataRequestSchema,
   QueryAllPublishedDataResponseSchema,
@@ -10,7 +11,6 @@ import {
   QueryZkpProofThresholdRequestSchema,
   QueryZkpProofThresholdResponseSchema,
 } from "../types/sunrise/da";
-import { queryFactory } from "./factory";
 
 export interface DaExtension {
   readonly da: {};

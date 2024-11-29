@@ -1,4 +1,22 @@
-import { createProtobufRpcClient, ProtobufRpcClient, QueryClient } from "@cosmjs/stargate";
+import { createProtobufRpcClient, QueryClient } from "@cosmjs/stargate";
+
+import { queryFactory } from "../internal/query-factory";
+import {
+  QueryEpochRequestSchema,
+  QueryEpochResponseSchema,
+  QueryEpochsRequestSchema,
+  QueryEpochsResponseSchema,
+  QueryGaugeRequestSchema,
+  QueryGaugeResponseSchema,
+  QueryGaugesRequestSchema,
+  QueryGaugesResponseSchema,
+  QueryParamsRequestSchema,
+  QueryParamsResponseSchema,
+  QueryVoteRequestSchema,
+  QueryVoteResponseSchema,
+  QueryVotesRequestSchema,
+  QueryVotesResponseSchema,
+} from "../types/sunrise/liquidityincentive";
 
 export interface LiquidityIncentiveExtension {
   readonly liquidityincentive: {};
@@ -6,11 +24,35 @@ export interface LiquidityIncentiveExtension {
 
 export function setupLiquidityIncentiveExtension(base: QueryClient): LiquidityIncentiveExtension {
   const rpc = createProtobufRpcClient(base);
-  return {
-    liquidityincentive: {},
-  };
-}
+  const service = "sunrise.liquidityincentive.Query";
 
-function request(rpc: ProtobufRpcClient, method: string, data: Uint8Array): Promise<Uint8Array> {
-  return rpc.request("sunrise.liquidityincentive.Query", method, data);
+  return {
+    liquidityincentive: {
+      params: queryFactory(
+        rpc,
+        service,
+        "Params",
+        QueryParamsRequestSchema,
+        QueryParamsResponseSchema,
+      ),
+      epoch: queryFactory(rpc, service, "Epoch", QueryEpochRequestSchema, QueryEpochResponseSchema),
+      epochs: queryFactory(
+        rpc,
+        service,
+        "Epochs",
+        QueryEpochsRequestSchema,
+        QueryEpochsResponseSchema,
+      ),
+      gauge: queryFactory(rpc, service, "Gauge", QueryGaugeRequestSchema, QueryGaugeResponseSchema),
+      gauges: queryFactory(
+        rpc,
+        service,
+        "Gauges",
+        QueryGaugesRequestSchema,
+        QueryGaugesResponseSchema,
+      ),
+      vote: queryFactory(rpc, service, "Vote", QueryVoteRequestSchema, QueryVoteResponseSchema),
+      votes: queryFactory(rpc, service, "Votes", QueryVotesRequestSchema, QueryVotesResponseSchema),
+    },
+  };
 }

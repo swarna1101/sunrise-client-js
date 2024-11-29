@@ -1,13 +1,26 @@
 import { createProtobufRpcClient, ProtobufRpcClient, QueryClient } from "@cosmjs/stargate";
 
+import { queryFactory } from "../internal/query-factory";
+import { QueryParamsRequestSchema, QueryParamsResponseSchema } from "../types/sunrise/fee";
+
 export interface FeeExtension {
   readonly fee: {};
 }
 
 export function setupFeeExtension(base: QueryClient): FeeExtension {
   const rpc = createProtobufRpcClient(base);
+  const service = "sunrise.fee.Query";
+
   return {
-    fee: {},
+    fee: {
+      params: queryFactory(
+        rpc,
+        service,
+        "Params",
+        QueryParamsRequestSchema,
+        QueryParamsResponseSchema,
+      ),
+    },
   };
 }
 
