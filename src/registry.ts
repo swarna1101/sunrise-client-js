@@ -1,8 +1,10 @@
-import { Message } from "@bufbuild/protobuf";
+import { Message, MessageInitShape } from "@bufbuild/protobuf";
 import { GenMessage } from "@bufbuild/protobuf/codegenv1";
 import { Registry } from "@cosmjs/proto-signing";
+import type { EncodeObject } from "@cosmjs/proto-signing";
 
 import { convertBufProtocGenEsTypeToPbJsType } from "./internal/registry-adapter";
+import { getTypeUrl } from "./internal/type-url";
 import * as da from "./types/sunrise/da";
 import * as fee from "./types/sunrise/fee";
 import * as liquidityincentive from "./types/sunrise/liquidityincentive";
@@ -40,5 +42,15 @@ const schemas: GenMessage<Message>[] = [
 ];
 
 export const registry = new Registry(
-  schemas.map((schema) => [`/${schema.typeName}`, new convertBufProtocGenEsTypeToPbJsType(schema)]),
+  schemas.map((schema) => [getTypeUrl(schema), new convertBufProtocGenEsTypeToPbJsType(schema)]),
 );
+
+export function createEncodeObject<T extends Message>(
+  schema: GenMessage<T>,
+  value: MessageInitShape<GenMessage<T>>,
+): EncodeObject {
+  return {
+    typeUrl: getTypeUrl(schema),
+    value,
+  };
+}
