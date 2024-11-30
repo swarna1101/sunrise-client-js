@@ -1,6 +1,6 @@
 {
   "name": "@sunriselayer/client",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "publishConfig": {
     "access": "public"
   },
@@ -20,7 +20,7 @@
   "scripts": {
     "gen-proto": "buf generate",
     "build": "tsc --build --clean && tsc --build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest"
   },
   "repository": {
     "type": "git",
@@ -38,7 +38,8 @@
     "@bufbuild/protoc-gen-es": "^2.2.2",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
     "prettier": "^3.4.1",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.6"
   },
   "dependencies": {
     "@bufbuild/protobuf": "^2.2.2",

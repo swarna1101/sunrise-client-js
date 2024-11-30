@@ -32,3 +32,27 @@ async function main() {
     await queryClient.tokenconverter.params({});
 }
 ```
+
+### Tx
+
+```ts
+import { SigningStargateClient } from "@cosmjs/stargate";
+
+import { createEncodeObject, sunriseTypesRegistry } from "@sunriselayer/client";
+import { MsgSwapExactAmountInSchema } from "@sunriselayer/client/types/swap";
+
+const address = "sunrise...";
+const client = await SigningStargateClient.connectWithSigner(
+    "http://localhost:26657",
+    {} as any, // Change here
+    {
+        registry: sunriseTypesRegistry,
+    },
+);
+
+const msgSwapExactAmountIn = createEncodeObject(MsgSwapExactAmountInSchema, {
+    sender: address,
+});
+
+const txHash = await client.signAndBroadcastSync(address, [msgSwapExactAmountIn], "auto");
+```

@@ -1,7 +1,8 @@
 import { Message, MessageInitShape } from "@bufbuild/protobuf";
 import { GenMessage } from "@bufbuild/protobuf/codegenv1";
 import { Registry } from "@cosmjs/proto-signing";
-import type { EncodeObject } from "@cosmjs/proto-signing";
+import type { EncodeObject, GeneratedType } from "@cosmjs/proto-signing";
+import { defaultRegistryTypes } from "@cosmjs/stargate";
 
 import { convertBufProtocGenEsTypeToPbJsType } from "./internal/registry-adapter";
 import { getTypeUrl } from "./internal/type-url";
@@ -41,9 +42,13 @@ const schemas: GenMessage<Message>[] = [
   tokenconverter.MsgConvertSchema,
 ];
 
-export const registry = new Registry(
-  schemas.map((schema) => [getTypeUrl(schema), new convertBufProtocGenEsTypeToPbJsType(schema)]),
-);
+export const sunriseTypesRegistry = new Registry([
+  ...defaultRegistryTypes,
+  ...schemas.map<[string, GeneratedType]>((schema) => [
+    getTypeUrl(schema),
+    new convertBufProtocGenEsTypeToPbJsType(schema),
+  ]),
+]);
 
 export function createEncodeObject<T extends Message>(
   schema: GenMessage<T>,
