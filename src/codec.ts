@@ -6,6 +6,8 @@ import { defaultRegistryTypes } from "@cosmjs/stargate";
 
 import { convertBufProtocGenEsTypeToPbJsType } from "./internal/registry-adapter";
 import { getTypeUrl } from "./internal/type-url";
+import * as lockup from "./types/sunrise/accounts/self_delegatable_lockup";
+import * as proxy from "./types/sunrise/accounts/self_delegation_proxy";
 import * as da from "./types/sunrise/da";
 import * as fee from "./types/sunrise/fee";
 import * as liquidityincentive from "./types/sunrise/liquidityincentive";
@@ -14,6 +16,12 @@ import * as swap from "./types/sunrise/swap";
 import * as tokenconverter from "./types/sunrise/tokenconverter";
 
 const schemas: GenMessage<Message>[] = [
+  lockup.MsgSelfDelegateSchema,
+  lockup.MsgWithdrawSelfDelegationUnbondedSchema,
+  lockup.MsgSendSchema,
+  proxy.MsgUndelegateSchema,
+  proxy.MsgWithdrawRewardSchema,
+  proxy.MsgSendSchema,
   da.ParamsSchema,
   da.MsgUpdateParamsSchema,
   da.MsgPublishDataSchema,
