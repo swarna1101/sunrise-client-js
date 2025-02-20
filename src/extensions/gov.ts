@@ -28,10 +28,10 @@ export type GovExtension = ReturnType<typeof setupGovExtension>;
 
 export function setupGovExtension(base: QueryClient) {
   const rpc = createProtobufRpcClient(base);
-  const service = "sunrise.gov.Query";
+  const service = "sunrise.gov.v1.Query";
 
   return {
-    gov: {
+    govv1: {
       constitution: queryFactory(
         rpc,
         service,
