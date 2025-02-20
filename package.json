@@ -1,6 +1,6 @@
 {
   "name": "@sunriselayer/client",
-  "version": "0.4.0-rc9",
+  "version": "0.4.0-rc10",
   "publishConfig": {
     "access": "public"
   },
@@ -10,10 +10,10 @@
   "exports": {
     ".": "./dist/index.js",
     "./data-server": "./dist/data-server/index.js",
-    "./types/cosmos/accounts": "./dist/types/cosmos/accounts/index.ts",
-    "./types/cosmos/gov": "./dist/types/cosmos/gov/index.ts",
-    "./types/accounts/lockup": "./dist/types/sunrise/accounts/self_delegatable_lockup/index.ts",
-    "./types/accounts/proxy": "./dist/types/sunrise/accounts/self_delegation_proxy/index.ts",
+    "./types/cosmos/accounts": "./dist/types/cosmos/accounts/index.js",
+    "./types/cosmos/gov": "./dist/types/cosmos/gov/index.js",
+    "./types/accounts/lockup": "./dist/types/sunrise/accounts/self_delegatable_lockup/index.js",
+    "./types/accounts/proxy": "./dist/types/sunrise/accounts/self_delegation_proxy/index.js",
     "./types/da": "./dist/types/sunrise/da/index.js",
     "./types/fee": "./dist/types/sunrise/fee/index.js",
     "./types/liquidityincentive": "./dist/types/sunrise/liquidityincentive/index.js",
