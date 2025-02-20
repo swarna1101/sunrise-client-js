@@ -28,7 +28,7 @@ export type GovV1Extension = ReturnType<typeof setupGovV1Extension>;
 
 export function setupGovV1Extension(base: QueryClient) {
   const rpc = createProtobufRpcClient(base);
-  const service = "sunrise.gov.v1.Query";
+  const service = "cosmos.gov.v1.Query";
 
   return {
     govv1: {
@@ -62,7 +62,7 @@ export function setupGovV1Extension(base: QueryClient) {
         QueryParamsRequestSchema,
         QueryParamsResponseSchema,
       ),
-      eposit: queryFactory(
+      deposit: queryFactory(
         rpc,
         service,
         "Deposit",

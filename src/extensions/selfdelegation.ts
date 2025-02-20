@@ -14,7 +14,7 @@ export type SelfDelegationExtension = ReturnType<typeof setupSelfDelegationExten
 
 export function setupSelfDelegationExtension(base: QueryClient) {
   const rpc = createProtobufRpcClient(base);
-  const service = "sunrise.selfdelegation.Query";
+  const service = "sunrise.selfdelegation.v1.Query";
 
   return {
     selfdelegation: {

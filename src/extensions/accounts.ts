@@ -16,7 +16,7 @@ export type AccountsExtension = ReturnType<typeof setupAccountsExtension>;
 
 export function setupAccountsExtension(base: QueryClient, targetAddress: string) {
   const rpc = createProtobufRpcClient(base);
-  const service = "sunrise.accounts.Query";
+  const service = "sunrise.accounts.self_delegatable_lockup.v1.Query";
 
   return {
     lockup: {

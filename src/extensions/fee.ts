@@ -7,7 +7,7 @@ export type FeeExtension = ReturnType<typeof setupFeeExtension>;
 
 export function setupFeeExtension(base: QueryClient) {
   const rpc = createProtobufRpcClient(base);
-  const service = "sunrise.fee.Query";
+  const service = "sunrise.fee.v1.Query";
 
   return {
     fee: {

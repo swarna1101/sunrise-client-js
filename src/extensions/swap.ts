@@ -22,7 +22,7 @@ export type SwapExtension = ReturnType<typeof setupSwapExtension>;
 
 export function setupSwapExtension(base: QueryClient) {
   const rpc = createProtobufRpcClient(base);
-  const service = "sunrise.swap.Query";
+  const service = "sunrise.swap.v1.Query";
 
   return {
     swap: {
