@@ -14,12 +14,13 @@ import * as swap from "./types/sunrise/swap";
 import * as tokenconverter from "./types/sunrise/tokenconverter";
 
 const schemas: GenMessage<Message>[] = [
-  da.MetadataSchema,
   da.ParamsSchema,
   da.MsgUpdateParamsSchema,
   da.MsgPublishDataSchema,
-  da.MsgChallengeForFraudSchema,
-  da.MsgSubmitProofSchema,
+  da.MsgSubmitValidityProofSchema,
+  da.MsgSubmitInvaliditySchema,
+  da.MsgRegisterProofDeputySchema,
+  da.MsgUnregisterProofDeputySchema,
   fee.ParamsSchema,
   fee.MsgUpdateParamsSchema,
   liquidityincentive.ParamsSchema,
