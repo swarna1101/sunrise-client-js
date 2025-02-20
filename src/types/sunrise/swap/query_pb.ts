@@ -4,16 +4,15 @@
 
 import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv1";
 import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv1";
-import { file_amino_amino } from "../../amino/amino_pb";
-import { file_gogoproto_gogo } from "../../gogoproto/gogo_pb";
-import { file_google_api_annotations } from "../../google/api/annotations_pb";
 import type { PageRequest, PageResponse } from "../../cosmos/base/query/v1beta1/pagination_pb";
 import { file_cosmos_base_query_v1beta1_pagination } from "../../cosmos/base/query/v1beta1/pagination_pb";
 import { file_cosmos_proto_cosmos } from "../../cosmos_proto/cosmos_pb";
-import type { Params } from "./params_pb";
-import { file_sunrise_swap_params } from "./params_pb";
+import { file_gogoproto_gogo } from "../../gogoproto/gogo_pb";
+import { file_google_api_annotations } from "../../google/api/annotations_pb";
 import type { IncomingInFlightPacket, OutgoingInFlightPacket } from "./in_flight_packet_pb";
 import { file_sunrise_swap_in_flight_packet } from "./in_flight_packet_pb";
+import type { Params } from "./params_pb";
+import { file_sunrise_swap_params } from "./params_pb";
 import type { Route, RouteResult } from "./route_pb";
 import { file_sunrise_swap_route } from "./route_pb";
 import type { Message } from "@bufbuild/protobuf";
@@ -22,7 +21,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file sunrise/swap/query.proto.
  */
 export const file_sunrise_swap_query: GenFile = /*@__PURE__*/
-  fileDesc("ChhzdW5yaXNlL3N3YXAvcXVlcnkucHJvdG8SDHN1bnJpc2Uuc3dhcCIUChJRdWVyeVBhcmFtc1JlcXVlc3QiRgoTUXVlcnlQYXJhbXNSZXNwb25zZRIvCgZwYXJhbXMYASABKAsyFC5zdW5yaXNlLnN3YXAuUGFyYW1zQgnI3h8AqOewKgEiYwoiUXVlcnlJbmNvbWluZ0luRmxpZ2h0UGFja2V0UmVxdWVzdBITCgtzcmNfcG9ydF9pZBgBIAEoCRIWCg5zcmNfY2hhbm5lbF9pZBgCIAEoCRIQCghzZXF1ZW5jZRgDIAEoBCJhCiNRdWVyeUluY29taW5nSW5GbGlnaHRQYWNrZXRSZXNwb25zZRI6CgZwYWNrZXQYASABKAsyJC5zdW5yaXNlLnN3YXAuSW5jb21pbmdJbkZsaWdodFBhY2tldEIEyN4fACJhCiNRdWVyeUluY29taW5nSW5GbGlnaHRQYWNrZXRzUmVxdWVzdBI6CgpwYWdpbmF0aW9uGAEgASgLMiYuY29zbW9zLmJhc2UucXVlcnkudjFiZXRhMS5QYWdlUmVxdWVzdCKgAQokUXVlcnlJbmNvbWluZ0luRmxpZ2h0UGFja2V0c1Jlc3BvbnNlEjsKB3BhY2tldHMYASADKAsyJC5zdW5yaXNlLnN3YXAuSW5jb21pbmdJbkZsaWdodFBhY2tldEIEyN4fABI7CgpwYWdpbmF0aW9uGAIgASgLMicuY29zbW9zLmJhc2UucXVlcnkudjFiZXRhMS5QYWdlUmVzcG9uc2UiYwoiUXVlcnlPdXRnb2luZ0luRmxpZ2h0UGFja2V0UmVxdWVzdBITCgtzcmNfcG9ydF9pZBgBIAEoCRIWCg5zcmNfY2hhbm5lbF9pZBgCIAEoCRIQCghzZXF1ZW5jZRgDIAEoBCJhCiNRdWVyeU91dGdvaW5nSW5GbGlnaHRQYWNrZXRSZXNwb25zZRI6CgZwYWNrZXQYASABKAsyJC5zdW5yaXNlLnN3YXAuT3V0Z29pbmdJbkZsaWdodFBhY2tldEIEyN4fACJhCiNRdWVyeU91dGdvaW5nSW5GbGlnaHRQYWNrZXRzUmVxdWVzdBI6CgpwYWdpbmF0aW9uGAEgASgLMiYuY29zbW9zLmJhc2UucXVlcnkudjFiZXRhMS5QYWdlUmVxdWVzdCKgAQokUXVlcnlPdXRnb2luZ0luRmxpZ2h0UGFja2V0c1Jlc3BvbnNlEjsKB3BhY2tldHMYASADKAsyJC5zdW5yaXNlLnN3YXAuT3V0Z29pbmdJbkZsaWdodFBhY2tldEIEyN4fABI7CgpwYWdpbmF0aW9uGAIgASgLMicuY29zbW9zLmJhc2UucXVlcnkudjFiZXRhMS5QYWdlUmVzcG9uc2UifAooUXVlcnlDYWxjdWxhdGlvblN3YXBFeGFjdEFtb3VudEluUmVxdWVzdBIZChFoYXNfaW50ZXJmYWNlX2ZlZRgBIAEoCBIiCgVyb3V0ZRgCIAEoCzITLnN1bnJpc2Uuc3dhcC5Sb3V0ZRIRCglhbW91bnRfaW4YAyABKAki+QEKKVF1ZXJ5Q2FsY3VsYXRpb25Td2FwRXhhY3RBbW91bnRJblJlc3BvbnNlEjQKBnJlc3VsdBgBIAEoCzIZLnN1bnJpc2Uuc3dhcC5Sb3V0ZVJlc3VsdEIJyN4fAKjnsCoBElAKFmludGVyZmFjZV9wcm92aWRlcl9mZWUYAiABKAlCMMjeHwDa3h8VY29zbW9zc2RrLmlvL21hdGguSW500rQtCmNvc21vcy5JbnSo57AqARJECgphbW91bnRfb3V0GAMgASgJQjDI3h8A2t4fFWNvc21vc3Nkay5pby9tYXRoLkludNK0LQpjb3Ntb3MuSW50qOewKgEifgopUXVlcnlDYWxjdWxhdGlvblN3YXBFeGFjdEFtb3VudE91dFJlcXVlc3QSGQoRaGFzX2ludGVyZmFjZV9mZWUYASABKAgSIgoFcm91dGUYAiABKAsyEy5zdW5yaXNlLnN3YXAuUm91dGUSEgoKYW1vdW50X291dBgDIAEoCSL5AQoqUXVlcnlDYWxjdWxhdGlvblN3YXBFeGFjdEFtb3VudE91dFJlc3BvbnNlEjQKBnJlc3VsdBgBIAEoCzIZLnN1bnJpc2Uuc3dhcC5Sb3V0ZVJlc3VsdEIJyN4fAKjnsCoBElAKFmludGVyZmFjZV9wcm92aWRlcl9mZWUYAiABKAlCMMjeHwDa3h8VY29zbW9zc2RrLmlvL21hdGguSW500rQtCmNvc21vcy5JbnSo57AqARJDCglhbW91bnRfaW4YAyABKAlCMMjeHwDa3h8VY29zbW9zc2RrLmlvL21hdGguSW500rQtCmNvc21vcy5JbnSo57AqATK6CgoFUXVlcnkSawoGUGFyYW1zEiAuc3VucmlzZS5zd2FwLlF1ZXJ5UGFyYW1zUmVxdWVzdBohLnN1bnJpc2Uuc3dhcC5RdWVyeVBhcmFtc1Jlc3BvbnNlIhyC0+STAhYSFC9zdW5yaXNlL3N3YXAvcGFyYW1zEtsBChZJbmNvbWluZ0luRmxpZ2h0UGFja2V0EjAuc3VucmlzZS5zd2FwLlF1ZXJ5SW5jb21pbmdJbkZsaWdodFBhY2tldFJlcXVlc3QaMS5zdW5yaXNlLnN3YXAuUXVlcnlJbmNvbWluZ0luRmxpZ2h0UGFja2V0UmVzcG9uc2UiXILT5JMCVhJUL3N1bnJpc2Uvc3dhcC9hY2tfd2FpdGluZ19wYWNrZXRzL2luY29taW5nL3tzcmNfcG9ydF9pZH0ve3NyY19jaGFubmVsX2lkfS97c2VxdWVuY2V9ErQBChdJbmNvbWluZ0luRmxpZ2h0UGFja2V0cxIxLnN1bnJpc2Uuc3dhcC5RdWVyeUluY29taW5nSW5GbGlnaHRQYWNrZXRzUmVxdWVzdBoyLnN1bnJpc2Uuc3dhcC5RdWVyeUluY29taW5nSW5GbGlnaHRQYWNrZXRzUmVzcG9uc2UiMoLT5JMCLBIqL3N1bnJpc2Uvc3dhcC9hY2tfd2FpdGluZ19wYWNrZXRzL2luY29taW5nEtkBChZPdXRnb2luZ0luRmxpZ2h0UGFja2V0EjAuc3VucmlzZS5zd2FwLlF1ZXJ5T3V0Z29pbmdJbkZsaWdodFBhY2tldFJlcXVlc3QaMS5zdW5yaXNlLnN3YXAuUXVlcnlPdXRnb2luZ0luRmxpZ2h0UGFja2V0UmVzcG9uc2UiWoLT5JMCVBJSL3N1bnJpc2Uvc3dhcC9pbl9mbGlnaHRfcGFja2V0cy9vdXRnb2luZy97c3JjX3BvcnRfaWR9L3tzcmNfY2hhbm5lbF9pZH0ve3NlcXVlbmNlfRKyAQoXT3V0Z29pbmdJbkZsaWdodFBhY2tldHMSMS5zdW5yaXNlLnN3YXAuUXVlcnlPdXRnb2luZ0luRmxpZ2h0UGFja2V0c1JlcXVlc3QaMi5zdW5yaXNlLnN3YXAuUXVlcnlPdXRnb2luZ0luRmxpZ2h0UGFja2V0c1Jlc3BvbnNlIjCC0+STAioSKC9zdW5yaXNlL3N3YXAvaW5fZmxpZ2h0X3BhY2tldHMvb3V0Z29pbmcSywEKHENhbGN1bGF0aW9uU3dhcEV4YWN0QW1vdW50SW4SNi5zdW5yaXNlLnN3YXAuUXVlcnlDYWxjdWxhdGlvblN3YXBFeGFjdEFtb3VudEluUmVxdWVzdBo3LnN1bnJpc2Uuc3dhcC5RdWVyeUNhbGN1bGF0aW9uU3dhcEV4YWN0QW1vdW50SW5SZXNwb25zZSI6gtPkkwI0OgEqIi8vc3VucmlzZS9zd2FwL2NhbGN1bGF0aW9ucy9zd2FwX2V4YWN0X2Ftb3VudF9pbhLPAQodQ2FsY3VsYXRpb25Td2FwRXhhY3RBbW91bnRPdXQSNy5zdW5yaXNlLnN3YXAuUXVlcnlDYWxjdWxhdGlvblN3YXBFeGFjdEFtb3VudE91dFJlcXVlc3QaOC5zdW5yaXNlLnN3YXAuUXVlcnlDYWxjdWxhdGlvblN3YXBFeGFjdEFtb3VudE91dFJlc3BvbnNlIjuC0+STAjU6ASoiMC9zdW5yaXNlL3N3YXAvY2FsY3VsYXRpb25zL3N3YXBfZXhhY3RfYW1vdW50X291dEKdAQoQY29tLnN1bnJpc2Uuc3dhcEIKUXVlcnlQcm90b1ABWixnaXRodWIuY29tL3N1bnJpc2VsYXllci9zdW5yaXNlL3gvc3dhcC90eXBlc6ICA1NTWKoCDFN1bnJpc2UuU3dhcMoCDFN1bnJpc2VcU3dhcOICGFN1bnJpc2VcU3dhcFxHUEJNZXRhZGF0YeoCDVN1bnJpc2U6OlN3YXBiBnByb3RvMw", [file_amino_amino, file_gogoproto_gogo, file_google_api_annotations, file_cosmos_base_query_v1beta1_pagination, file_cosmos_proto_cosmos, file_sunrise_swap_params, file_sunrise_swap_in_flight_packet, file_sunrise_swap_route]);
+  fileDesc("ChhzdW5yaXNlL3N3YXAvcXVlcnkucHJvdG8SDHN1bnJpc2Uuc3dhcCIUChJRdWVyeVBhcmFtc1JlcXVlc3QiQQoTUXVlcnlQYXJhbXNSZXNwb25zZRIqCgZwYXJhbXMYASABKAsyFC5zdW5yaXNlLnN3YXAuUGFyYW1zQgTI3h8AImMKIlF1ZXJ5SW5jb21pbmdJbkZsaWdodFBhY2tldFJlcXVlc3QSEwoLc3JjX3BvcnRfaWQYASABKAkSFgoOc3JjX2NoYW5uZWxfaWQYAiABKAkSEAoIc2VxdWVuY2UYAyABKAQiYQojUXVlcnlJbmNvbWluZ0luRmxpZ2h0UGFja2V0UmVzcG9uc2USOgoGcGFja2V0GAEgASgLMiQuc3VucmlzZS5zd2FwLkluY29taW5nSW5GbGlnaHRQYWNrZXRCBMjeHwAiYQojUXVlcnlJbmNvbWluZ0luRmxpZ2h0UGFja2V0c1JlcXVlc3QSOgoKcGFnaW5hdGlvbhgBIAEoCzImLmNvc21vcy5iYXNlLnF1ZXJ5LnYxYmV0YTEuUGFnZVJlcXVlc3QioAEKJFF1ZXJ5SW5jb21pbmdJbkZsaWdodFBhY2tldHNSZXNwb25zZRI7CgdwYWNrZXRzGAEgAygLMiQuc3VucmlzZS5zd2FwLkluY29taW5nSW5GbGlnaHRQYWNrZXRCBMjeHwASOwoKcGFnaW5hdGlvbhgCIAEoCzInLmNvc21vcy5iYXNlLnF1ZXJ5LnYxYmV0YTEuUGFnZVJlc3BvbnNlImMKIlF1ZXJ5T3V0Z29pbmdJbkZsaWdodFBhY2tldFJlcXVlc3QSEwoLc3JjX3BvcnRfaWQYASABKAkSFgoOc3JjX2NoYW5uZWxfaWQYAiABKAkSEAoIc2VxdWVuY2UYAyABKAQiYQojUXVlcnlPdXRnb2luZ0luRmxpZ2h0UGFja2V0UmVzcG9uc2USOgoGcGFja2V0GAEgASgLMiQuc3VucmlzZS5zd2FwLk91dGdvaW5nSW5GbGlnaHRQYWNrZXRCBMjeHwAiYQojUXVlcnlPdXRnb2luZ0luRmxpZ2h0UGFja2V0c1JlcXVlc3QSOgoKcGFnaW5hdGlvbhgBIAEoCzImLmNvc21vcy5iYXNlLnF1ZXJ5LnYxYmV0YTEuUGFnZVJlcXVlc3QioAEKJFF1ZXJ5T3V0Z29pbmdJbkZsaWdodFBhY2tldHNSZXNwb25zZRI7CgdwYWNrZXRzGAEgAygLMiQuc3VucmlzZS5zd2FwLk91dGdvaW5nSW5GbGlnaHRQYWNrZXRCBMjeHwASOwoKcGFnaW5hdGlvbhgCIAEoCzInLmNvc21vcy5iYXNlLnF1ZXJ5LnYxYmV0YTEuUGFnZVJlc3BvbnNlInwKKFF1ZXJ5Q2FsY3VsYXRpb25Td2FwRXhhY3RBbW91bnRJblJlcXVlc3QSGQoRaGFzX2ludGVyZmFjZV9mZWUYASABKAgSIgoFcm91dGUYAiABKAsyEy5zdW5yaXNlLnN3YXAuUm91dGUSEQoJYW1vdW50X2luGAMgASgJIuoBCilRdWVyeUNhbGN1bGF0aW9uU3dhcEV4YWN0QW1vdW50SW5SZXNwb25zZRIvCgZyZXN1bHQYASABKAsyGS5zdW5yaXNlLnN3YXAuUm91dGVSZXN1bHRCBMjeHwASSwoWaW50ZXJmYWNlX3Byb3ZpZGVyX2ZlZRgCIAEoCUIryN4fANreHxVjb3Ntb3NzZGsuaW8vbWF0aC5JbnTStC0KY29zbW9zLkludBI/CgphbW91bnRfb3V0GAMgASgJQivI3h8A2t4fFWNvc21vc3Nkay5pby9tYXRoLkludNK0LQpjb3Ntb3MuSW50In4KKVF1ZXJ5Q2FsY3VsYXRpb25Td2FwRXhhY3RBbW91bnRPdXRSZXF1ZXN0EhkKEWhhc19pbnRlcmZhY2VfZmVlGAEgASgIEiIKBXJvdXRlGAIgASgLMhMuc3VucmlzZS5zd2FwLlJvdXRlEhIKCmFtb3VudF9vdXQYAyABKAki6gEKKlF1ZXJ5Q2FsY3VsYXRpb25Td2FwRXhhY3RBbW91bnRPdXRSZXNwb25zZRIvCgZyZXN1bHQYASABKAsyGS5zdW5yaXNlLnN3YXAuUm91dGVSZXN1bHRCBMjeHwASSwoWaW50ZXJmYWNlX3Byb3ZpZGVyX2ZlZRgCIAEoCUIryN4fANreHxVjb3Ntb3NzZGsuaW8vbWF0aC5JbnTStC0KY29zbW9zLkludBI+CglhbW91bnRfaW4YAyABKAlCK8jeHwDa3h8VY29zbW9zc2RrLmlvL21hdGguSW500rQtCmNvc21vcy5JbnQytgoKBVF1ZXJ5EmsKBlBhcmFtcxIgLnN1bnJpc2Uuc3dhcC5RdWVyeVBhcmFtc1JlcXVlc3QaIS5zdW5yaXNlLnN3YXAuUXVlcnlQYXJhbXNSZXNwb25zZSIcgtPkkwIWEhQvc3VucmlzZS9zd2FwL3BhcmFtcxLZAQoWSW5jb21pbmdJbkZsaWdodFBhY2tldBIwLnN1bnJpc2Uuc3dhcC5RdWVyeUluY29taW5nSW5GbGlnaHRQYWNrZXRSZXF1ZXN0GjEuc3VucmlzZS5zd2FwLlF1ZXJ5SW5jb21pbmdJbkZsaWdodFBhY2tldFJlc3BvbnNlIlqC0+STAlQSUi9zdW5yaXNlL3N3YXAvaW4tZmxpZ2h0LXBhY2tldHMvaW5jb21pbmcve3NyY19wb3J0X2lkfS97c3JjX2NoYW5uZWxfaWR9L3tzZXF1ZW5jZX0SsgEKF0luY29taW5nSW5GbGlnaHRQYWNrZXRzEjEuc3VucmlzZS5zd2FwLlF1ZXJ5SW5jb21pbmdJbkZsaWdodFBhY2tldHNSZXF1ZXN0GjIuc3VucmlzZS5zd2FwLlF1ZXJ5SW5jb21pbmdJbkZsaWdodFBhY2tldHNSZXNwb25zZSIwgtPkkwIqEigvc3VucmlzZS9zd2FwL2luLWZsaWdodC1wYWNrZXRzL2luY29taW5nEtkBChZPdXRnb2luZ0luRmxpZ2h0UGFja2V0EjAuc3VucmlzZS5zd2FwLlF1ZXJ5T3V0Z29pbmdJbkZsaWdodFBhY2tldFJlcXVlc3QaMS5zdW5yaXNlLnN3YXAuUXVlcnlPdXRnb2luZ0luRmxpZ2h0UGFja2V0UmVzcG9uc2UiWoLT5JMCVBJSL3N1bnJpc2Uvc3dhcC9pbi1mbGlnaHQtcGFja2V0cy9vdXRnb2luZy97c3JjX3BvcnRfaWR9L3tzcmNfY2hhbm5lbF9pZH0ve3NlcXVlbmNlfRKyAQoXT3V0Z29pbmdJbkZsaWdodFBhY2tldHMSMS5zdW5yaXNlLnN3YXAuUXVlcnlPdXRnb2luZ0luRmxpZ2h0UGFja2V0c1JlcXVlc3QaMi5zdW5yaXNlLnN3YXAuUXVlcnlPdXRnb2luZ0luRmxpZ2h0UGFja2V0c1Jlc3BvbnNlIjCC0+STAioSKC9zdW5yaXNlL3N3YXAvaW4tZmxpZ2h0LXBhY2tldHMvb3V0Z29pbmcSywEKHENhbGN1bGF0aW9uU3dhcEV4YWN0QW1vdW50SW4SNi5zdW5yaXNlLnN3YXAuUXVlcnlDYWxjdWxhdGlvblN3YXBFeGFjdEFtb3VudEluUmVxdWVzdBo3LnN1bnJpc2Uuc3dhcC5RdWVyeUNhbGN1bGF0aW9uU3dhcEV4YWN0QW1vdW50SW5SZXNwb25zZSI6gtPkkwI0OgEqIi8vc3VucmlzZS9zd2FwL2NhbGN1bGF0aW9ucy9zd2FwLWV4YWN0LWFtb3VudC1pbhLPAQodQ2FsY3VsYXRpb25Td2FwRXhhY3RBbW91bnRPdXQSNy5zdW5yaXNlLnN3YXAuUXVlcnlDYWxjdWxhdGlvblN3YXBFeGFjdEFtb3VudE91dFJlcXVlc3QaOC5zdW5yaXNlLnN3YXAuUXVlcnlDYWxjdWxhdGlvblN3YXBFeGFjdEFtb3VudE91dFJlc3BvbnNlIjuC0+STAjU6ASoiMC9zdW5yaXNlL3N3YXAvY2FsY3VsYXRpb25zL3N3YXAtZXhhY3QtYW1vdW50LW91dEKdAQoQY29tLnN1bnJpc2Uuc3dhcEIKUXVlcnlQcm90b1ABWixnaXRodWIuY29tL3N1bnJpc2VsYXllci9zdW5yaXNlL3gvc3dhcC90eXBlc6ICA1NTWKoCDFN1bnJpc2UuU3dhcMoCDFN1bnJpc2VcU3dhcOICGFN1bnJpc2VcU3dhcFxHUEJNZXRhZGF0YeoCDVN1bnJpc2U6OlN3YXBiBnByb3RvMw", [file_cosmos_base_query_v1beta1_pagination, file_cosmos_proto_cosmos, file_gogoproto_gogo, file_google_api_annotations, file_sunrise_swap_in_flight_packet, file_sunrise_swap_params, file_sunrise_swap_route]);
 
 /**
  * QueryParamsRequest is request type for the Query/Params RPC method.
@@ -61,6 +60,8 @@ export const QueryParamsResponseSchema: GenMessage<QueryParamsResponse> = /*@__P
   messageDesc(file_sunrise_swap_query, 1);
 
 /**
+ * QueryIncomingInFlightPacketRequest
+ *
  * @generated from message sunrise.swap.QueryIncomingInFlightPacketRequest
  */
 export type QueryIncomingInFlightPacketRequest = Message<"sunrise.swap.QueryIncomingInFlightPacketRequest"> & {
@@ -88,6 +89,8 @@ export const QueryIncomingInFlightPacketRequestSchema: GenMessage<QueryIncomingI
   messageDesc(file_sunrise_swap_query, 2);
 
 /**
+ * QueryIncomingInFlightPacketResponse
+ *
  * @generated from message sunrise.swap.QueryIncomingInFlightPacketResponse
  */
 export type QueryIncomingInFlightPacketResponse = Message<"sunrise.swap.QueryIncomingInFlightPacketResponse"> & {
@@ -105,6 +108,8 @@ export const QueryIncomingInFlightPacketResponseSchema: GenMessage<QueryIncoming
   messageDesc(file_sunrise_swap_query, 3);
 
 /**
+ * QueryIncomingInFlightPacketsRequest
+ *
  * @generated from message sunrise.swap.QueryIncomingInFlightPacketsRequest
  */
 export type QueryIncomingInFlightPacketsRequest = Message<"sunrise.swap.QueryIncomingInFlightPacketsRequest"> & {
@@ -122,6 +127,8 @@ export const QueryIncomingInFlightPacketsRequestSchema: GenMessage<QueryIncoming
   messageDesc(file_sunrise_swap_query, 4);
 
 /**
+ * QueryIncomingInFlightPacketsResponse
+ *
  * @generated from message sunrise.swap.QueryIncomingInFlightPacketsResponse
  */
 export type QueryIncomingInFlightPacketsResponse = Message<"sunrise.swap.QueryIncomingInFlightPacketsResponse"> & {
@@ -144,6 +151,8 @@ export const QueryIncomingInFlightPacketsResponseSchema: GenMessage<QueryIncomin
   messageDesc(file_sunrise_swap_query, 5);
 
 /**
+ * QueryOutgoingInFlightPacketRequest
+ *
  * @generated from message sunrise.swap.QueryOutgoingInFlightPacketRequest
  */
 export type QueryOutgoingInFlightPacketRequest = Message<"sunrise.swap.QueryOutgoingInFlightPacketRequest"> & {
@@ -171,6 +180,8 @@ export const QueryOutgoingInFlightPacketRequestSchema: GenMessage<QueryOutgoingI
   messageDesc(file_sunrise_swap_query, 6);
 
 /**
+ * QueryOutgoingInFlightPacketResponse
+ *
  * @generated from message sunrise.swap.QueryOutgoingInFlightPacketResponse
  */
 export type QueryOutgoingInFlightPacketResponse = Message<"sunrise.swap.QueryOutgoingInFlightPacketResponse"> & {
@@ -188,6 +199,8 @@ export const QueryOutgoingInFlightPacketResponseSchema: GenMessage<QueryOutgoing
   messageDesc(file_sunrise_swap_query, 7);
 
 /**
+ * QueryOutgoingInFlightPacketsRequest
+ *
  * @generated from message sunrise.swap.QueryOutgoingInFlightPacketsRequest
  */
 export type QueryOutgoingInFlightPacketsRequest = Message<"sunrise.swap.QueryOutgoingInFlightPacketsRequest"> & {
@@ -205,6 +218,8 @@ export const QueryOutgoingInFlightPacketsRequestSchema: GenMessage<QueryOutgoing
   messageDesc(file_sunrise_swap_query, 8);
 
 /**
+ * QueryOutgoingInFlightPacketsResponse
+ *
  * @generated from message sunrise.swap.QueryOutgoingInFlightPacketsResponse
  */
 export type QueryOutgoingInFlightPacketsResponse = Message<"sunrise.swap.QueryOutgoingInFlightPacketsResponse"> & {
@@ -227,6 +242,8 @@ export const QueryOutgoingInFlightPacketsResponseSchema: GenMessage<QueryOutgoin
   messageDesc(file_sunrise_swap_query, 9);
 
 /**
+ * QueryCalculationSwapExactAmountInRequest
+ *
  * @generated from message sunrise.swap.QueryCalculationSwapExactAmountInRequest
  */
 export type QueryCalculationSwapExactAmountInRequest = Message<"sunrise.swap.QueryCalculationSwapExactAmountInRequest"> & {
@@ -254,6 +271,8 @@ export const QueryCalculationSwapExactAmountInRequestSchema: GenMessage<QueryCal
   messageDesc(file_sunrise_swap_query, 10);
 
 /**
+ * QueryCalculationSwapExactAmountInResponse
+ *
  * @generated from message sunrise.swap.QueryCalculationSwapExactAmountInResponse
  */
 export type QueryCalculationSwapExactAmountInResponse = Message<"sunrise.swap.QueryCalculationSwapExactAmountInResponse"> & {
@@ -281,6 +300,8 @@ export const QueryCalculationSwapExactAmountInResponseSchema: GenMessage<QueryCa
   messageDesc(file_sunrise_swap_query, 11);
 
 /**
+ * QueryCalculationSwapExactAmountOutRequest
+ *
  * @generated from message sunrise.swap.QueryCalculationSwapExactAmountOutRequest
  */
 export type QueryCalculationSwapExactAmountOutRequest = Message<"sunrise.swap.QueryCalculationSwapExactAmountOutRequest"> & {
@@ -308,6 +329,8 @@ export const QueryCalculationSwapExactAmountOutRequestSchema: GenMessage<QueryCa
   messageDesc(file_sunrise_swap_query, 12);
 
 /**
+ * QueryCalculationSwapExactAmountOutResponse
+ *
  * @generated from message sunrise.swap.QueryCalculationSwapExactAmountOutResponse
  */
 export type QueryCalculationSwapExactAmountOutResponse = Message<"sunrise.swap.QueryCalculationSwapExactAmountOutResponse"> & {
@@ -351,7 +374,7 @@ export const Query: GenService<{
     output: typeof QueryParamsResponseSchema;
   },
   /**
-   * Queries a list of IncomingInFlightPacket items.
+   * IncomingInFlightPacket
    *
    * @generated from rpc sunrise.swap.Query.IncomingInFlightPacket
    */
@@ -361,6 +384,8 @@ export const Query: GenService<{
     output: typeof QueryIncomingInFlightPacketResponseSchema;
   },
   /**
+   * IncomingInFlightPackets
+   *
    * @generated from rpc sunrise.swap.Query.IncomingInFlightPackets
    */
   incomingInFlightPackets: {
@@ -369,7 +394,7 @@ export const Query: GenService<{
     output: typeof QueryIncomingInFlightPacketsResponseSchema;
   },
   /**
-   * Queries a list of OutgoingInFlightPacket items.
+   * OutgoingInFlightPacket
    *
    * @generated from rpc sunrise.swap.Query.OutgoingInFlightPacket
    */
@@ -379,6 +404,8 @@ export const Query: GenService<{
     output: typeof QueryOutgoingInFlightPacketResponseSchema;
   },
   /**
+   * OutgoingInFlightPackets
+   *
    * @generated from rpc sunrise.swap.Query.OutgoingInFlightPackets
    */
   outgoingInFlightPackets: {
@@ -387,7 +414,7 @@ export const Query: GenService<{
     output: typeof QueryOutgoingInFlightPacketsResponseSchema;
   },
   /**
-   * Queries a Calculation swap value.
+   * CalculationSwapExactAmountIn
    *
    * @generated from rpc sunrise.swap.Query.CalculationSwapExactAmountIn
    */
@@ -397,6 +424,8 @@ export const Query: GenService<{
     output: typeof QueryCalculationSwapExactAmountInResponseSchema;
   },
   /**
+   * CalculationSwapExactAmountOut
+   *
    * @generated from rpc sunrise.swap.Query.CalculationSwapExactAmountOut
    */
   calculationSwapExactAmountOut: {

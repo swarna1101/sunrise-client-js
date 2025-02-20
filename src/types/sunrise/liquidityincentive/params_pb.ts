@@ -4,16 +4,15 @@
 
 import type { GenFile, GenMessage } from "@bufbuild/protobuf/codegenv1";
 import { fileDesc, messageDesc } from "@bufbuild/protobuf/codegenv1";
-import { file_amino_amino } from "../../amino/amino_pb";
-import { file_gogoproto_gogo } from "../../gogoproto/gogo_pb";
 import { file_cosmos_proto_cosmos } from "../../cosmos_proto/cosmos_pb";
+import { file_gogoproto_gogo } from "../../gogoproto/gogo_pb";
 import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file sunrise/liquidityincentive/params.proto.
  */
 export const file_sunrise_liquidityincentive_params: GenFile = /*@__PURE__*/
-  fileDesc("CidzdW5yaXNlL2xpcXVpZGl0eWluY2VudGl2ZS9wYXJhbXMucHJvdG8SGnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlIp0BCgZQYXJhbXMSFAoMZXBvY2hfYmxvY2tzGAEgASgDEk8KFHN0YWtpbmdfcmV3YXJkX3JhdGlvGAIgASgJQjHI3h8A2t4fG2Nvc21vc3Nkay5pby9tYXRoLkxlZ2FjeURlY9K0LQpjb3Ntb3MuRGVjOizooB8BiuewKiNzdW5yaXNlL3gvbGlxdWlkaXR5aW5jZW50aXZlL1BhcmFtc0LyAQoeY29tLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlQgtQYXJhbXNQcm90b1ABWjpnaXRodWIuY29tL3N1bnJpc2VsYXllci9zdW5yaXNlL3gvbGlxdWlkaXR5aW5jZW50aXZlL3R5cGVzogIDU0xYqgIaU3VucmlzZS5MaXF1aWRpdHlpbmNlbnRpdmXKAhpTdW5yaXNlXExpcXVpZGl0eWluY2VudGl2ZeICJlN1bnJpc2VcTGlxdWlkaXR5aW5jZW50aXZlXEdQQk1ldGFkYXRh6gIbU3VucmlzZTo6TGlxdWlkaXR5aW5jZW50aXZlYgZwcm90bzM", [file_amino_amino, file_gogoproto_gogo, file_cosmos_proto_cosmos]);
+  fileDesc("CidzdW5yaXNlL2xpcXVpZGl0eWluY2VudGl2ZS9wYXJhbXMucHJvdG8SGnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlInUKBlBhcmFtcxIUCgxlcG9jaF9ibG9ja3MYASABKAMSTwoUc3Rha2luZ19yZXdhcmRfcmF0aW8YAiABKAlCMcjeHwDa3h8bY29zbW9zc2RrLmlvL21hdGguTGVnYWN5RGVj0rQtCmNvc21vcy5EZWM6BOigHwFC8gEKHmNvbS5zdW5yaXNlLmxpcXVpZGl0eWluY2VudGl2ZUILUGFyYW1zUHJvdG9QAVo6Z2l0aHViLmNvbS9zdW5yaXNlbGF5ZXIvc3VucmlzZS94L2xpcXVpZGl0eWluY2VudGl2ZS90eXBlc6ICA1NMWKoCGlN1bnJpc2UuTGlxdWlkaXR5aW5jZW50aXZlygIaU3VucmlzZVxMaXF1aWRpdHlpbmNlbnRpdmXiAiZTdW5yaXNlXExpcXVpZGl0eWluY2VudGl2ZVxHUEJNZXRhZGF0YeoCG1N1bnJpc2U6OkxpcXVpZGl0eWluY2VudGl2ZWIGcHJvdG8z", [file_cosmos_proto_cosmos, file_gogoproto_gogo]);
 
 /**
  * Params defines the parameters for the module.

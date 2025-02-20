@@ -4,16 +4,14 @@
 
 import type { GenFile, GenMessage } from "@bufbuild/protobuf/codegenv1";
 import { fileDesc, messageDesc } from "@bufbuild/protobuf/codegenv1";
-import { file_amino_amino } from "../../amino/amino_pb";
 import { file_gogoproto_gogo } from "../../gogoproto/gogo_pb";
-import { file_cosmos_proto_cosmos } from "../../cosmos_proto/cosmos_pb";
 import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file sunrise/tokenconverter/params.proto.
  */
 export const file_sunrise_tokenconverter_params: GenFile = /*@__PURE__*/
-  fileDesc("CiNzdW5yaXNlL3Rva2VuY29udmVydGVyL3BhcmFtcy5wcm90bxIWc3VucmlzZS50b2tlbmNvbnZlcnRlciKjAQoGUGFyYW1zEhIKCmJvbmRfZGVub20YASABKAkSEQoJZmVlX2Rlbm9tGAIgASgJEkgKDm1heF9zdXBwbHlfZmVlGAMgASgJQjDI3h8A2t4fFWNvc21vc3Nkay5pby9tYXRoLkludNK0LQpjb3Ntb3MuSW50qOewKgE6KOigHwGK57AqH3N1bnJpc2UveC90b2tlbmNvbnZlcnRlci9QYXJhbXNC2gEKGmNvbS5zdW5yaXNlLnRva2VuY29udmVydGVyQgtQYXJhbXNQcm90b1ABWjZnaXRodWIuY29tL3N1bnJpc2VsYXllci9zdW5yaXNlL3gvdG9rZW5jb252ZXJ0ZXIvdHlwZXOiAgNTVFiqAhZTdW5yaXNlLlRva2VuY29udmVydGVyygIWU3VucmlzZVxUb2tlbmNvbnZlcnRlcuICIlN1bnJpc2VcVG9rZW5jb252ZXJ0ZXJcR1BCTWV0YWRhdGHqAhdTdW5yaXNlOjpUb2tlbmNvbnZlcnRlcmIGcHJvdG8z", [file_amino_amino, file_gogoproto_gogo, file_cosmos_proto_cosmos]);
+  fileDesc("CiNzdW5yaXNlL3Rva2VuY29udmVydGVyL3BhcmFtcy5wcm90bxIWc3VucmlzZS50b2tlbmNvbnZlcnRlciI1CgZQYXJhbXMSEgoKYm9uZF9kZW5vbRgBIAEoCRIRCglmZWVfZGVub20YAiABKAk6BOigHwFC2gEKGmNvbS5zdW5yaXNlLnRva2VuY29udmVydGVyQgtQYXJhbXNQcm90b1ABWjZnaXRodWIuY29tL3N1bnJpc2VsYXllci9zdW5yaXNlL3gvdG9rZW5jb252ZXJ0ZXIvdHlwZXOiAgNTVFiqAhZTdW5yaXNlLlRva2VuY29udmVydGVyygIWU3VucmlzZVxUb2tlbmNvbnZlcnRlcuICIlN1bnJpc2VcVG9rZW5jb252ZXJ0ZXJcR1BCTWV0YWRhdGHqAhdTdW5yaXNlOjpUb2tlbmNvbnZlcnRlcmIGcHJvdG8z", [file_gogoproto_gogo]);
 
 /**
  * Params defines the parameters for the module.
@@ -30,11 +28,6 @@ export type Params = Message<"sunrise.tokenconverter.Params"> & {
    * @generated from field: string fee_denom = 2;
    */
   feeDenom: string;
-
-  /**
-   * @generated from field: string max_supply_fee = 3;
-   */
-  maxSupplyFee: string;
 };
 
 /**

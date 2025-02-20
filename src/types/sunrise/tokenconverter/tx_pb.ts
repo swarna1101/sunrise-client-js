@@ -4,7 +4,6 @@
 
 import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv1";
 import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv1";
-import { file_amino_amino } from "../../amino/amino_pb";
 import { file_cosmos_msg_v1_msg } from "../../cosmos/msg/v1/msg_pb";
 import { file_cosmos_proto_cosmos } from "../../cosmos_proto/cosmos_pb";
 import { file_gogoproto_gogo } from "../../gogoproto/gogo_pb";
@@ -16,7 +15,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file sunrise/tokenconverter/tx.proto.
  */
 export const file_sunrise_tokenconverter_tx: GenFile = /*@__PURE__*/
-  fileDesc("Ch9zdW5yaXNlL3Rva2VuY29udmVydGVyL3R4LnByb3RvEhZzdW5yaXNlLnRva2VuY29udmVydGVyIrYBCg9Nc2dVcGRhdGVQYXJhbXMSKwoJYXV0aG9yaXR5GAEgASgJQhjStC0UY29zbW9zLkFkZHJlc3NTdHJpbmcSOQoGcGFyYW1zGAIgASgLMh4uc3VucmlzZS50b2tlbmNvbnZlcnRlci5QYXJhbXNCCcjeHwCo57AqATo7guewKglhdXRob3JpdHmK57AqKHN1bnJpc2UveC90b2tlbmNvbnZlcnRlci9Nc2dVcGRhdGVQYXJhbXMiGQoXTXNnVXBkYXRlUGFyYW1zUmVzcG9uc2UitQEKCk1zZ0NvbnZlcnQSDgoGc2VuZGVyGAEgASgJEkQKCm1pbl9hbW91bnQYAiABKAlCMMjeHwDa3h8VY29zbW9zc2RrLmlvL21hdGguSW500rQtCmNvc21vcy5JbnSo57AqARJECgptYXhfYW1vdW50GAMgASgJQjDI3h8A2t4fFWNvc21vc3Nkay5pby9tYXRoLkludNK0LQpjb3Ntb3MuSW50qOewKgE6C4LnsCoGc2VuZGVyIlYKEk1zZ0NvbnZlcnRSZXNwb25zZRJACgZhbW91bnQYASABKAlCMMjeHwDa3h8VY29zbW9zc2RrLmlvL21hdGguSW500rQtCmNvc21vcy5JbnSo57AqATLRAQoDTXNnEmgKDFVwZGF0ZVBhcmFtcxInLnN1bnJpc2UudG9rZW5jb252ZXJ0ZXIuTXNnVXBkYXRlUGFyYW1zGi8uc3VucmlzZS50b2tlbmNvbnZlcnRlci5Nc2dVcGRhdGVQYXJhbXNSZXNwb25zZRJZCgdDb252ZXJ0EiIuc3VucmlzZS50b2tlbmNvbnZlcnRlci5Nc2dDb252ZXJ0Giouc3VucmlzZS50b2tlbmNvbnZlcnRlci5Nc2dDb252ZXJ0UmVzcG9uc2UaBYDnsCoBQtYBChpjb20uc3VucmlzZS50b2tlbmNvbnZlcnRlckIHVHhQcm90b1ABWjZnaXRodWIuY29tL3N1bnJpc2VsYXllci9zdW5yaXNlL3gvdG9rZW5jb252ZXJ0ZXIvdHlwZXOiAgNTVFiqAhZTdW5yaXNlLlRva2VuY29udmVydGVyygIWU3VucmlzZVxUb2tlbmNvbnZlcnRlcuICIlN1bnJpc2VcVG9rZW5jb252ZXJ0ZXJcR1BCTWV0YWRhdGHqAhdTdW5yaXNlOjpUb2tlbmNvbnZlcnRlcmIGcHJvdG8z", [file_amino_amino, file_cosmos_msg_v1_msg, file_cosmos_proto_cosmos, file_gogoproto_gogo, file_sunrise_tokenconverter_params]);
+  fileDesc("Ch9zdW5yaXNlL3Rva2VuY29udmVydGVyL3R4LnByb3RvEhZzdW5yaXNlLnRva2VuY29udmVydGVyIoQBCg9Nc2dVcGRhdGVQYXJhbXMSKwoJYXV0aG9yaXR5GAEgASgJQhjStC0UY29zbW9zLkFkZHJlc3NTdHJpbmcSNAoGcGFyYW1zGAIgASgLMh4uc3VucmlzZS50b2tlbmNvbnZlcnRlci5QYXJhbXNCBMjeHwA6DoLnsCoJYXV0aG9yaXR5IhkKF01zZ1VwZGF0ZVBhcmFtc1Jlc3BvbnNlIoABCgpNc2dDb252ZXJ0EigKBnNlbmRlchgBIAEoCUIY0rQtFGNvc21vcy5BZGRyZXNzU3RyaW5nEjsKBmFtb3VudBgCIAEoCUIryN4fANreHxVjb3Ntb3NzZGsuaW8vbWF0aC5JbnTStC0KY29zbW9zLkludDoLguewKgZzZW5kZXIiFAoSTXNnQ29udmVydFJlc3BvbnNlMtEBCgNNc2cSaAoMVXBkYXRlUGFyYW1zEicuc3VucmlzZS50b2tlbmNvbnZlcnRlci5Nc2dVcGRhdGVQYXJhbXMaLy5zdW5yaXNlLnRva2VuY29udmVydGVyLk1zZ1VwZGF0ZVBhcmFtc1Jlc3BvbnNlElkKB0NvbnZlcnQSIi5zdW5yaXNlLnRva2VuY29udmVydGVyLk1zZ0NvbnZlcnQaKi5zdW5yaXNlLnRva2VuY29udmVydGVyLk1zZ0NvbnZlcnRSZXNwb25zZRoFgOewKgFC1gEKGmNvbS5zdW5yaXNlLnRva2VuY29udmVydGVyQgdUeFByb3RvUAFaNmdpdGh1Yi5jb20vc3VucmlzZWxheWVyL3N1bnJpc2UveC90b2tlbmNvbnZlcnRlci90eXBlc6ICA1NUWKoCFlN1bnJpc2UuVG9rZW5jb252ZXJ0ZXLKAhZTdW5yaXNlXFRva2VuY29udmVydGVy4gIiU3VucmlzZVxUb2tlbmNvbnZlcnRlclxHUEJNZXRhZGF0YeoCF1N1bnJpc2U6OlRva2VuY29udmVydGVyYgZwcm90bzM", [file_cosmos_msg_v1_msg, file_cosmos_proto_cosmos, file_gogoproto_gogo, file_sunrise_tokenconverter_params]);
 
 /**
  * MsgUpdateParams is the Msg/UpdateParams request type.
@@ -63,6 +62,8 @@ export const MsgUpdateParamsResponseSchema: GenMessage<MsgUpdateParamsResponse> 
   messageDesc(file_sunrise_tokenconverter_tx, 1);
 
 /**
+ * MsgConvert
+ *
  * @generated from message sunrise.tokenconverter.MsgConvert
  */
 export type MsgConvert = Message<"sunrise.tokenconverter.MsgConvert"> & {
@@ -72,14 +73,9 @@ export type MsgConvert = Message<"sunrise.tokenconverter.MsgConvert"> & {
   sender: string;
 
   /**
-   * @generated from field: string min_amount = 2;
+   * @generated from field: string amount = 2;
    */
-  minAmount: string;
-
-  /**
-   * @generated from field: string max_amount = 3;
-   */
-  maxAmount: string;
+  amount: string;
 };
 
 /**
@@ -90,13 +86,11 @@ export const MsgConvertSchema: GenMessage<MsgConvert> = /*@__PURE__*/
   messageDesc(file_sunrise_tokenconverter_tx, 2);
 
 /**
+ * MsgConvertResponse
+ *
  * @generated from message sunrise.tokenconverter.MsgConvertResponse
  */
 export type MsgConvertResponse = Message<"sunrise.tokenconverter.MsgConvertResponse"> & {
-  /**
-   * @generated from field: string amount = 1;
-   */
-  amount: string;
 };
 
 /**
@@ -124,6 +118,8 @@ export const Msg: GenService<{
     output: typeof MsgUpdateParamsResponseSchema;
   },
   /**
+   * Convert
+   *
    * @generated from rpc sunrise.tokenconverter.Msg.Convert
    */
   convert: {

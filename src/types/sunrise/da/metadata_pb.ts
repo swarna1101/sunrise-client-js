@@ -4,18 +4,17 @@
 
 import type { GenFile, GenMessage } from "@bufbuild/protobuf/codegenv1";
 import { fileDesc, messageDesc } from "@bufbuild/protobuf/codegenv1";
-import { file_amino_amino } from "../../amino/amino_pb";
-import { file_cosmos_proto_cosmos } from "../../cosmos_proto/cosmos_pb";
-import { file_gogoproto_gogo } from "../../gogoproto/gogo_pb";
 import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file sunrise/da/metadata.proto.
  */
 export const file_sunrise_da_metadata: GenFile = /*@__PURE__*/
-  fileDesc("ChlzdW5yaXNlL2RhL21ldGFkYXRhLnByb3RvEgpzdW5yaXNlLmRhIogBCghNZXRhZGF0YRIbChNyZWNvdmVyZWRfZGF0YV9oYXNoGAEgASgMEhsKE3JlY292ZXJlZF9kYXRhX3NpemUYAiABKAQSEgoKc2hhcmRfc2l6ZRgDIAEoBBIaChJwYXJpdHlfc2hhcmRfY291bnQYBCABKAQSEgoKc2hhcmRfdXJpcxgFIAMoCUKUAQoOY29tLnN1bnJpc2UuZGFCDU1ldGFkYXRhUHJvdG9QAVoqZ2l0aHViLmNvbS9zdW5yaXNlbGF5ZXIvc3VucmlzZS94L2RhL3R5cGVzogIDU0RYqgIKU3VucmlzZS5EYcoCClN1bnJpc2VcRGHiAhZTdW5yaXNlXERhXEdQQk1ldGFkYXRh6gILU3VucmlzZTo6RGFiBnByb3RvMw", [file_amino_amino, file_cosmos_proto_cosmos, file_gogoproto_gogo]);
+  fileDesc("ChlzdW5yaXNlL2RhL21ldGFkYXRhLnByb3RvEgpzdW5yaXNlLmRhIogBCghNZXRhZGF0YRIbChNyZWNvdmVyZWRfZGF0YV9oYXNoGAEgASgMEhsKE3JlY292ZXJlZF9kYXRhX3NpemUYAiABKAQSEgoKc2hhcmRfc2l6ZRgDIAEoBBIaChJwYXJpdHlfc2hhcmRfY291bnQYBCABKAQSEgoKc2hhcmRfdXJpcxgFIAMoCSIqChJNZXRhZGF0YVVyaVdyYXBwZXISFAoMbWV0YWRhdGFfdXJpGAEgASgJQpQBCg5jb20uc3VucmlzZS5kYUINTWV0YWRhdGFQcm90b1ABWipnaXRodWIuY29tL3N1bnJpc2VsYXllci9zdW5yaXNlL3gvZGEvdHlwZXOiAgNTRFiqAgpTdW5yaXNlLkRhygIKU3VucmlzZVxEYeICFlN1bnJpc2VcRGFcR1BCTWV0YWRhdGHqAgtTdW5yaXNlOjpEYWIGcHJvdG8z");
 
 /**
+ * Metadata
+ *
  * @generated from message sunrise.da.Metadata
  */
 export type Metadata = Message<"sunrise.da.Metadata"> & {
@@ -51,4 +50,23 @@ export type Metadata = Message<"sunrise.da.Metadata"> & {
  */
 export const MetadataSchema: GenMessage<Metadata> = /*@__PURE__*/
   messageDesc(file_sunrise_da_metadata, 0);
+
+/**
+ * MetadataUriWrapper
+ *
+ * @generated from message sunrise.da.MetadataUriWrapper
+ */
+export type MetadataUriWrapper = Message<"sunrise.da.MetadataUriWrapper"> & {
+  /**
+   * @generated from field: string metadata_uri = 1;
+   */
+  metadataUri: string;
+};
+
+/**
+ * Describes the message sunrise.da.MetadataUriWrapper.
+ * Use `create(MetadataUriWrapperSchema)` to create a new message.
+ */
+export const MetadataUriWrapperSchema: GenMessage<MetadataUriWrapper> = /*@__PURE__*/
+  messageDesc(file_sunrise_da_metadata, 1);
 

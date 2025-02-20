@@ -13,9 +13,11 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file sunrise/liquidityincentive/gauge.proto.
  */
 export const file_sunrise_liquidityincentive_gauge: GenFile = /*@__PURE__*/
-  fileDesc("CiZzdW5yaXNlL2xpcXVpZGl0eWluY2VudGl2ZS9nYXVnZS5wcm90bxIac3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUidQoFR2F1Z2USGQoRcHJldmlvdXNfZXBvY2hfaWQYASABKAQSDwoHcG9vbF9pZBgCIAEoBBJACgVyYXRpbxgDIAEoCUIxyN4fANreHxtjb3Ntb3NzZGsuaW8vbWF0aC5MZWdhY3lEZWPStC0KY29zbW9zLkRlYyJgCgpQb29sV2VpZ2h0Eg8KB3Bvb2xfaWQYASABKAQSQQoGd2VpZ2h0GAIgASgJQjHI3h8A2t4fG2Nvc21vc3Nkay5pby9tYXRoLkxlZ2FjeURlY9K0LQpjb3Ntb3MuRGVjIlUKBFZvdGUSDgoGc2VuZGVyGAEgASgJEj0KB3dlaWdodHMYAiADKAsyJi5zdW5yaXNlLmxpcXVpZGl0eWluY2VudGl2ZS5Qb29sV2VpZ2h0QgTI3h8AQvEBCh5jb20uc3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmVCCkdhdWdlUHJvdG9QAVo6Z2l0aHViLmNvbS9zdW5yaXNlbGF5ZXIvc3VucmlzZS94L2xpcXVpZGl0eWluY2VudGl2ZS90eXBlc6ICA1NMWKoCGlN1bnJpc2UuTGlxdWlkaXR5aW5jZW50aXZlygIaU3VucmlzZVxMaXF1aWRpdHlpbmNlbnRpdmXiAiZTdW5yaXNlXExpcXVpZGl0eWluY2VudGl2ZVxHUEJNZXRhZGF0YeoCG1N1bnJpc2U6OkxpcXVpZGl0eWluY2VudGl2ZWIGcHJvdG8z", [file_amino_amino, file_cosmos_proto_cosmos, file_gogoproto_gogo]);
+  fileDesc("CiZzdW5yaXNlL2xpcXVpZGl0eWluY2VudGl2ZS9nYXVnZS5wcm90bxIac3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUidAoFR2F1Z2USGQoRcHJldmlvdXNfZXBvY2hfaWQYASABKAQSDwoHcG9vbF9pZBgCIAEoBBI/CgVjb3VudBgDIAEoCUIwyN4fANreHxVjb3Ntb3NzZGsuaW8vbWF0aC5JbnTStC0KY29zbW9zLkludKjnsCoBIl8KC1RhbGx5UmVzdWx0Eg8KB3Bvb2xfaWQYASABKAQSPwoFY291bnQYAiABKAlCMMjeHwDa3h8VY29zbW9zc2RrLmlvL21hdGguSW500rQtCmNvc21vcy5JbnSo57AqASI9CgpQb29sV2VpZ2h0Eg8KB3Bvb2xfaWQYASABKAQSHgoGd2VpZ2h0GAIgASgJQg7StC0KY29zbW9zLkRlYyJaCgRWb3RlEg4KBnNlbmRlchgBIAEoCRJCCgxwb29sX3dlaWdodHMYAiADKAsyJi5zdW5yaXNlLmxpcXVpZGl0eWluY2VudGl2ZS5Qb29sV2VpZ2h0QgTI3h8AQvEBCh5jb20uc3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmVCCkdhdWdlUHJvdG9QAVo6Z2l0aHViLmNvbS9zdW5yaXNlbGF5ZXIvc3VucmlzZS94L2xpcXVpZGl0eWluY2VudGl2ZS90eXBlc6ICA1NMWKoCGlN1bnJpc2UuTGlxdWlkaXR5aW5jZW50aXZlygIaU3VucmlzZVxMaXF1aWRpdHlpbmNlbnRpdmXiAiZTdW5yaXNlXExpcXVpZGl0eWluY2VudGl2ZVxHUEJNZXRhZGF0YeoCG1N1bnJpc2U6OkxpcXVpZGl0eWluY2VudGl2ZWIGcHJvdG8z", [file_amino_amino, file_cosmos_proto_cosmos, file_gogoproto_gogo]);
 
 /**
+ * Gauge
+ *
  * @generated from message sunrise.liquidityincentive.Gauge
  */
 export type Gauge = Message<"sunrise.liquidityincentive.Gauge"> & {
@@ -30,9 +32,9 @@ export type Gauge = Message<"sunrise.liquidityincentive.Gauge"> & {
   poolId: bigint;
 
   /**
-   * @generated from field: string ratio = 3;
+   * @generated from field: string count = 3;
    */
-  ratio: string;
+  count: string;
 };
 
 /**
@@ -43,6 +45,32 @@ export const GaugeSchema: GenMessage<Gauge> = /*@__PURE__*/
   messageDesc(file_sunrise_liquidityincentive_gauge, 0);
 
 /**
+ * TallyResult
+ *
+ * @generated from message sunrise.liquidityincentive.TallyResult
+ */
+export type TallyResult = Message<"sunrise.liquidityincentive.TallyResult"> & {
+  /**
+   * @generated from field: uint64 pool_id = 1;
+   */
+  poolId: bigint;
+
+  /**
+   * @generated from field: string count = 2;
+   */
+  count: string;
+};
+
+/**
+ * Describes the message sunrise.liquidityincentive.TallyResult.
+ * Use `create(TallyResultSchema)` to create a new message.
+ */
+export const TallyResultSchema: GenMessage<TallyResult> = /*@__PURE__*/
+  messageDesc(file_sunrise_liquidityincentive_gauge, 1);
+
+/**
+ * PoolWeight
+ *
  * @generated from message sunrise.liquidityincentive.PoolWeight
  */
 export type PoolWeight = Message<"sunrise.liquidityincentive.PoolWeight"> & {
@@ -62,9 +90,11 @@ export type PoolWeight = Message<"sunrise.liquidityincentive.PoolWeight"> & {
  * Use `create(PoolWeightSchema)` to create a new message.
  */
 export const PoolWeightSchema: GenMessage<PoolWeight> = /*@__PURE__*/
-  messageDesc(file_sunrise_liquidityincentive_gauge, 1);
+  messageDesc(file_sunrise_liquidityincentive_gauge, 2);
 
 /**
+ * Vote
+ *
  * @generated from message sunrise.liquidityincentive.Vote
  */
 export type Vote = Message<"sunrise.liquidityincentive.Vote"> & {
@@ -74,9 +104,9 @@ export type Vote = Message<"sunrise.liquidityincentive.Vote"> & {
   sender: string;
 
   /**
-   * @generated from field: repeated sunrise.liquidityincentive.PoolWeight weights = 2;
+   * @generated from field: repeated sunrise.liquidityincentive.PoolWeight pool_weights = 2;
    */
-  weights: PoolWeight[];
+  poolWeights: PoolWeight[];
 };
 
 /**
@@ -84,5 +114,5 @@ export type Vote = Message<"sunrise.liquidityincentive.Vote"> & {
  * Use `create(VoteSchema)` to create a new message.
  */
 export const VoteSchema: GenMessage<Vote> = /*@__PURE__*/
-  messageDesc(file_sunrise_liquidityincentive_gauge, 2);
+  messageDesc(file_sunrise_liquidityincentive_gauge, 3);
 

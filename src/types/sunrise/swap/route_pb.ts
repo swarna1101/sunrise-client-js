@@ -4,21 +4,21 @@
 
 import type { GenFile, GenMessage } from "@bufbuild/protobuf/codegenv1";
 import { fileDesc, messageDesc } from "@bufbuild/protobuf/codegenv1";
-import { file_amino_amino } from "../../amino/amino_pb";
-import { file_cosmos_msg_v1_msg } from "../../cosmos/msg/v1/msg_pb";
-import { file_cosmos_proto_cosmos } from "../../cosmos_proto/cosmos_pb";
-import { file_gogoproto_gogo } from "../../gogoproto/gogo_pb";
 import type { Coin } from "../../cosmos/base/v1beta1/coin_pb";
 import { file_cosmos_base_v1beta1_coin } from "../../cosmos/base/v1beta1/coin_pb";
+import { file_cosmos_proto_cosmos } from "../../cosmos_proto/cosmos_pb";
+import { file_gogoproto_gogo } from "../../gogoproto/gogo_pb";
 import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file sunrise/swap/route.proto.
  */
 export const file_sunrise_swap_route: GenFile = /*@__PURE__*/
-  fileDesc("ChhzdW5yaXNlL3N3YXAvcm91dGUucHJvdG8SDHN1bnJpc2Uuc3dhcCIcCglSb3V0ZVBvb2wSDwoHcG9vbF9pZBgBIAEoBCI9CgtSb3V0ZVNlcmllcxIuCgZyb3V0ZXMYASADKAsyEy5zdW5yaXNlLnN3YXAuUm91dGVCCcjeHwCo57AqASKIAQoNUm91dGVQYXJhbGxlbBIuCgZyb3V0ZXMYASADKAsyEy5zdW5yaXNlLnN3YXAuUm91dGVCCcjeHwCo57AqARJHCgd3ZWlnaHRzGAIgAygJQjbI3h8A2t4fG2Nvc21vc3Nkay5pby9tYXRoLkxlZ2FjeURlY9K0LQpjb3Ntb3MuRGVjqOewKgEivwEKBVJvdXRlEhAKCGRlbm9tX2luGAEgASgJEhEKCWRlbm9tX291dBgCIAEoCRInCgRwb29sGAMgASgLMhcuc3VucmlzZS5zd2FwLlJvdXRlUG9vbEgAEisKBnNlcmllcxgEIAEoCzIZLnN1bnJpc2Uuc3dhcC5Sb3V0ZVNlcmllc0gAEi8KCHBhcmFsbGVsGAUgASgLMhsuc3VucmlzZS5zd2FwLlJvdXRlUGFyYWxsZWxIAEIKCghzdHJhdGVneSIiCg9Sb3V0ZVJlc3VsdFBvb2wSDwoHcG9vbF9pZBgBIAEoBCJQChFSb3V0ZVJlc3VsdFNlcmllcxI7Cg1yb3V0ZV9yZXN1bHRzGAEgAygLMhkuc3VucmlzZS5zd2FwLlJvdXRlUmVzdWx0QgnI3h8AqOewKgEiUgoTUm91dGVSZXN1bHRQYXJhbGxlbBI7Cg1yb3V0ZV9yZXN1bHRzGAEgAygLMhkuc3VucmlzZS5zd2FwLlJvdXRlUmVzdWx0QgnI3h8AqOewKgEimQIKC1JvdXRlUmVzdWx0EjEKCHRva2VuX2luGAEgASgLMhkuY29zbW9zLmJhc2UudjFiZXRhMS5Db2luQgTI3h8AEjIKCXRva2VuX291dBgCIAEoCzIZLmNvc21vcy5iYXNlLnYxYmV0YTEuQ29pbkIEyN4fABItCgRwb29sGAMgASgLMh0uc3VucmlzZS5zd2FwLlJvdXRlUmVzdWx0UG9vbEgAEjEKBnNlcmllcxgEIAEoCzIfLnN1bnJpc2Uuc3dhcC5Sb3V0ZVJlc3VsdFNlcmllc0gAEjUKCHBhcmFsbGVsGAUgASgLMiEuc3VucmlzZS5zd2FwLlJvdXRlUmVzdWx0UGFyYWxsZWxIAEIKCghzdHJhdGVneUKdAQoQY29tLnN1bnJpc2Uuc3dhcEIKUm91dGVQcm90b1ABWixnaXRodWIuY29tL3N1bnJpc2VsYXllci9zdW5yaXNlL3gvc3dhcC90eXBlc6ICA1NTWKoCDFN1bnJpc2UuU3dhcMoCDFN1bnJpc2VcU3dhcOICGFN1bnJpc2VcU3dhcFxHUEJNZXRhZGF0YeoCDVN1bnJpc2U6OlN3YXBiBnByb3RvMw", [file_amino_amino, file_cosmos_msg_v1_msg, file_cosmos_proto_cosmos, file_gogoproto_gogo, file_cosmos_base_v1beta1_coin]);
+  fileDesc("ChhzdW5yaXNlL3N3YXAvcm91dGUucHJvdG8SDHN1bnJpc2Uuc3dhcCIcCglSb3V0ZVBvb2wSDwoHcG9vbF9pZBgBIAEoBCI4CgtSb3V0ZVNlcmllcxIpCgZyb3V0ZXMYASADKAsyEy5zdW5yaXNlLnN3YXAuUm91dGVCBMjeHwAifgoNUm91dGVQYXJhbGxlbBIpCgZyb3V0ZXMYASADKAsyEy5zdW5yaXNlLnN3YXAuUm91dGVCBMjeHwASQgoHd2VpZ2h0cxgCIAMoCUIxyN4fANreHxtjb3Ntb3NzZGsuaW8vbWF0aC5MZWdhY3lEZWPStC0KY29zbW9zLkRlYyK/AQoFUm91dGUSEAoIZGVub21faW4YASABKAkSEQoJZGVub21fb3V0GAIgASgJEicKBHBvb2wYAyABKAsyFy5zdW5yaXNlLnN3YXAuUm91dGVQb29sSAASKwoGc2VyaWVzGAQgASgLMhkuc3VucmlzZS5zd2FwLlJvdXRlU2VyaWVzSAASLwoIcGFyYWxsZWwYBSABKAsyGy5zdW5yaXNlLnN3YXAuUm91dGVQYXJhbGxlbEgAQgoKCHN0cmF0ZWd5IiIKD1JvdXRlUmVzdWx0UG9vbBIPCgdwb29sX2lkGAEgASgEIksKEVJvdXRlUmVzdWx0U2VyaWVzEjYKDXJvdXRlX3Jlc3VsdHMYASADKAsyGS5zdW5yaXNlLnN3YXAuUm91dGVSZXN1bHRCBMjeHwAiTQoTUm91dGVSZXN1bHRQYXJhbGxlbBI2Cg1yb3V0ZV9yZXN1bHRzGAEgAygLMhkuc3VucmlzZS5zd2FwLlJvdXRlUmVzdWx0QgTI3h8AIpkCCgtSb3V0ZVJlc3VsdBIxCgh0b2tlbl9pbhgBIAEoCzIZLmNvc21vcy5iYXNlLnYxYmV0YTEuQ29pbkIEyN4fABIyCgl0b2tlbl9vdXQYAiABKAsyGS5jb3Ntb3MuYmFzZS52MWJldGExLkNvaW5CBMjeHwASLQoEcG9vbBgDIAEoCzIdLnN1bnJpc2Uuc3dhcC5Sb3V0ZVJlc3VsdFBvb2xIABIxCgZzZXJpZXMYBCABKAsyHy5zdW5yaXNlLnN3YXAuUm91dGVSZXN1bHRTZXJpZXNIABI1CghwYXJhbGxlbBgFIAEoCzIhLnN1bnJpc2Uuc3dhcC5Sb3V0ZVJlc3VsdFBhcmFsbGVsSABCCgoIc3RyYXRlZ3lCnQEKEGNvbS5zdW5yaXNlLnN3YXBCClJvdXRlUHJvdG9QAVosZ2l0aHViLmNvbS9zdW5yaXNlbGF5ZXIvc3VucmlzZS94L3N3YXAvdHlwZXOiAgNTU1iqAgxTdW5yaXNlLlN3YXDKAgxTdW5yaXNlXFN3YXDiAhhTdW5yaXNlXFN3YXBcR1BCTWV0YWRhdGHqAg1TdW5yaXNlOjpTd2FwYgZwcm90bzM", [file_cosmos_base_v1beta1_coin, file_cosmos_proto_cosmos, file_gogoproto_gogo]);
 
 /**
+ * RoutePool
+ *
  * @generated from message sunrise.swap.RoutePool
  */
 export type RoutePool = Message<"sunrise.swap.RoutePool"> & {
@@ -36,6 +36,8 @@ export const RoutePoolSchema: GenMessage<RoutePool> = /*@__PURE__*/
   messageDesc(file_sunrise_swap_route, 0);
 
 /**
+ * RouteSeries
+ *
  * @generated from message sunrise.swap.RouteSeries
  */
 export type RouteSeries = Message<"sunrise.swap.RouteSeries"> & {
@@ -53,6 +55,8 @@ export const RouteSeriesSchema: GenMessage<RouteSeries> = /*@__PURE__*/
   messageDesc(file_sunrise_swap_route, 1);
 
 /**
+ * RouteParallel
+ *
  * @generated from message sunrise.swap.RouteParallel
  */
 export type RouteParallel = Message<"sunrise.swap.RouteParallel"> & {
@@ -75,6 +79,8 @@ export const RouteParallelSchema: GenMessage<RouteParallel> = /*@__PURE__*/
   messageDesc(file_sunrise_swap_route, 2);
 
 /**
+ * Route
+ *
  * @generated from message sunrise.swap.Route
  */
 export type Route = Message<"sunrise.swap.Route"> & {
@@ -89,6 +95,8 @@ export type Route = Message<"sunrise.swap.Route"> & {
   denomOut: string;
 
   /**
+   * strategy
+   *
    * @generated from oneof sunrise.swap.Route.strategy
    */
   strategy: {
@@ -120,6 +128,8 @@ export const RouteSchema: GenMessage<Route> = /*@__PURE__*/
   messageDesc(file_sunrise_swap_route, 3);
 
 /**
+ * RouteResultPool
+ *
  * @generated from message sunrise.swap.RouteResultPool
  */
 export type RouteResultPool = Message<"sunrise.swap.RouteResultPool"> & {
@@ -137,6 +147,8 @@ export const RouteResultPoolSchema: GenMessage<RouteResultPool> = /*@__PURE__*/
   messageDesc(file_sunrise_swap_route, 4);
 
 /**
+ * RouteResultSeries
+ *
  * @generated from message sunrise.swap.RouteResultSeries
  */
 export type RouteResultSeries = Message<"sunrise.swap.RouteResultSeries"> & {
@@ -154,6 +166,8 @@ export const RouteResultSeriesSchema: GenMessage<RouteResultSeries> = /*@__PURE_
   messageDesc(file_sunrise_swap_route, 5);
 
 /**
+ * RouteResultParallel
+ *
  * @generated from message sunrise.swap.RouteResultParallel
  */
 export type RouteResultParallel = Message<"sunrise.swap.RouteResultParallel"> & {
@@ -171,6 +185,8 @@ export const RouteResultParallelSchema: GenMessage<RouteResultParallel> = /*@__P
   messageDesc(file_sunrise_swap_route, 6);
 
 /**
+ * RouteResult
+ *
  * @generated from message sunrise.swap.RouteResult
  */
 export type RouteResult = Message<"sunrise.swap.RouteResult"> & {
@@ -185,6 +201,8 @@ export type RouteResult = Message<"sunrise.swap.RouteResult"> & {
   tokenOut?: Coin;
 
   /**
+   * strategy
+   *
    * @generated from oneof sunrise.swap.RouteResult.strategy
    */
   strategy: {

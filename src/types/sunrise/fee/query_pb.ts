@@ -4,7 +4,6 @@
 
 import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv1";
 import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv1";
-import { file_amino_amino } from "../../amino/amino_pb";
 import { file_gogoproto_gogo } from "../../gogoproto/gogo_pb";
 import { file_google_api_annotations } from "../../google/api/annotations_pb";
 import type { Params } from "./params_pb";
@@ -15,7 +14,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file sunrise/fee/query.proto.
  */
 export const file_sunrise_fee_query: GenFile = /*@__PURE__*/
-  fileDesc("ChdzdW5yaXNlL2ZlZS9xdWVyeS5wcm90bxILc3VucmlzZS5mZWUiFAoSUXVlcnlQYXJhbXNSZXF1ZXN0IkUKE1F1ZXJ5UGFyYW1zUmVzcG9uc2USLgoGcGFyYW1zGAEgASgLMhMuc3VucmlzZS5mZWUuUGFyYW1zQgnI3h8AqOewKgEycQoFUXVlcnkSaAoGUGFyYW1zEh8uc3VucmlzZS5mZWUuUXVlcnlQYXJhbXNSZXF1ZXN0GiAuc3VucmlzZS5mZWUuUXVlcnlQYXJhbXNSZXNwb25zZSIbgtPkkwIVEhMvc3VucmlzZS9mZWUvcGFyYW1zQpcBCg9jb20uc3VucmlzZS5mZWVCClF1ZXJ5UHJvdG9QAVorZ2l0aHViLmNvbS9zdW5yaXNlbGF5ZXIvc3VucmlzZS94L2ZlZS90eXBlc6ICA1NGWKoCC1N1bnJpc2UuRmVlygILU3VucmlzZVxGZWXiAhdTdW5yaXNlXEZlZVxHUEJNZXRhZGF0YeoCDFN1bnJpc2U6OkZlZWIGcHJvdG8z", [file_amino_amino, file_gogoproto_gogo, file_google_api_annotations, file_sunrise_fee_params]);
+  fileDesc("ChdzdW5yaXNlL2ZlZS9xdWVyeS5wcm90bxILc3VucmlzZS5mZWUiFAoSUXVlcnlQYXJhbXNSZXF1ZXN0IkAKE1F1ZXJ5UGFyYW1zUmVzcG9uc2USKQoGcGFyYW1zGAEgASgLMhMuc3VucmlzZS5mZWUuUGFyYW1zQgTI3h8AMnEKBVF1ZXJ5EmgKBlBhcmFtcxIfLnN1bnJpc2UuZmVlLlF1ZXJ5UGFyYW1zUmVxdWVzdBogLnN1bnJpc2UuZmVlLlF1ZXJ5UGFyYW1zUmVzcG9uc2UiG4LT5JMCFRITL3N1bnJpc2UvZmVlL3BhcmFtc0KXAQoPY29tLnN1bnJpc2UuZmVlQgpRdWVyeVByb3RvUAFaK2dpdGh1Yi5jb20vc3VucmlzZWxheWVyL3N1bnJpc2UveC9mZWUvdHlwZXOiAgNTRliqAgtTdW5yaXNlLkZlZcoCC1N1bnJpc2VcRmVl4gIXU3VucmlzZVxGZWVcR1BCTWV0YWRhdGHqAgxTdW5yaXNlOjpGZWViBnByb3RvMw", [file_gogoproto_gogo, file_google_api_annotations, file_sunrise_fee_params]);
 
 /**
  * QueryParamsRequest is request type for the Query/Params RPC method.

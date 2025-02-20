@@ -16,7 +16,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file sunrise/da/tx.proto.
  */
 export const file_sunrise_da_tx: GenFile = /*@__PURE__*/
-  fileDesc("ChNzdW5yaXNlL2RhL3R4LnByb3RvEgpzdW5yaXNlLmRhIp4BCg9Nc2dVcGRhdGVQYXJhbXMSKwoJYXV0aG9yaXR5GAEgASgJQhjStC0UY29zbW9zLkFkZHJlc3NTdHJpbmcSLQoGcGFyYW1zGAIgASgLMhIuc3VucmlzZS5kYS5QYXJhbXNCCcjeHwCo57AqATovguewKglhdXRob3JpdHmK57AqHHN1bnJpc2UveC9kYS9Nc2dVcGRhdGVQYXJhbXMiGQoXTXNnVXBkYXRlUGFyYW1zUmVzcG9uc2UilgEKDk1zZ1B1Ymxpc2hEYXRhEg4KBnNlbmRlchgBIAEoCRIUCgxtZXRhZGF0YV91cmkYAiABKAkSGgoScGFyaXR5X3NoYXJkX2NvdW50GAMgASgEEhsKE3NoYXJkX2RvdWJsZV9oYXNoZXMYBCADKAwSGAoQZGF0YV9zb3VyY2VfaW5mbxgFIAEoCToLguewKgZzZW5kZXIiGAoWTXNnUHVibGlzaERhdGFSZXNwb25zZSJJChRNc2dDaGFsbGVuZ2VGb3JGcmF1ZBIOCgZzZW5kZXIYASABKAkSFAoMbWV0YWRhdGFfdXJpGAIgASgJOguC57AqBnNlbmRlciIeChxNc2dDaGFsbGVuZ2VGb3JGcmF1ZFJlc3BvbnNlInsKDk1zZ1N1Ym1pdFByb29mEg4KBnNlbmRlchgBIAEoCRIUCgxtZXRhZGF0YV91cmkYAiABKAkSDwoHaW5kaWNlcxgDIAMoAxIOCgZwcm9vZnMYBCADKAwSFQoNaXNfdmFsaWRfZGF0YRgFIAEoCDoLguewKgZzZW5kZXIiGAoWTXNnU3VibWl0UHJvb2ZSZXNwb25zZTLdAgoDTXNnElAKDFVwZGF0ZVBhcmFtcxIbLnN1bnJpc2UuZGEuTXNnVXBkYXRlUGFyYW1zGiMuc3VucmlzZS5kYS5Nc2dVcGRhdGVQYXJhbXNSZXNwb25zZRJNCgtQdWJsaXNoRGF0YRIaLnN1bnJpc2UuZGEuTXNnUHVibGlzaERhdGEaIi5zdW5yaXNlLmRhLk1zZ1B1Ymxpc2hEYXRhUmVzcG9uc2USXwoRQ2hhbGxlbmdlRm9yRnJhdWQSIC5zdW5yaXNlLmRhLk1zZ0NoYWxsZW5nZUZvckZyYXVkGiguc3VucmlzZS5kYS5Nc2dDaGFsbGVuZ2VGb3JGcmF1ZFJlc3BvbnNlEk0KC1N1Ym1pdFByb29mEhouc3VucmlzZS5kYS5Nc2dTdWJtaXRQcm9vZhoiLnN1bnJpc2UuZGEuTXNnU3VibWl0UHJvb2ZSZXNwb25zZRoFgOewKgFCjgEKDmNvbS5zdW5yaXNlLmRhQgdUeFByb3RvUAFaKmdpdGh1Yi5jb20vc3VucmlzZWxheWVyL3N1bnJpc2UveC9kYS90eXBlc6ICA1NEWKoCClN1bnJpc2UuRGHKAgpTdW5yaXNlXERh4gIWU3VucmlzZVxEYVxHUEJNZXRhZGF0YeoCC1N1bnJpc2U6OkRhYgZwcm90bzM", [file_amino_amino, file_cosmos_msg_v1_msg, file_cosmos_proto_cosmos, file_gogoproto_gogo, file_sunrise_da_params]);
+  fileDesc("ChNzdW5yaXNlL2RhL3R4LnByb3RvEgpzdW5yaXNlLmRhIp4BCg9Nc2dVcGRhdGVQYXJhbXMSKwoJYXV0aG9yaXR5GAEgASgJQhjStC0UY29zbW9zLkFkZHJlc3NTdHJpbmcSLQoGcGFyYW1zGAIgASgLMhIuc3VucmlzZS5kYS5QYXJhbXNCCcjeHwCo57AqATovguewKglhdXRob3JpdHmK57AqHHN1bnJpc2UveC9kYS9Nc2dVcGRhdGVQYXJhbXMiGQoXTXNnVXBkYXRlUGFyYW1zUmVzcG9uc2UisAEKDk1zZ1B1Ymxpc2hEYXRhEigKBnNlbmRlchgBIAEoCUIY0rQtFGNvc21vcy5BZGRyZXNzU3RyaW5nEhQKDG1ldGFkYXRhX3VyaRgCIAEoCRIaChJwYXJpdHlfc2hhcmRfY291bnQYAyABKAQSGwoTc2hhcmRfZG91YmxlX2hhc2hlcxgEIAMoDBIYChBkYXRhX3NvdXJjZV9pbmZvGAUgASgJOguC57AqBnNlbmRlciIYChZNc2dQdWJsaXNoRGF0YVJlc3BvbnNlImMKFE1zZ0NoYWxsZW5nZUZvckZyYXVkEigKBnNlbmRlchgBIAEoCUIY0rQtFGNvc21vcy5BZGRyZXNzU3RyaW5nEhQKDG1ldGFkYXRhX3VyaRgCIAEoCToLguewKgZzZW5kZXIiHgocTXNnQ2hhbGxlbmdlRm9yRnJhdWRSZXNwb25zZSKVAQoOTXNnU3VibWl0UHJvb2YSKAoGc2VuZGVyGAEgASgJQhjStC0UY29zbW9zLkFkZHJlc3NTdHJpbmcSFAoMbWV0YWRhdGFfdXJpGAIgASgJEg8KB2luZGljZXMYAyADKAMSDgoGcHJvb2ZzGAQgAygMEhUKDWlzX3ZhbGlkX2RhdGEYBSABKAg6C4LnsCoGc2VuZGVyIhgKFk1zZ1N1Ym1pdFByb29mUmVzcG9uc2Uy3QIKA01zZxJQCgxVcGRhdGVQYXJhbXMSGy5zdW5yaXNlLmRhLk1zZ1VwZGF0ZVBhcmFtcxojLnN1bnJpc2UuZGEuTXNnVXBkYXRlUGFyYW1zUmVzcG9uc2USTQoLUHVibGlzaERhdGESGi5zdW5yaXNlLmRhLk1zZ1B1Ymxpc2hEYXRhGiIuc3VucmlzZS5kYS5Nc2dQdWJsaXNoRGF0YVJlc3BvbnNlEl8KEUNoYWxsZW5nZUZvckZyYXVkEiAuc3VucmlzZS5kYS5Nc2dDaGFsbGVuZ2VGb3JGcmF1ZBooLnN1bnJpc2UuZGEuTXNnQ2hhbGxlbmdlRm9yRnJhdWRSZXNwb25zZRJNCgtTdWJtaXRQcm9vZhIaLnN1bnJpc2UuZGEuTXNnU3VibWl0UHJvb2YaIi5zdW5yaXNlLmRhLk1zZ1N1Ym1pdFByb29mUmVzcG9uc2UaBYDnsCoBQo4BCg5jb20uc3VucmlzZS5kYUIHVHhQcm90b1ABWipnaXRodWIuY29tL3N1bnJpc2VsYXllci9zdW5yaXNlL3gvZGEvdHlwZXOiAgNTRFiqAgpTdW5yaXNlLkRhygIKU3VucmlzZVxEYeICFlN1bnJpc2VcRGFcR1BCTWV0YWRhdGHqAgtTdW5yaXNlOjpEYWIGcHJvdG8z", [file_amino_amino, file_cosmos_msg_v1_msg, file_cosmos_proto_cosmos, file_gogoproto_gogo, file_sunrise_da_params]);
 
 /**
  * MsgUpdateParams is the Msg/UpdateParams request type.
@@ -64,6 +64,8 @@ export const MsgUpdateParamsResponseSchema: GenMessage<MsgUpdateParamsResponse> 
   messageDesc(file_sunrise_da_tx, 1);
 
 /**
+ * MsgPublishData
+ *
  * @generated from message sunrise.da.MsgPublishData
  */
 export type MsgPublishData = Message<"sunrise.da.MsgPublishData"> & {
@@ -101,6 +103,8 @@ export const MsgPublishDataSchema: GenMessage<MsgPublishData> = /*@__PURE__*/
   messageDesc(file_sunrise_da_tx, 2);
 
 /**
+ * MsgPublishDataResponse
+ *
  * @generated from message sunrise.da.MsgPublishDataResponse
  */
 export type MsgPublishDataResponse = Message<"sunrise.da.MsgPublishDataResponse"> & {
@@ -114,6 +118,8 @@ export const MsgPublishDataResponseSchema: GenMessage<MsgPublishDataResponse> = 
   messageDesc(file_sunrise_da_tx, 3);
 
 /**
+ * MsgChallengeForFraud
+ *
  * @generated from message sunrise.da.MsgChallengeForFraud
  */
 export type MsgChallengeForFraud = Message<"sunrise.da.MsgChallengeForFraud"> & {
@@ -136,6 +142,8 @@ export const MsgChallengeForFraudSchema: GenMessage<MsgChallengeForFraud> = /*@_
   messageDesc(file_sunrise_da_tx, 4);
 
 /**
+ * MsgChallengeForFraudResponse
+ *
  * @generated from message sunrise.da.MsgChallengeForFraudResponse
  */
 export type MsgChallengeForFraudResponse = Message<"sunrise.da.MsgChallengeForFraudResponse"> & {
@@ -149,6 +157,8 @@ export const MsgChallengeForFraudResponseSchema: GenMessage<MsgChallengeForFraud
   messageDesc(file_sunrise_da_tx, 5);
 
 /**
+ * MsgSubmitProof
+ *
  * @generated from message sunrise.da.MsgSubmitProof
  */
 export type MsgSubmitProof = Message<"sunrise.da.MsgSubmitProof"> & {
@@ -186,6 +196,8 @@ export const MsgSubmitProofSchema: GenMessage<MsgSubmitProof> = /*@__PURE__*/
   messageDesc(file_sunrise_da_tx, 6);
 
 /**
+ * MsgSubmitProofResponse
+ *
  * @generated from message sunrise.da.MsgSubmitProofResponse
  */
 export type MsgSubmitProofResponse = Message<"sunrise.da.MsgSubmitProofResponse"> & {
@@ -216,6 +228,8 @@ export const Msg: GenService<{
     output: typeof MsgUpdateParamsResponseSchema;
   },
   /**
+   * PublishData
+   *
    * @generated from rpc sunrise.da.Msg.PublishData
    */
   publishData: {
@@ -224,6 +238,8 @@ export const Msg: GenService<{
     output: typeof MsgPublishDataResponseSchema;
   },
   /**
+   * ChallengeForFraud
+   *
    * @generated from rpc sunrise.da.Msg.ChallengeForFraud
    */
   challengeForFraud: {
@@ -232,6 +248,8 @@ export const Msg: GenService<{
     output: typeof MsgChallengeForFraudResponseSchema;
   },
   /**
+   * SubmitProof
+   *
    * @generated from rpc sunrise.da.Msg.SubmitProof
    */
   submitProof: {

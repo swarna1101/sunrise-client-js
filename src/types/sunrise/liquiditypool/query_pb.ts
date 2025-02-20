@@ -4,13 +4,12 @@
 
 import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv1";
 import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv1";
-import { file_amino_amino } from "../../amino/amino_pb";
-import { file_gogoproto_gogo } from "../../gogoproto/gogo_pb";
-import { file_google_api_annotations } from "../../google/api/annotations_pb";
-import type { Coin } from "../../cosmos/base/v1beta1/coin_pb";
-import { file_cosmos_base_v1beta1_coin } from "../../cosmos/base/v1beta1/coin_pb";
 import type { PageRequest, PageResponse } from "../../cosmos/base/query/v1beta1/pagination_pb";
 import { file_cosmos_base_query_v1beta1_pagination } from "../../cosmos/base/query/v1beta1/pagination_pb";
+import type { Coin } from "../../cosmos/base/v1beta1/coin_pb";
+import { file_cosmos_base_v1beta1_coin } from "../../cosmos/base/v1beta1/coin_pb";
+import { file_gogoproto_gogo } from "../../gogoproto/gogo_pb";
+import { file_google_api_annotations } from "../../google/api/annotations_pb";
 import type { Params } from "./params_pb";
 import { file_sunrise_liquiditypool_params } from "./params_pb";
 import type { Pool } from "./pool_pb";
@@ -23,7 +22,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file sunrise/liquiditypool/query.proto.
  */
 export const file_sunrise_liquiditypool_query: GenFile = /*@__PURE__*/
-  fileDesc("CiFzdW5yaXNlL2xpcXVpZGl0eXBvb2wvcXVlcnkucHJvdG8SFXN1bnJpc2UubGlxdWlkaXR5cG9vbCIUChJRdWVyeVBhcmFtc1JlcXVlc3QiTwoTUXVlcnlQYXJhbXNSZXNwb25zZRI4CgZwYXJhbXMYASABKAsyHS5zdW5yaXNlLmxpcXVpZGl0eXBvb2wuUGFyYW1zQgnI3h8AqOewKgEiHgoQUXVlcnlQb29sUmVxdWVzdBIKCgJpZBgBIAEoBCKmAQoIUG9vbEluZm8SLwoEcG9vbBgBIAEoCzIbLnN1bnJpc2UubGlxdWlkaXR5cG9vbC5Qb29sQgTI3h8AEjMKCnRva2VuX2Jhc2UYAiABKAsyGS5jb3Ntb3MuYmFzZS52MWJldGExLkNvaW5CBMjeHwASNAoLdG9rZW5fcXVvdGUYAyABKAsyGS5jb3Ntb3MuYmFzZS52MWJldGExLkNvaW5CBMjeHwAiSAoRUXVlcnlQb29sUmVzcG9uc2USMwoEcG9vbBgBIAEoCzIfLnN1bnJpc2UubGlxdWlkaXR5cG9vbC5Qb29sSW5mb0IEyN4fACJPChFRdWVyeVBvb2xzUmVxdWVzdBI6CgpwYWdpbmF0aW9uGAEgASgLMiYuY29zbW9zLmJhc2UucXVlcnkudjFiZXRhMS5QYWdlUmVxdWVzdCKHAQoSUXVlcnlQb29sc1Jlc3BvbnNlEjQKBXBvb2xzGAEgAygLMh8uc3VucmlzZS5saXF1aWRpdHlwb29sLlBvb2xJbmZvQgTI3h8AEjsKCnBhZ2luYXRpb24YAiABKAsyJy5jb3Ntb3MuYmFzZS5xdWVyeS52MWJldGExLlBhZ2VSZXNwb25zZSIiChRRdWVyeVBvc2l0aW9uUmVxdWVzdBIKCgJpZBgBIAEoBCKyAQoMUG9zaXRpb25JbmZvEjcKCHBvc2l0aW9uGAEgASgLMh8uc3VucmlzZS5saXF1aWRpdHlwb29sLlBvc2l0aW9uQgTI3h8AEjMKCnRva2VuX2Jhc2UYAiABKAsyGS5jb3Ntb3MuYmFzZS52MWJldGExLkNvaW5CBMjeHwASNAoLdG9rZW5fcXVvdGUYAyABKAsyGS5jb3Ntb3MuYmFzZS52MWJldGExLkNvaW5CBMjeHwAiVAoVUXVlcnlQb3NpdGlvblJlc3BvbnNlEjsKCHBvc2l0aW9uGAEgASgLMiMuc3VucmlzZS5saXF1aWRpdHlwb29sLlBvc2l0aW9uSW5mb0IEyN4fACJTChVRdWVyeVBvc2l0aW9uc1JlcXVlc3QSOgoKcGFnaW5hdGlvbhgBIAEoCzImLmNvc21vcy5iYXNlLnF1ZXJ5LnYxYmV0YTEuUGFnZVJlcXVlc3QikwEKFlF1ZXJ5UG9zaXRpb25zUmVzcG9uc2USPAoJcG9zaXRpb25zGAEgAygLMiMuc3VucmlzZS5saXF1aWRpdHlwb29sLlBvc2l0aW9uSW5mb0IEyN4fABI7CgpwYWdpbmF0aW9uGAIgASgLMicuY29zbW9zLmJhc2UucXVlcnkudjFiZXRhMS5QYWdlUmVzcG9uc2UiLAoZUXVlcnlQb29sUG9zaXRpb25zUmVxdWVzdBIPCgdwb29sX2lkGAEgASgEIloKGlF1ZXJ5UG9vbFBvc2l0aW9uc1Jlc3BvbnNlEjwKCXBvc2l0aW9ucxgBIAMoCzIjLnN1bnJpc2UubGlxdWlkaXR5cG9vbC5Qb3NpdGlvbkluZm9CBMjeHwAiLwocUXVlcnlBZGRyZXNzUG9zaXRpb25zUmVxdWVzdBIPCgdhZGRyZXNzGAEgASgJIl0KHVF1ZXJ5QWRkcmVzc1Bvc2l0aW9uc1Jlc3BvbnNlEjwKCXBvc2l0aW9ucxgBIAMoCzIjLnN1bnJpc2UubGlxdWlkaXR5cG9vbC5Qb3NpdGlvbkluZm9CBMjeHwAiJgoYUXVlcnlQb3NpdGlvbkZlZXNSZXF1ZXN0EgoKAmlkGAEgASgEInYKGVF1ZXJ5UG9zaXRpb25GZWVzUmVzcG9uc2USWQoEZmVlcxgBIAMoCzIZLmNvc21vcy5iYXNlLnYxYmV0YTEuQ29pbkIwyN4fAKrfHyhnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkNvaW5zIn8KJVF1ZXJ5Q2FsY3VsYXRpb25DcmVhdGVQb3NpdGlvblJlcXVlc3QSDwoHcG9vbF9pZBgBIAEoBBISCgpsb3dlcl90aWNrGAIgASgJEhIKCnVwcGVyX3RpY2sYAyABKAkSDgoGYW1vdW50GAQgASgJEg0KBWRlbm9tGAUgASgJIlkKJlF1ZXJ5Q2FsY3VsYXRpb25DcmVhdGVQb3NpdGlvblJlc3BvbnNlEi8KBmFtb3VudBgBIAEoCzIZLmNvc21vcy5iYXNlLnYxYmV0YTEuQ29pbkIEyN4fACJbCihRdWVyeUNhbGN1bGF0aW9uSW5jcmVhc2VMaXF1aWRpdHlSZXF1ZXN0EgoKAmlkGAEgASgEEhEKCWFtb3VudF9pbhgCIAEoCRIQCghkZW5vbV9pbhgDIAEoCSJkCilRdWVyeUNhbGN1bGF0aW9uSW5jcmVhc2VMaXF1aWRpdHlSZXNwb25zZRI3Cg50b2tlbl9yZXF1aXJlZBgBIAEoCzIZLmNvc21vcy5iYXNlLnYxYmV0YTEuQ29pbkIEyN4fADK4DQoFUXVlcnkShgEKBlBhcmFtcxIpLnN1bnJpc2UubGlxdWlkaXR5cG9vbC5RdWVyeVBhcmFtc1JlcXVlc3QaKi5zdW5yaXNlLmxpcXVpZGl0eXBvb2wuUXVlcnlQYXJhbXNSZXNwb25zZSIlgtPkkwIfEh0vc3VucmlzZS9saXF1aWRpdHlwb29sL3BhcmFtcxKEAQoEUG9vbBInLnN1bnJpc2UubGlxdWlkaXR5cG9vbC5RdWVyeVBvb2xSZXF1ZXN0Giguc3VucmlzZS5saXF1aWRpdHlwb29sLlF1ZXJ5UG9vbFJlc3BvbnNlIimC0+STAiMSIS9zdW5yaXNlL2xpcXVpZGl0eXBvb2wvcG9vbHMve2lkfRKCAQoFUG9vbHMSKC5zdW5yaXNlLmxpcXVpZGl0eXBvb2wuUXVlcnlQb29sc1JlcXVlc3QaKS5zdW5yaXNlLmxpcXVpZGl0eXBvb2wuUXVlcnlQb29sc1Jlc3BvbnNlIiSC0+STAh4SHC9zdW5yaXNlL2xpcXVpZGl0eXBvb2wvcG9vbHMSlAEKCFBvc2l0aW9uEisuc3VucmlzZS5saXF1aWRpdHlwb29sLlF1ZXJ5UG9zaXRpb25SZXF1ZXN0Giwuc3VucmlzZS5saXF1aWRpdHlwb29sLlF1ZXJ5UG9zaXRpb25SZXNwb25zZSItgtPkkwInEiUvc3VucmlzZS9saXF1aWRpdHlwb29sL3Bvc2l0aW9ucy97aWR9EpIBCglQb3NpdGlvbnMSLC5zdW5yaXNlLmxpcXVpZGl0eXBvb2wuUXVlcnlQb3NpdGlvbnNSZXF1ZXN0Gi0uc3VucmlzZS5saXF1aWRpdHlwb29sLlF1ZXJ5UG9zaXRpb25zUmVzcG9uc2UiKILT5JMCIhIgL3N1bnJpc2UvbGlxdWlkaXR5cG9vbC9wb3NpdGlvbnMSrgEKDVBvb2xQb3NpdGlvbnMSMC5zdW5yaXNlLmxpcXVpZGl0eXBvb2wuUXVlcnlQb29sUG9zaXRpb25zUmVxdWVzdBoxLnN1bnJpc2UubGlxdWlkaXR5cG9vbC5RdWVyeVBvb2xQb3NpdGlvbnNSZXNwb25zZSI4gtPkkwIyEjAvc3VucmlzZS9saXF1aWRpdHlwb29sL3Bvb2xzL3twb29sX2lkfS9wb3NpdGlvbnMSuQEKEEFkZHJlc3NQb3NpdGlvbnMSMy5zdW5yaXNlLmxpcXVpZGl0eXBvb2wuUXVlcnlBZGRyZXNzUG9zaXRpb25zUmVxdWVzdBo0LnN1bnJpc2UubGlxdWlkaXR5cG9vbC5RdWVyeUFkZHJlc3NQb3NpdGlvbnNSZXNwb25zZSI6gtPkkwI0EjIvc3VucmlzZS9saXF1aWRpdHlwb29sL2FkZHJlc3Mve2FkZHJlc3N9L3Bvc2l0aW9ucxKlAQoMUG9zaXRpb25GZWVzEi8uc3VucmlzZS5saXF1aWRpdHlwb29sLlF1ZXJ5UG9zaXRpb25GZWVzUmVxdWVzdBowLnN1bnJpc2UubGlxdWlkaXR5cG9vbC5RdWVyeVBvc2l0aW9uRmVlc1Jlc3BvbnNlIjKC0+STAiwSKi9zdW5yaXNlL2xpcXVpZGl0eXBvb2wvcG9zaXRpb25zL3tpZH0vZmVlcxLlAQoZQ2FsY3VsYXRpb25DcmVhdGVQb3NpdGlvbhI8LnN1bnJpc2UubGlxdWlkaXR5cG9vbC5RdWVyeUNhbGN1bGF0aW9uQ3JlYXRlUG9zaXRpb25SZXF1ZXN0Gj0uc3VucmlzZS5saXF1aWRpdHlwb29sLlF1ZXJ5Q2FsY3VsYXRpb25DcmVhdGVQb3NpdGlvblJlc3BvbnNlIkuC0+STAkUSQy9zdW5yaXNlL2xpcXVpZGl0eXBvb2wvcG9vbHMve3Bvb2xfaWR9L2NhbGN1bGF0aW9ucy9jcmVhdGVfcG9zaXRpb24S8AEKHENhbGN1bGF0aW9uSW5jcmVhc2VMaXF1aWRpdHkSPy5zdW5yaXNlLmxpcXVpZGl0eXBvb2wuUXVlcnlDYWxjdWxhdGlvbkluY3JlYXNlTGlxdWlkaXR5UmVxdWVzdBpALnN1bnJpc2UubGlxdWlkaXR5cG9vbC5RdWVyeUNhbGN1bGF0aW9uSW5jcmVhc2VMaXF1aWRpdHlSZXNwb25zZSJNgtPkkwJHEkUvc3VucmlzZS9saXF1aWRpdHlwb29sL3Bvc2l0aW9ucy97aWR9L2NhbGN1bGF0aW9ucy9pbmNyZWFzZV9saXF1aWRpdHlC0wEKGWNvbS5zdW5yaXNlLmxpcXVpZGl0eXBvb2xCClF1ZXJ5UHJvdG9QAVo1Z2l0aHViLmNvbS9zdW5yaXNlbGF5ZXIvc3VucmlzZS94L2xpcXVpZGl0eXBvb2wvdHlwZXOiAgNTTFiqAhVTdW5yaXNlLkxpcXVpZGl0eXBvb2zKAhVTdW5yaXNlXExpcXVpZGl0eXBvb2ziAiFTdW5yaXNlXExpcXVpZGl0eXBvb2xcR1BCTWV0YWRhdGHqAhZTdW5yaXNlOjpMaXF1aWRpdHlwb29sYgZwcm90bzM", [file_amino_amino, file_gogoproto_gogo, file_google_api_annotations, file_cosmos_base_v1beta1_coin, file_cosmos_base_query_v1beta1_pagination, file_sunrise_liquiditypool_params, file_sunrise_liquiditypool_pool, file_sunrise_liquiditypool_position]);
+  fileDesc("CiFzdW5yaXNlL2xpcXVpZGl0eXBvb2wvcXVlcnkucHJvdG8SFXN1bnJpc2UubGlxdWlkaXR5cG9vbCIUChJRdWVyeVBhcmFtc1JlcXVlc3QiSgoTUXVlcnlQYXJhbXNSZXNwb25zZRIzCgZwYXJhbXMYASABKAsyHS5zdW5yaXNlLmxpcXVpZGl0eXBvb2wuUGFyYW1zQgTI3h8AIh4KEFF1ZXJ5UG9vbFJlcXVlc3QSCgoCaWQYASABKAQipgEKCFBvb2xJbmZvEi8KBHBvb2wYASABKAsyGy5zdW5yaXNlLmxpcXVpZGl0eXBvb2wuUG9vbEIEyN4fABIzCgp0b2tlbl9iYXNlGAIgASgLMhkuY29zbW9zLmJhc2UudjFiZXRhMS5Db2luQgTI3h8AEjQKC3Rva2VuX3F1b3RlGAMgASgLMhkuY29zbW9zLmJhc2UudjFiZXRhMS5Db2luQgTI3h8AIkgKEVF1ZXJ5UG9vbFJlc3BvbnNlEjMKBHBvb2wYASABKAsyHy5zdW5yaXNlLmxpcXVpZGl0eXBvb2wuUG9vbEluZm9CBMjeHwAiTwoRUXVlcnlQb29sc1JlcXVlc3QSOgoKcGFnaW5hdGlvbhgBIAEoCzImLmNvc21vcy5iYXNlLnF1ZXJ5LnYxYmV0YTEuUGFnZVJlcXVlc3QihwEKElF1ZXJ5UG9vbHNSZXNwb25zZRI0CgVwb29scxgBIAMoCzIfLnN1bnJpc2UubGlxdWlkaXR5cG9vbC5Qb29sSW5mb0IEyN4fABI7CgpwYWdpbmF0aW9uGAIgASgLMicuY29zbW9zLmJhc2UucXVlcnkudjFiZXRhMS5QYWdlUmVzcG9uc2UiIgoUUXVlcnlQb3NpdGlvblJlcXVlc3QSCgoCaWQYASABKAQisgEKDFBvc2l0aW9uSW5mbxI3Cghwb3NpdGlvbhgBIAEoCzIfLnN1bnJpc2UubGlxdWlkaXR5cG9vbC5Qb3NpdGlvbkIEyN4fABIzCgp0b2tlbl9iYXNlGAIgASgLMhkuY29zbW9zLmJhc2UudjFiZXRhMS5Db2luQgTI3h8AEjQKC3Rva2VuX3F1b3RlGAMgASgLMhkuY29zbW9zLmJhc2UudjFiZXRhMS5Db2luQgTI3h8AIlQKFVF1ZXJ5UG9zaXRpb25SZXNwb25zZRI7Cghwb3NpdGlvbhgBIAEoCzIjLnN1bnJpc2UubGlxdWlkaXR5cG9vbC5Qb3NpdGlvbkluZm9CBMjeHwAiUwoVUXVlcnlQb3NpdGlvbnNSZXF1ZXN0EjoKCnBhZ2luYXRpb24YASABKAsyJi5jb3Ntb3MuYmFzZS5xdWVyeS52MWJldGExLlBhZ2VSZXF1ZXN0IpMBChZRdWVyeVBvc2l0aW9uc1Jlc3BvbnNlEjwKCXBvc2l0aW9ucxgBIAMoCzIjLnN1bnJpc2UubGlxdWlkaXR5cG9vbC5Qb3NpdGlvbkluZm9CBMjeHwASOwoKcGFnaW5hdGlvbhgCIAEoCzInLmNvc21vcy5iYXNlLnF1ZXJ5LnYxYmV0YTEuUGFnZVJlc3BvbnNlIiwKGVF1ZXJ5UG9vbFBvc2l0aW9uc1JlcXVlc3QSDwoHcG9vbF9pZBgBIAEoBCJaChpRdWVyeVBvb2xQb3NpdGlvbnNSZXNwb25zZRI8Cglwb3NpdGlvbnMYASADKAsyIy5zdW5yaXNlLmxpcXVpZGl0eXBvb2wuUG9zaXRpb25JbmZvQgTI3h8AIi8KHFF1ZXJ5QWRkcmVzc1Bvc2l0aW9uc1JlcXVlc3QSDwoHYWRkcmVzcxgBIAEoCSJdCh1RdWVyeUFkZHJlc3NQb3NpdGlvbnNSZXNwb25zZRI8Cglwb3NpdGlvbnMYASADKAsyIy5zdW5yaXNlLmxpcXVpZGl0eXBvb2wuUG9zaXRpb25JbmZvQgTI3h8AIiYKGFF1ZXJ5UG9zaXRpb25GZWVzUmVxdWVzdBIKCgJpZBgBIAEoBCJ2ChlRdWVyeVBvc2l0aW9uRmVlc1Jlc3BvbnNlElkKBGZlZXMYASADKAsyGS5jb3Ntb3MuYmFzZS52MWJldGExLkNvaW5CMMjeHwCq3x8oZ2l0aHViLmNvbS9jb3Ntb3MvY29zbW9zLXNkay90eXBlcy5Db2lucyJ/CiVRdWVyeUNhbGN1bGF0aW9uQ3JlYXRlUG9zaXRpb25SZXF1ZXN0Eg8KB3Bvb2xfaWQYASABKAQSEgoKbG93ZXJfdGljaxgCIAEoCRISCgp1cHBlcl90aWNrGAMgASgJEg4KBmFtb3VudBgEIAEoCRINCgVkZW5vbRgFIAEoCSJZCiZRdWVyeUNhbGN1bGF0aW9uQ3JlYXRlUG9zaXRpb25SZXNwb25zZRIvCgZhbW91bnQYASABKAsyGS5jb3Ntb3MuYmFzZS52MWJldGExLkNvaW5CBMjeHwAiWwooUXVlcnlDYWxjdWxhdGlvbkluY3JlYXNlTGlxdWlkaXR5UmVxdWVzdBIKCgJpZBgBIAEoBBIRCglhbW91bnRfaW4YAiABKAkSEAoIZGVub21faW4YAyABKAkiZAopUXVlcnlDYWxjdWxhdGlvbkluY3JlYXNlTGlxdWlkaXR5UmVzcG9uc2USNwoOdG9rZW5fcmVxdWlyZWQYASABKAsyGS5jb3Ntb3MuYmFzZS52MWJldGExLkNvaW5CBMjeHwAyuA0KBVF1ZXJ5EoYBCgZQYXJhbXMSKS5zdW5yaXNlLmxpcXVpZGl0eXBvb2wuUXVlcnlQYXJhbXNSZXF1ZXN0Giouc3VucmlzZS5saXF1aWRpdHlwb29sLlF1ZXJ5UGFyYW1zUmVzcG9uc2UiJYLT5JMCHxIdL3N1bnJpc2UvbGlxdWlkaXR5cG9vbC9wYXJhbXMShAEKBFBvb2wSJy5zdW5yaXNlLmxpcXVpZGl0eXBvb2wuUXVlcnlQb29sUmVxdWVzdBooLnN1bnJpc2UubGlxdWlkaXR5cG9vbC5RdWVyeVBvb2xSZXNwb25zZSIpgtPkkwIjEiEvc3VucmlzZS9saXF1aWRpdHlwb29sL3Bvb2xzL3tpZH0SggEKBVBvb2xzEiguc3VucmlzZS5saXF1aWRpdHlwb29sLlF1ZXJ5UG9vbHNSZXF1ZXN0Gikuc3VucmlzZS5saXF1aWRpdHlwb29sLlF1ZXJ5UG9vbHNSZXNwb25zZSIkgtPkkwIeEhwvc3VucmlzZS9saXF1aWRpdHlwb29sL3Bvb2xzEpQBCghQb3NpdGlvbhIrLnN1bnJpc2UubGlxdWlkaXR5cG9vbC5RdWVyeVBvc2l0aW9uUmVxdWVzdBosLnN1bnJpc2UubGlxdWlkaXR5cG9vbC5RdWVyeVBvc2l0aW9uUmVzcG9uc2UiLYLT5JMCJxIlL3N1bnJpc2UvbGlxdWlkaXR5cG9vbC9wb3NpdGlvbnMve2lkfRKSAQoJUG9zaXRpb25zEiwuc3VucmlzZS5saXF1aWRpdHlwb29sLlF1ZXJ5UG9zaXRpb25zUmVxdWVzdBotLnN1bnJpc2UubGlxdWlkaXR5cG9vbC5RdWVyeVBvc2l0aW9uc1Jlc3BvbnNlIiiC0+STAiISIC9zdW5yaXNlL2xpcXVpZGl0eXBvb2wvcG9zaXRpb25zEq4BCg1Qb29sUG9zaXRpb25zEjAuc3VucmlzZS5saXF1aWRpdHlwb29sLlF1ZXJ5UG9vbFBvc2l0aW9uc1JlcXVlc3QaMS5zdW5yaXNlLmxpcXVpZGl0eXBvb2wuUXVlcnlQb29sUG9zaXRpb25zUmVzcG9uc2UiOILT5JMCMhIwL3N1bnJpc2UvbGlxdWlkaXR5cG9vbC9wb29scy97cG9vbF9pZH0vcG9zaXRpb25zErkBChBBZGRyZXNzUG9zaXRpb25zEjMuc3VucmlzZS5saXF1aWRpdHlwb29sLlF1ZXJ5QWRkcmVzc1Bvc2l0aW9uc1JlcXVlc3QaNC5zdW5yaXNlLmxpcXVpZGl0eXBvb2wuUXVlcnlBZGRyZXNzUG9zaXRpb25zUmVzcG9uc2UiOoLT5JMCNBIyL3N1bnJpc2UvbGlxdWlkaXR5cG9vbC9hZGRyZXNzL3thZGRyZXNzfS9wb3NpdGlvbnMSpQEKDFBvc2l0aW9uRmVlcxIvLnN1bnJpc2UubGlxdWlkaXR5cG9vbC5RdWVyeVBvc2l0aW9uRmVlc1JlcXVlc3QaMC5zdW5yaXNlLmxpcXVpZGl0eXBvb2wuUXVlcnlQb3NpdGlvbkZlZXNSZXNwb25zZSIygtPkkwIsEiovc3VucmlzZS9saXF1aWRpdHlwb29sL3Bvc2l0aW9ucy97aWR9L2ZlZXMS5QEKGUNhbGN1bGF0aW9uQ3JlYXRlUG9zaXRpb24SPC5zdW5yaXNlLmxpcXVpZGl0eXBvb2wuUXVlcnlDYWxjdWxhdGlvbkNyZWF0ZVBvc2l0aW9uUmVxdWVzdBo9LnN1bnJpc2UubGlxdWlkaXR5cG9vbC5RdWVyeUNhbGN1bGF0aW9uQ3JlYXRlUG9zaXRpb25SZXNwb25zZSJLgtPkkwJFEkMvc3VucmlzZS9saXF1aWRpdHlwb29sL3Bvb2xzL3twb29sX2lkfS9jYWxjdWxhdGlvbnMvY3JlYXRlLXBvc2l0aW9uEvABChxDYWxjdWxhdGlvbkluY3JlYXNlTGlxdWlkaXR5Ej8uc3VucmlzZS5saXF1aWRpdHlwb29sLlF1ZXJ5Q2FsY3VsYXRpb25JbmNyZWFzZUxpcXVpZGl0eVJlcXVlc3QaQC5zdW5yaXNlLmxpcXVpZGl0eXBvb2wuUXVlcnlDYWxjdWxhdGlvbkluY3JlYXNlTGlxdWlkaXR5UmVzcG9uc2UiTYLT5JMCRxJFL3N1bnJpc2UvbGlxdWlkaXR5cG9vbC9wb3NpdGlvbnMve2lkfS9jYWxjdWxhdGlvbnMvaW5jcmVhc2UtbGlxdWlkaXR5QtMBChljb20uc3VucmlzZS5saXF1aWRpdHlwb29sQgpRdWVyeVByb3RvUAFaNWdpdGh1Yi5jb20vc3VucmlzZWxheWVyL3N1bnJpc2UveC9saXF1aWRpdHlwb29sL3R5cGVzogIDU0xYqgIVU3VucmlzZS5MaXF1aWRpdHlwb29sygIVU3VucmlzZVxMaXF1aWRpdHlwb29s4gIhU3VucmlzZVxMaXF1aWRpdHlwb29sXEdQQk1ldGFkYXRh6gIWU3VucmlzZTo6TGlxdWlkaXR5cG9vbGIGcHJvdG8z", [file_cosmos_base_query_v1beta1_pagination, file_cosmos_base_v1beta1_coin, file_gogoproto_gogo, file_google_api_annotations, file_sunrise_liquiditypool_params, file_sunrise_liquiditypool_pool, file_sunrise_liquiditypool_position]);
 
 /**
  * QueryParamsRequest is request type for the Query/Params RPC method.
@@ -62,6 +61,8 @@ export const QueryParamsResponseSchema: GenMessage<QueryParamsResponse> = /*@__P
   messageDesc(file_sunrise_liquiditypool_query, 1);
 
 /**
+ * QueryPoolRequest
+ *
  * @generated from message sunrise.liquiditypool.QueryPoolRequest
  */
 export type QueryPoolRequest = Message<"sunrise.liquiditypool.QueryPoolRequest"> & {
@@ -79,6 +80,8 @@ export const QueryPoolRequestSchema: GenMessage<QueryPoolRequest> = /*@__PURE__*
   messageDesc(file_sunrise_liquiditypool_query, 2);
 
 /**
+ * PoolInfo
+ *
  * @generated from message sunrise.liquiditypool.PoolInfo
  */
 export type PoolInfo = Message<"sunrise.liquiditypool.PoolInfo"> & {
@@ -106,6 +109,8 @@ export const PoolInfoSchema: GenMessage<PoolInfo> = /*@__PURE__*/
   messageDesc(file_sunrise_liquiditypool_query, 3);
 
 /**
+ * QueryPoolResponse
+ *
  * @generated from message sunrise.liquiditypool.QueryPoolResponse
  */
 export type QueryPoolResponse = Message<"sunrise.liquiditypool.QueryPoolResponse"> & {
@@ -123,6 +128,8 @@ export const QueryPoolResponseSchema: GenMessage<QueryPoolResponse> = /*@__PURE_
   messageDesc(file_sunrise_liquiditypool_query, 4);
 
 /**
+ * QueryPoolsRequest
+ *
  * @generated from message sunrise.liquiditypool.QueryPoolsRequest
  */
 export type QueryPoolsRequest = Message<"sunrise.liquiditypool.QueryPoolsRequest"> & {
@@ -140,6 +147,8 @@ export const QueryPoolsRequestSchema: GenMessage<QueryPoolsRequest> = /*@__PURE_
   messageDesc(file_sunrise_liquiditypool_query, 5);
 
 /**
+ * QueryPoolsResponse
+ *
  * @generated from message sunrise.liquiditypool.QueryPoolsResponse
  */
 export type QueryPoolsResponse = Message<"sunrise.liquiditypool.QueryPoolsResponse"> & {
@@ -162,6 +171,8 @@ export const QueryPoolsResponseSchema: GenMessage<QueryPoolsResponse> = /*@__PUR
   messageDesc(file_sunrise_liquiditypool_query, 6);
 
 /**
+ * QueryPositionRequest
+ *
  * @generated from message sunrise.liquiditypool.QueryPositionRequest
  */
 export type QueryPositionRequest = Message<"sunrise.liquiditypool.QueryPositionRequest"> & {
@@ -179,6 +190,8 @@ export const QueryPositionRequestSchema: GenMessage<QueryPositionRequest> = /*@_
   messageDesc(file_sunrise_liquiditypool_query, 7);
 
 /**
+ * PositionInfo
+ *
  * @generated from message sunrise.liquiditypool.PositionInfo
  */
 export type PositionInfo = Message<"sunrise.liquiditypool.PositionInfo"> & {
@@ -206,6 +219,8 @@ export const PositionInfoSchema: GenMessage<PositionInfo> = /*@__PURE__*/
   messageDesc(file_sunrise_liquiditypool_query, 8);
 
 /**
+ * QueryPositionResponse
+ *
  * @generated from message sunrise.liquiditypool.QueryPositionResponse
  */
 export type QueryPositionResponse = Message<"sunrise.liquiditypool.QueryPositionResponse"> & {
@@ -223,6 +238,8 @@ export const QueryPositionResponseSchema: GenMessage<QueryPositionResponse> = /*
   messageDesc(file_sunrise_liquiditypool_query, 9);
 
 /**
+ * QueryPositionsRequest
+ *
  * @generated from message sunrise.liquiditypool.QueryPositionsRequest
  */
 export type QueryPositionsRequest = Message<"sunrise.liquiditypool.QueryPositionsRequest"> & {
@@ -240,6 +257,8 @@ export const QueryPositionsRequestSchema: GenMessage<QueryPositionsRequest> = /*
   messageDesc(file_sunrise_liquiditypool_query, 10);
 
 /**
+ * QueryPositionsResponse
+ *
  * @generated from message sunrise.liquiditypool.QueryPositionsResponse
  */
 export type QueryPositionsResponse = Message<"sunrise.liquiditypool.QueryPositionsResponse"> & {
@@ -262,6 +281,8 @@ export const QueryPositionsResponseSchema: GenMessage<QueryPositionsResponse> = 
   messageDesc(file_sunrise_liquiditypool_query, 11);
 
 /**
+ * QueryPoolPositionsRequest
+ *
  * @generated from message sunrise.liquiditypool.QueryPoolPositionsRequest
  */
 export type QueryPoolPositionsRequest = Message<"sunrise.liquiditypool.QueryPoolPositionsRequest"> & {
@@ -279,6 +300,8 @@ export const QueryPoolPositionsRequestSchema: GenMessage<QueryPoolPositionsReque
   messageDesc(file_sunrise_liquiditypool_query, 12);
 
 /**
+ * QueryPoolPositionsResponse
+ *
  * @generated from message sunrise.liquiditypool.QueryPoolPositionsResponse
  */
 export type QueryPoolPositionsResponse = Message<"sunrise.liquiditypool.QueryPoolPositionsResponse"> & {
@@ -296,6 +319,8 @@ export const QueryPoolPositionsResponseSchema: GenMessage<QueryPoolPositionsResp
   messageDesc(file_sunrise_liquiditypool_query, 13);
 
 /**
+ * QueryAddressPositionsRequest
+ *
  * @generated from message sunrise.liquiditypool.QueryAddressPositionsRequest
  */
 export type QueryAddressPositionsRequest = Message<"sunrise.liquiditypool.QueryAddressPositionsRequest"> & {
@@ -313,6 +338,8 @@ export const QueryAddressPositionsRequestSchema: GenMessage<QueryAddressPosition
   messageDesc(file_sunrise_liquiditypool_query, 14);
 
 /**
+ * QueryAddressPositionsResponse
+ *
  * @generated from message sunrise.liquiditypool.QueryAddressPositionsResponse
  */
 export type QueryAddressPositionsResponse = Message<"sunrise.liquiditypool.QueryAddressPositionsResponse"> & {
@@ -330,6 +357,8 @@ export const QueryAddressPositionsResponseSchema: GenMessage<QueryAddressPositio
   messageDesc(file_sunrise_liquiditypool_query, 15);
 
 /**
+ * QueryPositionFeesRequest
+ *
  * @generated from message sunrise.liquiditypool.QueryPositionFeesRequest
  */
 export type QueryPositionFeesRequest = Message<"sunrise.liquiditypool.QueryPositionFeesRequest"> & {
@@ -347,6 +376,8 @@ export const QueryPositionFeesRequestSchema: GenMessage<QueryPositionFeesRequest
   messageDesc(file_sunrise_liquiditypool_query, 16);
 
 /**
+ * QueryPositionFeesResponse
+ *
  * @generated from message sunrise.liquiditypool.QueryPositionFeesResponse
  */
 export type QueryPositionFeesResponse = Message<"sunrise.liquiditypool.QueryPositionFeesResponse"> & {
@@ -364,6 +395,8 @@ export const QueryPositionFeesResponseSchema: GenMessage<QueryPositionFeesRespon
   messageDesc(file_sunrise_liquiditypool_query, 17);
 
 /**
+ * QueryCalculationCreatePositionRequest
+ *
  * @generated from message sunrise.liquiditypool.QueryCalculationCreatePositionRequest
  */
 export type QueryCalculationCreatePositionRequest = Message<"sunrise.liquiditypool.QueryCalculationCreatePositionRequest"> & {
@@ -401,6 +434,8 @@ export const QueryCalculationCreatePositionRequestSchema: GenMessage<QueryCalcul
   messageDesc(file_sunrise_liquiditypool_query, 18);
 
 /**
+ * QueryCalculationCreatePositionResponse
+ *
  * @generated from message sunrise.liquiditypool.QueryCalculationCreatePositionResponse
  */
 export type QueryCalculationCreatePositionResponse = Message<"sunrise.liquiditypool.QueryCalculationCreatePositionResponse"> & {
@@ -418,6 +453,8 @@ export const QueryCalculationCreatePositionResponseSchema: GenMessage<QueryCalcu
   messageDesc(file_sunrise_liquiditypool_query, 19);
 
 /**
+ * QueryCalculationIncreaseLiquidityRequest
+ *
  * @generated from message sunrise.liquiditypool.QueryCalculationIncreaseLiquidityRequest
  */
 export type QueryCalculationIncreaseLiquidityRequest = Message<"sunrise.liquiditypool.QueryCalculationIncreaseLiquidityRequest"> & {
@@ -445,6 +482,8 @@ export const QueryCalculationIncreaseLiquidityRequestSchema: GenMessage<QueryCal
   messageDesc(file_sunrise_liquiditypool_query, 20);
 
 /**
+ * QueryCalculationIncreaseLiquidityResponse
+ *
  * @generated from message sunrise.liquiditypool.QueryCalculationIncreaseLiquidityResponse
  */
 export type QueryCalculationIncreaseLiquidityResponse = Message<"sunrise.liquiditypool.QueryCalculationIncreaseLiquidityResponse"> & {
@@ -478,7 +517,7 @@ export const Query: GenService<{
     output: typeof QueryParamsResponseSchema;
   },
   /**
-   * Queries a list of Pool items.
+   * Pool
    *
    * @generated from rpc sunrise.liquiditypool.Query.Pool
    */
@@ -488,6 +527,8 @@ export const Query: GenService<{
     output: typeof QueryPoolResponseSchema;
   },
   /**
+   * Pools
+   *
    * @generated from rpc sunrise.liquiditypool.Query.Pools
    */
   pools: {
@@ -496,7 +537,7 @@ export const Query: GenService<{
     output: typeof QueryPoolsResponseSchema;
   },
   /**
-   * Queries a list of Position items.
+   * Position
    *
    * @generated from rpc sunrise.liquiditypool.Query.Position
    */
@@ -506,6 +547,8 @@ export const Query: GenService<{
     output: typeof QueryPositionResponseSchema;
   },
   /**
+   * Positions
+   *
    * @generated from rpc sunrise.liquiditypool.Query.Positions
    */
   positions: {
@@ -514,6 +557,8 @@ export const Query: GenService<{
     output: typeof QueryPositionsResponseSchema;
   },
   /**
+   * PoolPositions
+   *
    * @generated from rpc sunrise.liquiditypool.Query.PoolPositions
    */
   poolPositions: {
@@ -522,6 +567,8 @@ export const Query: GenService<{
     output: typeof QueryPoolPositionsResponseSchema;
   },
   /**
+   * AddressPositions
+   *
    * @generated from rpc sunrise.liquiditypool.Query.AddressPositions
    */
   addressPositions: {

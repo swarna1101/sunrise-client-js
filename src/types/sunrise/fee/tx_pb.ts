@@ -4,7 +4,6 @@
 
 import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv1";
 import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv1";
-import { file_amino_amino } from "../../amino/amino_pb";
 import { file_cosmos_msg_v1_msg } from "../../cosmos/msg/v1/msg_pb";
 import { file_cosmos_proto_cosmos } from "../../cosmos_proto/cosmos_pb";
 import { file_gogoproto_gogo } from "../../gogoproto/gogo_pb";
@@ -16,7 +15,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file sunrise/fee/tx.proto.
  */
 export const file_sunrise_fee_tx: GenFile = /*@__PURE__*/
-  fileDesc("ChRzdW5yaXNlL2ZlZS90eC5wcm90bxILc3VucmlzZS5mZWUioAEKD01zZ1VwZGF0ZVBhcmFtcxIrCglhdXRob3JpdHkYASABKAlCGNK0LRRjb3Ntb3MuQWRkcmVzc1N0cmluZxIuCgZwYXJhbXMYAiABKAsyEy5zdW5yaXNlLmZlZS5QYXJhbXNCCcjeHwCo57AqATowguewKglhdXRob3JpdHmK57AqHXN1bnJpc2UveC9mZWUvTXNnVXBkYXRlUGFyYW1zIhkKF01zZ1VwZGF0ZVBhcmFtc1Jlc3BvbnNlMmAKA01zZxJSCgxVcGRhdGVQYXJhbXMSHC5zdW5yaXNlLmZlZS5Nc2dVcGRhdGVQYXJhbXMaJC5zdW5yaXNlLmZlZS5Nc2dVcGRhdGVQYXJhbXNSZXNwb25zZRoFgOewKgFClAEKD2NvbS5zdW5yaXNlLmZlZUIHVHhQcm90b1ABWitnaXRodWIuY29tL3N1bnJpc2VsYXllci9zdW5yaXNlL3gvZmVlL3R5cGVzogIDU0ZYqgILU3VucmlzZS5GZWXKAgtTdW5yaXNlXEZlZeICF1N1bnJpc2VcRmVlXEdQQk1ldGFkYXRh6gIMU3VucmlzZTo6RmVlYgZwcm90bzM", [file_amino_amino, file_cosmos_msg_v1_msg, file_cosmos_proto_cosmos, file_gogoproto_gogo, file_sunrise_fee_params]);
+  fileDesc("ChRzdW5yaXNlL2ZlZS90eC5wcm90bxILc3VucmlzZS5mZWUieQoPTXNnVXBkYXRlUGFyYW1zEisKCWF1dGhvcml0eRgBIAEoCUIY0rQtFGNvc21vcy5BZGRyZXNzU3RyaW5nEikKBnBhcmFtcxgCIAEoCzITLnN1bnJpc2UuZmVlLlBhcmFtc0IEyN4fADoOguewKglhdXRob3JpdHkiGQoXTXNnVXBkYXRlUGFyYW1zUmVzcG9uc2UyYAoDTXNnElIKDFVwZGF0ZVBhcmFtcxIcLnN1bnJpc2UuZmVlLk1zZ1VwZGF0ZVBhcmFtcxokLnN1bnJpc2UuZmVlLk1zZ1VwZGF0ZVBhcmFtc1Jlc3BvbnNlGgWA57AqAUKUAQoPY29tLnN1bnJpc2UuZmVlQgdUeFByb3RvUAFaK2dpdGh1Yi5jb20vc3VucmlzZWxheWVyL3N1bnJpc2UveC9mZWUvdHlwZXOiAgNTRliqAgtTdW5yaXNlLkZlZcoCC1N1bnJpc2VcRmVl4gIXU3VucmlzZVxGZWVcR1BCTWV0YWRhdGHqAgxTdW5yaXNlOjpGZWViBnByb3RvMw", [file_cosmos_msg_v1_msg, file_cosmos_proto_cosmos, file_gogoproto_gogo, file_sunrise_fee_params]);
 
 /**
  * MsgUpdateParams is the Msg/UpdateParams request type.

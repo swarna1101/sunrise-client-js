@@ -4,7 +4,6 @@
 
 import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv1";
 import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv1";
-import { file_amino_amino } from "../../amino/amino_pb";
 import { file_gogoproto_gogo } from "../../gogoproto/gogo_pb";
 import { file_google_api_annotations } from "../../google/api/annotations_pb";
 import type { Params } from "./params_pb";
@@ -15,7 +14,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file sunrise/tokenconverter/query.proto.
  */
 export const file_sunrise_tokenconverter_query: GenFile = /*@__PURE__*/
-  fileDesc("CiJzdW5yaXNlL3Rva2VuY29udmVydGVyL3F1ZXJ5LnByb3RvEhZzdW5yaXNlLnRva2VuY29udmVydGVyIhQKElF1ZXJ5UGFyYW1zUmVxdWVzdCJQChNRdWVyeVBhcmFtc1Jlc3BvbnNlEjkKBnBhcmFtcxgBIAEoCzIeLnN1bnJpc2UudG9rZW5jb252ZXJ0ZXIuUGFyYW1zQgnI3h8AqOewKgEykwEKBVF1ZXJ5EokBCgZQYXJhbXMSKi5zdW5yaXNlLnRva2VuY29udmVydGVyLlF1ZXJ5UGFyYW1zUmVxdWVzdBorLnN1bnJpc2UudG9rZW5jb252ZXJ0ZXIuUXVlcnlQYXJhbXNSZXNwb25zZSImgtPkkwIgEh4vc3VucmlzZS90b2tlbmNvbnZlcnRlci9wYXJhbXNC2QEKGmNvbS5zdW5yaXNlLnRva2VuY29udmVydGVyQgpRdWVyeVByb3RvUAFaNmdpdGh1Yi5jb20vc3VucmlzZWxheWVyL3N1bnJpc2UveC90b2tlbmNvbnZlcnRlci90eXBlc6ICA1NUWKoCFlN1bnJpc2UuVG9rZW5jb252ZXJ0ZXLKAhZTdW5yaXNlXFRva2VuY29udmVydGVy4gIiU3VucmlzZVxUb2tlbmNvbnZlcnRlclxHUEJNZXRhZGF0YeoCF1N1bnJpc2U6OlRva2VuY29udmVydGVyYgZwcm90bzM", [file_amino_amino, file_gogoproto_gogo, file_google_api_annotations, file_sunrise_tokenconverter_params]);
+  fileDesc("CiJzdW5yaXNlL3Rva2VuY29udmVydGVyL3F1ZXJ5LnByb3RvEhZzdW5yaXNlLnRva2VuY29udmVydGVyIhQKElF1ZXJ5UGFyYW1zUmVxdWVzdCJLChNRdWVyeVBhcmFtc1Jlc3BvbnNlEjQKBnBhcmFtcxgBIAEoCzIeLnN1bnJpc2UudG9rZW5jb252ZXJ0ZXIuUGFyYW1zQgTI3h8AMpMBCgVRdWVyeRKJAQoGUGFyYW1zEiouc3VucmlzZS50b2tlbmNvbnZlcnRlci5RdWVyeVBhcmFtc1JlcXVlc3QaKy5zdW5yaXNlLnRva2VuY29udmVydGVyLlF1ZXJ5UGFyYW1zUmVzcG9uc2UiJoLT5JMCIBIeL3N1bnJpc2UvdG9rZW5jb252ZXJ0ZXIvcGFyYW1zQtkBChpjb20uc3VucmlzZS50b2tlbmNvbnZlcnRlckIKUXVlcnlQcm90b1ABWjZnaXRodWIuY29tL3N1bnJpc2VsYXllci9zdW5yaXNlL3gvdG9rZW5jb252ZXJ0ZXIvdHlwZXOiAgNTVFiqAhZTdW5yaXNlLlRva2VuY29udmVydGVyygIWU3VucmlzZVxUb2tlbmNvbnZlcnRlcuICIlN1bnJpc2VcVG9rZW5jb252ZXJ0ZXJcR1BCTWV0YWRhdGHqAhdTdW5yaXNlOjpUb2tlbmNvbnZlcnRlcmIGcHJvdG8z", [file_gogoproto_gogo, file_google_api_annotations, file_sunrise_tokenconverter_params]);
 
 /**
  * QueryParamsRequest is request type for the Query/Params RPC method.

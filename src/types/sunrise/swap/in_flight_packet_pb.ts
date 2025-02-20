@@ -4,7 +4,6 @@
 
 import type { GenFile, GenMessage } from "@bufbuild/protobuf/codegenv1";
 import { fileDesc, messageDesc } from "@bufbuild/protobuf/codegenv1";
-import { file_amino_amino } from "../../amino/amino_pb";
 import { file_cosmos_proto_cosmos } from "../../cosmos_proto/cosmos_pb";
 import { file_gogoproto_gogo } from "../../gogoproto/gogo_pb";
 import type { RouteResult } from "./route_pb";
@@ -15,9 +14,11 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file sunrise/swap/in_flight_packet.proto.
  */
 export const file_sunrise_swap_in_flight_packet: GenFile = /*@__PURE__*/
-  fileDesc("CiNzdW5yaXNlL3N3YXAvaW5fZmxpZ2h0X3BhY2tldC5wcm90bxIMc3VucmlzZS5zd2FwIkQKC1BhY2tldEluZGV4Eg8KB3BvcnRfaWQYASABKAkSEgoKY2hhbm5lbF9pZBgCIAEoCRIQCghzZXF1ZW5jZRgDIAEoBCKCBAoWSW5jb21pbmdJbkZsaWdodFBhY2tldBIzCgVpbmRleBgBIAEoCzIZLnN1bnJpc2Uuc3dhcC5QYWNrZXRJbmRleEIJyN4fAKjnsCoBEgwKBGRhdGEYAiABKAwSEwoLc3JjX3BvcnRfaWQYAyABKAkSFgoOc3JjX2NoYW5uZWxfaWQYBCABKAkSFgoOdGltZW91dF9oZWlnaHQYBSABKAkSGQoRdGltZW91dF90aW1lc3RhbXAYBiABKAQSCwoDYWNrGAcgASgMEjQKBnJlc3VsdBgIIAEoCzIZLnN1bnJpc2Uuc3dhcC5Sb3V0ZVJlc3VsdEIJyN4fAKjnsCoBEkcKDWludGVyZmFjZV9mZWUYCSABKAlCMMjeHwDa3h8VY29zbW9zc2RrLmlvL21hdGguSW500rQtCmNvc21vcy5JbnSo57AqARI6ChVvdXRnb2luZ19pbmRleF9jaGFuZ2UYCiABKAsyGS5zdW5yaXNlLnN3YXAuUGFja2V0SW5kZXhIABIUCgphY2tfY2hhbmdlGAsgASgMSAASOwoWb3V0Z29pbmdfaW5kZXhfZm9yd2FyZBgMIAEoCzIZLnN1bnJpc2Uuc3dhcC5QYWNrZXRJbmRleEgBEhUKC2Fja19mb3J3YXJkGA0gASgMSAFCCAoGY2hhbmdlQgkKB2ZvcndhcmQiqQEKFk91dGdvaW5nSW5GbGlnaHRQYWNrZXQSMwoFaW5kZXgYASABKAsyGS5zdW5yaXNlLnN3YXAuUGFja2V0SW5kZXhCCcjeHwCo57AqARI/ChFhY2tfd2FpdGluZ19pbmRleBgCIAEoCzIZLnN1bnJpc2Uuc3dhcC5QYWNrZXRJbmRleEIJyN4fAKjnsCoBEhkKEXJldHJpZXNfcmVtYWluaW5nGAMgASgFQqYBChBjb20uc3VucmlzZS5zd2FwQhNJbkZsaWdodFBhY2tldFByb3RvUAFaLGdpdGh1Yi5jb20vc3VucmlzZWxheWVyL3N1bnJpc2UveC9zd2FwL3R5cGVzogIDU1NYqgIMU3VucmlzZS5Td2FwygIMU3VucmlzZVxTd2Fw4gIYU3VucmlzZVxTd2FwXEdQQk1ldGFkYXRh6gINU3VucmlzZTo6U3dhcGIGcHJvdG8z", [file_amino_amino, file_cosmos_proto_cosmos, file_gogoproto_gogo, file_sunrise_swap_route]);
+  fileDesc("CiNzdW5yaXNlL3N3YXAvaW5fZmxpZ2h0X3BhY2tldC5wcm90bxIMc3VucmlzZS5zd2FwIkQKC1BhY2tldEluZGV4Eg8KB3BvcnRfaWQYASABKAkSEgoKY2hhbm5lbF9pZBgCIAEoCRIQCghzZXF1ZW5jZRgDIAEoBCLzAwoWSW5jb21pbmdJbkZsaWdodFBhY2tldBIuCgVpbmRleBgBIAEoCzIZLnN1bnJpc2Uuc3dhcC5QYWNrZXRJbmRleEIEyN4fABIMCgRkYXRhGAIgASgMEhMKC3NyY19wb3J0X2lkGAMgASgJEhYKDnNyY19jaGFubmVsX2lkGAQgASgJEhYKDnRpbWVvdXRfaGVpZ2h0GAUgASgJEhkKEXRpbWVvdXRfdGltZXN0YW1wGAYgASgEEgsKA2FjaxgHIAEoDBIvCgZyZXN1bHQYCCABKAsyGS5zdW5yaXNlLnN3YXAuUm91dGVSZXN1bHRCBMjeHwASQgoNaW50ZXJmYWNlX2ZlZRgJIAEoCUIryN4fANreHxVjb3Ntb3NzZGsuaW8vbWF0aC5JbnTStC0KY29zbW9zLkludBI6ChVvdXRnb2luZ19pbmRleF9jaGFuZ2UYCiABKAsyGS5zdW5yaXNlLnN3YXAuUGFja2V0SW5kZXhIABIUCgphY2tfY2hhbmdlGAsgASgMSAASOwoWb3V0Z29pbmdfaW5kZXhfZm9yd2FyZBgMIAEoCzIZLnN1bnJpc2Uuc3dhcC5QYWNrZXRJbmRleEgBEhUKC2Fja19mb3J3YXJkGA0gASgMSAFCCAoGY2hhbmdlQgkKB2ZvcndhcmQinwEKFk91dGdvaW5nSW5GbGlnaHRQYWNrZXQSLgoFaW5kZXgYASABKAsyGS5zdW5yaXNlLnN3YXAuUGFja2V0SW5kZXhCBMjeHwASOgoRYWNrX3dhaXRpbmdfaW5kZXgYAiABKAsyGS5zdW5yaXNlLnN3YXAuUGFja2V0SW5kZXhCBMjeHwASGQoRcmV0cmllc19yZW1haW5pbmcYAyABKAVCpgEKEGNvbS5zdW5yaXNlLnN3YXBCE0luRmxpZ2h0UGFja2V0UHJvdG9QAVosZ2l0aHViLmNvbS9zdW5yaXNlbGF5ZXIvc3VucmlzZS94L3N3YXAvdHlwZXOiAgNTU1iqAgxTdW5yaXNlLlN3YXDKAgxTdW5yaXNlXFN3YXDiAhhTdW5yaXNlXFN3YXBcR1BCTWV0YWRhdGHqAg1TdW5yaXNlOjpTd2FwYgZwcm90bzM", [file_cosmos_proto_cosmos, file_gogoproto_gogo, file_sunrise_swap_route]);
 
 /**
+ * PacketIndex
+ *
  * @generated from message sunrise.swap.PacketIndex
  */
 export type PacketIndex = Message<"sunrise.swap.PacketIndex"> & {
@@ -45,6 +46,8 @@ export const PacketIndexSchema: GenMessage<PacketIndex> = /*@__PURE__*/
   messageDesc(file_sunrise_swap_in_flight_packet, 0);
 
 /**
+ * IncomingInFlightPacket
+ *
  * @generated from message sunrise.swap.IncomingInFlightPacket
  */
 export type IncomingInFlightPacket = Message<"sunrise.swap.IncomingInFlightPacket"> & {
@@ -94,6 +97,8 @@ export type IncomingInFlightPacket = Message<"sunrise.swap.IncomingInFlightPacke
   interfaceFee: string;
 
   /**
+   * change
+   *
    * @generated from oneof sunrise.swap.IncomingInFlightPacket.change
    */
   change: {
@@ -111,6 +116,8 @@ export type IncomingInFlightPacket = Message<"sunrise.swap.IncomingInFlightPacke
   } | { case: undefined; value?: undefined };
 
   /**
+   * forward
+   *
    * @generated from oneof sunrise.swap.IncomingInFlightPacket.forward
    */
   forward: {
@@ -136,6 +143,8 @@ export const IncomingInFlightPacketSchema: GenMessage<IncomingInFlightPacket> = 
   messageDesc(file_sunrise_swap_in_flight_packet, 1);
 
 /**
+ * OutgoingInFlightPacket
+ *
  * @generated from message sunrise.swap.OutgoingInFlightPacket
  */
 export type OutgoingInFlightPacket = Message<"sunrise.swap.OutgoingInFlightPacket"> & {

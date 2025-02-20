@@ -4,25 +4,23 @@
 
 import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv1";
 import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv1";
-import { file_amino_amino } from "../../amino/amino_pb";
-import { file_gogoproto_gogo } from "../../gogoproto/gogo_pb";
-import { file_google_api_annotations } from "../../google/api/annotations_pb";
-import { file_cosmos_base_v1beta1_coin } from "../../cosmos/base/v1beta1/coin_pb";
 import type { PageRequest, PageResponse } from "../../cosmos/base/query/v1beta1/pagination_pb";
 import { file_cosmos_base_query_v1beta1_pagination } from "../../cosmos/base/query/v1beta1/pagination_pb";
-import type { Params } from "./params_pb";
-import { file_sunrise_liquidityincentive_params } from "./params_pb";
+import { file_gogoproto_gogo } from "../../gogoproto/gogo_pb";
+import { file_google_api_annotations } from "../../google/api/annotations_pb";
 import type { Epoch } from "./epoch_pb";
 import { file_sunrise_liquidityincentive_epoch } from "./epoch_pb";
 import type { Gauge, Vote } from "./gauge_pb";
 import { file_sunrise_liquidityincentive_gauge } from "./gauge_pb";
+import type { Params } from "./params_pb";
+import { file_sunrise_liquidityincentive_params } from "./params_pb";
 import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file sunrise/liquidityincentive/query.proto.
  */
 export const file_sunrise_liquidityincentive_query: GenFile = /*@__PURE__*/
-  fileDesc("CiZzdW5yaXNlL2xpcXVpZGl0eWluY2VudGl2ZS9xdWVyeS5wcm90bxIac3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUiFAoSUXVlcnlQYXJhbXNSZXF1ZXN0IlQKE1F1ZXJ5UGFyYW1zUmVzcG9uc2USPQoGcGFyYW1zGAEgASgLMiIuc3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUuUGFyYW1zQgnI3h8AqOewKgEiHwoRUXVlcnlFcG9jaFJlcXVlc3QSCgoCaWQYASABKAQiTAoSUXVlcnlFcG9jaFJlc3BvbnNlEjYKBWVwb2NoGAEgASgLMiEuc3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUuRXBvY2hCBMjeHwAiUAoSUXVlcnlFcG9jaHNSZXF1ZXN0EjoKCnBhZ2luYXRpb24YASABKAsyJi5jb3Ntb3MuYmFzZS5xdWVyeS52MWJldGExLlBhZ2VSZXF1ZXN0IosBChNRdWVyeUVwb2Noc1Jlc3BvbnNlEjcKBmVwb2NocxgBIAMoCzIhLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLkVwb2NoQgTI3h8AEjsKCnBhZ2luYXRpb24YAiABKAsyJy5jb3Ntb3MuYmFzZS5xdWVyeS52MWJldGExLlBhZ2VSZXNwb25zZSI/ChFRdWVyeUdhdWdlUmVxdWVzdBIZChFwcmV2aW91c19lcG9jaF9pZBgBIAEoBBIPCgdwb29sX2lkGAIgASgEIkwKElF1ZXJ5R2F1Z2VSZXNwb25zZRI2CgVnYXVnZRgBIAEoCzIhLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLkdhdWdlQgTI3h8AImsKElF1ZXJ5R2F1Z2VzUmVxdWVzdBIZChFwcmV2aW91c19lcG9jaF9pZBgBIAEoBBI6CgpwYWdpbmF0aW9uGAIgASgLMiYuY29zbW9zLmJhc2UucXVlcnkudjFiZXRhMS5QYWdlUmVxdWVzdCKKAQoTUXVlcnlHYXVnZXNSZXNwb25zZRI2CgVnYXVnZRgBIAMoCzIhLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLkdhdWdlQgTI3h8AEjsKCnBhZ2luYXRpb24YAiABKAsyJy5jb3Ntb3MuYmFzZS5xdWVyeS52MWJldGExLlBhZ2VSZXNwb25zZSIjChBRdWVyeVZvdGVSZXF1ZXN0Eg8KB2FkZHJlc3MYASABKAkiSQoRUXVlcnlWb3RlUmVzcG9uc2USNAoEdm90ZRgBIAEoCzIgLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLlZvdGVCBMjeHwAiTwoRUXVlcnlWb3Rlc1JlcXVlc3QSOgoKcGFnaW5hdGlvbhgBIAEoCzImLmNvc21vcy5iYXNlLnF1ZXJ5LnYxYmV0YTEuUGFnZVJlcXVlc3QiiAEKElF1ZXJ5Vm90ZXNSZXNwb25zZRI1CgV2b3RlcxgBIAMoCzIgLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLlZvdGVCBMjeHwASOwoKcGFnaW5hdGlvbhgCIAEoCzInLmNvc21vcy5iYXNlLnF1ZXJ5LnYxYmV0YTEuUGFnZVJlc3BvbnNlMu0ICgVRdWVyeRKVAQoGUGFyYW1zEi4uc3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUuUXVlcnlQYXJhbXNSZXF1ZXN0Gi8uc3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUuUXVlcnlQYXJhbXNSZXNwb25zZSIqgtPkkwIkEiIvc3VucmlzZS9saXF1aWRpdHlpbmNlbnRpdmUvcGFyYW1zEpcBCgVFcG9jaBItLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLlF1ZXJ5RXBvY2hSZXF1ZXN0Gi4uc3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUuUXVlcnlFcG9jaFJlc3BvbnNlIi+C0+STAikSJy9zdW5yaXNlL2xpcXVpZGl0eWluY2VudGl2ZS9lcG9jaHMve2lkfRKVAQoGRXBvY2hzEi4uc3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUuUXVlcnlFcG9jaHNSZXF1ZXN0Gi8uc3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUuUXVlcnlFcG9jaHNSZXNwb25zZSIqgtPkkwIkEiIvc3VucmlzZS9saXF1aWRpdHlpbmNlbnRpdmUvZXBvY2hzErcBCgVHYXVnZRItLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLlF1ZXJ5R2F1Z2VSZXF1ZXN0Gi4uc3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUuUXVlcnlHYXVnZVJlc3BvbnNlIk+C0+STAkkSRy9zdW5yaXNlL2xpcXVpZGl0eWluY2VudGl2ZS9lcG9jaHMve3ByZXZpb3VzX2Vwb2NoX2lkfS9nYXVnZXMve3Bvb2xfaWR9ErABCgZHYXVnZXMSLi5zdW5yaXNlLmxpcXVpZGl0eWluY2VudGl2ZS5RdWVyeUdhdWdlc1JlcXVlc3QaLy5zdW5yaXNlLmxpcXVpZGl0eWluY2VudGl2ZS5RdWVyeUdhdWdlc1Jlc3BvbnNlIkWC0+STAj8SPS9zdW5yaXNlL2xpcXVpZGl0eWluY2VudGl2ZS9lcG9jaHMve3ByZXZpb3VzX2Vwb2NoX2lkfS9nYXVnZXMSmAEKBFZvdGUSLC5zdW5yaXNlLmxpcXVpZGl0eWluY2VudGl2ZS5RdWVyeVZvdGVSZXF1ZXN0Gi0uc3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUuUXVlcnlWb3RlUmVzcG9uc2UiM4LT5JMCLRIrL3N1bnJpc2UvbGlxdWlkaXR5aW5jZW50aXZlL3ZvdGVzL3thZGRyZXNzfRKRAQoFVm90ZXMSLS5zdW5yaXNlLmxpcXVpZGl0eWluY2VudGl2ZS5RdWVyeVZvdGVzUmVxdWVzdBouLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLlF1ZXJ5Vm90ZXNSZXNwb25zZSIpgtPkkwIjEiEvc3VucmlzZS9saXF1aWRpdHlpbmNlbnRpdmUvdm90ZXNC8QEKHmNvbS5zdW5yaXNlLmxpcXVpZGl0eWluY2VudGl2ZUIKUXVlcnlQcm90b1ABWjpnaXRodWIuY29tL3N1bnJpc2VsYXllci9zdW5yaXNlL3gvbGlxdWlkaXR5aW5jZW50aXZlL3R5cGVzogIDU0xYqgIaU3VucmlzZS5MaXF1aWRpdHlpbmNlbnRpdmXKAhpTdW5yaXNlXExpcXVpZGl0eWluY2VudGl2ZeICJlN1bnJpc2VcTGlxdWlkaXR5aW5jZW50aXZlXEdQQk1ldGFkYXRh6gIbU3VucmlzZTo6TGlxdWlkaXR5aW5jZW50aXZlYgZwcm90bzM", [file_amino_amino, file_gogoproto_gogo, file_google_api_annotations, file_cosmos_base_v1beta1_coin, file_cosmos_base_query_v1beta1_pagination, file_sunrise_liquidityincentive_params, file_sunrise_liquidityincentive_epoch, file_sunrise_liquidityincentive_gauge]);
+  fileDesc("CiZzdW5yaXNlL2xpcXVpZGl0eWluY2VudGl2ZS9xdWVyeS5wcm90bxIac3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUiFAoSUXVlcnlQYXJhbXNSZXF1ZXN0Ik8KE1F1ZXJ5UGFyYW1zUmVzcG9uc2USOAoGcGFyYW1zGAEgASgLMiIuc3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUuUGFyYW1zQgTI3h8AIh8KEVF1ZXJ5RXBvY2hSZXF1ZXN0EgoKAmlkGAEgASgEIkwKElF1ZXJ5RXBvY2hSZXNwb25zZRI2CgVlcG9jaBgBIAEoCzIhLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLkVwb2NoQgTI3h8AIlAKElF1ZXJ5RXBvY2hzUmVxdWVzdBI6CgpwYWdpbmF0aW9uGAEgASgLMiYuY29zbW9zLmJhc2UucXVlcnkudjFiZXRhMS5QYWdlUmVxdWVzdCKLAQoTUXVlcnlFcG9jaHNSZXNwb25zZRI3CgZlcG9jaHMYASADKAsyIS5zdW5yaXNlLmxpcXVpZGl0eWluY2VudGl2ZS5FcG9jaEIEyN4fABI7CgpwYWdpbmF0aW9uGAIgASgLMicuY29zbW9zLmJhc2UucXVlcnkudjFiZXRhMS5QYWdlUmVzcG9uc2UiPwoRUXVlcnlHYXVnZVJlcXVlc3QSGQoRcHJldmlvdXNfZXBvY2hfaWQYASABKAQSDwoHcG9vbF9pZBgCIAEoBCJMChJRdWVyeUdhdWdlUmVzcG9uc2USNgoFZ2F1Z2UYASABKAsyIS5zdW5yaXNlLmxpcXVpZGl0eWluY2VudGl2ZS5HYXVnZUIEyN4fACJrChJRdWVyeUdhdWdlc1JlcXVlc3QSGQoRcHJldmlvdXNfZXBvY2hfaWQYASABKAQSOgoKcGFnaW5hdGlvbhgCIAEoCzImLmNvc21vcy5iYXNlLnF1ZXJ5LnYxYmV0YTEuUGFnZVJlcXVlc3QiigEKE1F1ZXJ5R2F1Z2VzUmVzcG9uc2USNgoFZ2F1Z2UYASADKAsyIS5zdW5yaXNlLmxpcXVpZGl0eWluY2VudGl2ZS5HYXVnZUIEyN4fABI7CgpwYWdpbmF0aW9uGAIgASgLMicuY29zbW9zLmJhc2UucXVlcnkudjFiZXRhMS5QYWdlUmVzcG9uc2UiIwoQUXVlcnlWb3RlUmVxdWVzdBIPCgdhZGRyZXNzGAEgASgJIkkKEVF1ZXJ5Vm90ZVJlc3BvbnNlEjQKBHZvdGUYASABKAsyIC5zdW5yaXNlLmxpcXVpZGl0eWluY2VudGl2ZS5Wb3RlQgTI3h8AIk8KEVF1ZXJ5Vm90ZXNSZXF1ZXN0EjoKCnBhZ2luYXRpb24YASABKAsyJi5jb3Ntb3MuYmFzZS5xdWVyeS52MWJldGExLlBhZ2VSZXF1ZXN0IogBChJRdWVyeVZvdGVzUmVzcG9uc2USNQoFdm90ZXMYASADKAsyIC5zdW5yaXNlLmxpcXVpZGl0eWluY2VudGl2ZS5Wb3RlQgTI3h8AEjsKCnBhZ2luYXRpb24YAiABKAsyJy5jb3Ntb3MuYmFzZS5xdWVyeS52MWJldGExLlBhZ2VSZXNwb25zZTLtCAoFUXVlcnkSlQEKBlBhcmFtcxIuLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLlF1ZXJ5UGFyYW1zUmVxdWVzdBovLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLlF1ZXJ5UGFyYW1zUmVzcG9uc2UiKoLT5JMCJBIiL3N1bnJpc2UvbGlxdWlkaXR5aW5jZW50aXZlL3BhcmFtcxKXAQoFRXBvY2gSLS5zdW5yaXNlLmxpcXVpZGl0eWluY2VudGl2ZS5RdWVyeUVwb2NoUmVxdWVzdBouLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLlF1ZXJ5RXBvY2hSZXNwb25zZSIvgtPkkwIpEicvc3VucmlzZS9saXF1aWRpdHlpbmNlbnRpdmUvZXBvY2hzL3tpZH0SlQEKBkVwb2NocxIuLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLlF1ZXJ5RXBvY2hzUmVxdWVzdBovLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLlF1ZXJ5RXBvY2hzUmVzcG9uc2UiKoLT5JMCJBIiL3N1bnJpc2UvbGlxdWlkaXR5aW5jZW50aXZlL2Vwb2NocxK3AQoFR2F1Z2USLS5zdW5yaXNlLmxpcXVpZGl0eWluY2VudGl2ZS5RdWVyeUdhdWdlUmVxdWVzdBouLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLlF1ZXJ5R2F1Z2VSZXNwb25zZSJPgtPkkwJJEkcvc3VucmlzZS9saXF1aWRpdHlpbmNlbnRpdmUvZXBvY2hzL3twcmV2aW91c19lcG9jaF9pZH0vZ2F1Z2VzL3twb29sX2lkfRKwAQoGR2F1Z2VzEi4uc3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUuUXVlcnlHYXVnZXNSZXF1ZXN0Gi8uc3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUuUXVlcnlHYXVnZXNSZXNwb25zZSJFgtPkkwI/Ej0vc3VucmlzZS9saXF1aWRpdHlpbmNlbnRpdmUvZXBvY2hzL3twcmV2aW91c19lcG9jaF9pZH0vZ2F1Z2VzEpgBCgRWb3RlEiwuc3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUuUXVlcnlWb3RlUmVxdWVzdBotLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLlF1ZXJ5Vm90ZVJlc3BvbnNlIjOC0+STAi0SKy9zdW5yaXNlL2xpcXVpZGl0eWluY2VudGl2ZS92b3Rlcy97YWRkcmVzc30SkQEKBVZvdGVzEi0uc3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUuUXVlcnlWb3Rlc1JlcXVlc3QaLi5zdW5yaXNlLmxpcXVpZGl0eWluY2VudGl2ZS5RdWVyeVZvdGVzUmVzcG9uc2UiKYLT5JMCIxIhL3N1bnJpc2UvbGlxdWlkaXR5aW5jZW50aXZlL3ZvdGVzQvEBCh5jb20uc3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmVCClF1ZXJ5UHJvdG9QAVo6Z2l0aHViLmNvbS9zdW5yaXNlbGF5ZXIvc3VucmlzZS94L2xpcXVpZGl0eWluY2VudGl2ZS90eXBlc6ICA1NMWKoCGlN1bnJpc2UuTGlxdWlkaXR5aW5jZW50aXZlygIaU3VucmlzZVxMaXF1aWRpdHlpbmNlbnRpdmXiAiZTdW5yaXNlXExpcXVpZGl0eWluY2VudGl2ZVxHUEJNZXRhZGF0YeoCG1N1bnJpc2U6OkxpcXVpZGl0eWluY2VudGl2ZWIGcHJvdG8z", [file_cosmos_base_query_v1beta1_pagination, file_gogoproto_gogo, file_google_api_annotations, file_sunrise_liquidityincentive_epoch, file_sunrise_liquidityincentive_gauge, file_sunrise_liquidityincentive_params]);
 
 /**
  * QueryParamsRequest is request type for the Query/Params RPC method.
@@ -61,6 +59,8 @@ export const QueryParamsResponseSchema: GenMessage<QueryParamsResponse> = /*@__P
   messageDesc(file_sunrise_liquidityincentive_query, 1);
 
 /**
+ * QueryEpochRequest
+ *
  * @generated from message sunrise.liquidityincentive.QueryEpochRequest
  */
 export type QueryEpochRequest = Message<"sunrise.liquidityincentive.QueryEpochRequest"> & {
@@ -78,6 +78,8 @@ export const QueryEpochRequestSchema: GenMessage<QueryEpochRequest> = /*@__PURE_
   messageDesc(file_sunrise_liquidityincentive_query, 2);
 
 /**
+ * QueryEpochResponse
+ *
  * @generated from message sunrise.liquidityincentive.QueryEpochResponse
  */
 export type QueryEpochResponse = Message<"sunrise.liquidityincentive.QueryEpochResponse"> & {
@@ -95,6 +97,8 @@ export const QueryEpochResponseSchema: GenMessage<QueryEpochResponse> = /*@__PUR
   messageDesc(file_sunrise_liquidityincentive_query, 3);
 
 /**
+ * QueryEpochsRequest
+ *
  * @generated from message sunrise.liquidityincentive.QueryEpochsRequest
  */
 export type QueryEpochsRequest = Message<"sunrise.liquidityincentive.QueryEpochsRequest"> & {
@@ -112,6 +116,8 @@ export const QueryEpochsRequestSchema: GenMessage<QueryEpochsRequest> = /*@__PUR
   messageDesc(file_sunrise_liquidityincentive_query, 4);
 
 /**
+ * QueryEpochsResponse
+ *
  * @generated from message sunrise.liquidityincentive.QueryEpochsResponse
  */
 export type QueryEpochsResponse = Message<"sunrise.liquidityincentive.QueryEpochsResponse"> & {
@@ -134,6 +140,8 @@ export const QueryEpochsResponseSchema: GenMessage<QueryEpochsResponse> = /*@__P
   messageDesc(file_sunrise_liquidityincentive_query, 5);
 
 /**
+ * QueryGaugeRequest
+ *
  * @generated from message sunrise.liquidityincentive.QueryGaugeRequest
  */
 export type QueryGaugeRequest = Message<"sunrise.liquidityincentive.QueryGaugeRequest"> & {
@@ -156,6 +164,8 @@ export const QueryGaugeRequestSchema: GenMessage<QueryGaugeRequest> = /*@__PURE_
   messageDesc(file_sunrise_liquidityincentive_query, 6);
 
 /**
+ * QueryGaugeResponse
+ *
  * @generated from message sunrise.liquidityincentive.QueryGaugeResponse
  */
 export type QueryGaugeResponse = Message<"sunrise.liquidityincentive.QueryGaugeResponse"> & {
@@ -173,6 +183,8 @@ export const QueryGaugeResponseSchema: GenMessage<QueryGaugeResponse> = /*@__PUR
   messageDesc(file_sunrise_liquidityincentive_query, 7);
 
 /**
+ * QueryGaugesRequest
+ *
  * @generated from message sunrise.liquidityincentive.QueryGaugesRequest
  */
 export type QueryGaugesRequest = Message<"sunrise.liquidityincentive.QueryGaugesRequest"> & {
@@ -195,6 +207,8 @@ export const QueryGaugesRequestSchema: GenMessage<QueryGaugesRequest> = /*@__PUR
   messageDesc(file_sunrise_liquidityincentive_query, 8);
 
 /**
+ * QueryGaugesResponse
+ *
  * @generated from message sunrise.liquidityincentive.QueryGaugesResponse
  */
 export type QueryGaugesResponse = Message<"sunrise.liquidityincentive.QueryGaugesResponse"> & {
@@ -217,6 +231,8 @@ export const QueryGaugesResponseSchema: GenMessage<QueryGaugesResponse> = /*@__P
   messageDesc(file_sunrise_liquidityincentive_query, 9);
 
 /**
+ * QueryVoteRequest
+ *
  * @generated from message sunrise.liquidityincentive.QueryVoteRequest
  */
 export type QueryVoteRequest = Message<"sunrise.liquidityincentive.QueryVoteRequest"> & {
@@ -234,6 +250,8 @@ export const QueryVoteRequestSchema: GenMessage<QueryVoteRequest> = /*@__PURE__*
   messageDesc(file_sunrise_liquidityincentive_query, 10);
 
 /**
+ * QueryVoteResponse
+ *
  * @generated from message sunrise.liquidityincentive.QueryVoteResponse
  */
 export type QueryVoteResponse = Message<"sunrise.liquidityincentive.QueryVoteResponse"> & {
@@ -251,6 +269,8 @@ export const QueryVoteResponseSchema: GenMessage<QueryVoteResponse> = /*@__PURE_
   messageDesc(file_sunrise_liquidityincentive_query, 11);
 
 /**
+ * QueryVotesRequest
+ *
  * @generated from message sunrise.liquidityincentive.QueryVotesRequest
  */
 export type QueryVotesRequest = Message<"sunrise.liquidityincentive.QueryVotesRequest"> & {
@@ -268,6 +288,8 @@ export const QueryVotesRequestSchema: GenMessage<QueryVotesRequest> = /*@__PURE_
   messageDesc(file_sunrise_liquidityincentive_query, 12);
 
 /**
+ * QueryVotesResponse
+ *
  * @generated from message sunrise.liquidityincentive.QueryVotesResponse
  */
 export type QueryVotesResponse = Message<"sunrise.liquidityincentive.QueryVotesResponse"> & {
@@ -306,7 +328,7 @@ export const Query: GenService<{
     output: typeof QueryParamsResponseSchema;
   },
   /**
-   * Queries a list of Epoch items.
+   * Epoch
    *
    * @generated from rpc sunrise.liquidityincentive.Query.Epoch
    */
@@ -316,6 +338,8 @@ export const Query: GenService<{
     output: typeof QueryEpochResponseSchema;
   },
   /**
+   * Epochs
+   *
    * @generated from rpc sunrise.liquidityincentive.Query.Epochs
    */
   epochs: {
@@ -324,7 +348,7 @@ export const Query: GenService<{
     output: typeof QueryEpochsResponseSchema;
   },
   /**
-   * Queries a list of Gauge items.
+   * Gauge
    *
    * @generated from rpc sunrise.liquidityincentive.Query.Gauge
    */
@@ -334,6 +358,8 @@ export const Query: GenService<{
     output: typeof QueryGaugeResponseSchema;
   },
   /**
+   * Gauges
+   *
    * @generated from rpc sunrise.liquidityincentive.Query.Gauges
    */
   gauges: {
@@ -342,7 +368,7 @@ export const Query: GenService<{
     output: typeof QueryGaugesResponseSchema;
   },
   /**
-   * Queries a list of Vote items.
+   * Vote
    *
    * @generated from rpc sunrise.liquidityincentive.Query.Vote
    */
@@ -352,6 +378,8 @@ export const Query: GenService<{
     output: typeof QueryVoteResponseSchema;
   },
   /**
+   * Votes
+   *
    * @generated from rpc sunrise.liquidityincentive.Query.Votes
    */
   votes: {

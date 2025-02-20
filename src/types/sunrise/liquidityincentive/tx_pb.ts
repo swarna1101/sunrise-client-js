@@ -4,21 +4,20 @@
 
 import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv1";
 import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv1";
-import { file_amino_amino } from "../../amino/amino_pb";
 import { file_cosmos_msg_v1_msg } from "../../cosmos/msg/v1/msg_pb";
 import { file_cosmos_proto_cosmos } from "../../cosmos_proto/cosmos_pb";
 import { file_gogoproto_gogo } from "../../gogoproto/gogo_pb";
-import type { Params } from "./params_pb";
-import { file_sunrise_liquidityincentive_params } from "./params_pb";
 import type { PoolWeight } from "./gauge_pb";
 import { file_sunrise_liquidityincentive_gauge } from "./gauge_pb";
+import type { Params } from "./params_pb";
+import { file_sunrise_liquidityincentive_params } from "./params_pb";
 import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file sunrise/liquidityincentive/tx.proto.
  */
 export const file_sunrise_liquidityincentive_tx: GenFile = /*@__PURE__*/
-  fileDesc("CiNzdW5yaXNlL2xpcXVpZGl0eWluY2VudGl2ZS90eC5wcm90bxIac3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUivgEKD01zZ1VwZGF0ZVBhcmFtcxIrCglhdXRob3JpdHkYASABKAlCGNK0LRRjb3Ntb3MuQWRkcmVzc1N0cmluZxI9CgZwYXJhbXMYAiABKAsyIi5zdW5yaXNlLmxpcXVpZGl0eWluY2VudGl2ZS5QYXJhbXNCCcjeHwCo57AqATo/guewKglhdXRob3JpdHmK57AqLHN1bnJpc2UveC9saXF1aWRpdHlpbmNlbnRpdmUvTXNnVXBkYXRlUGFyYW1zIhkKF01zZ1VwZGF0ZVBhcmFtc1Jlc3BvbnNlImoKDE1zZ1ZvdGVHYXVnZRIOCgZzZW5kZXIYASABKAkSPQoHd2VpZ2h0cxgCIAMoCzImLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLlBvb2xXZWlnaHRCBMjeHwA6C4LnsCoGc2VuZGVyIhYKFE1zZ1ZvdGVHYXVnZVJlc3BvbnNlIjQKFU1zZ0NvbGxlY3RWb3RlUmV3YXJkcxIOCgZzZW5kZXIYASABKAk6C4LnsCoGc2VuZGVyIh8KHU1zZ0NvbGxlY3RWb3RlUmV3YXJkc1Jlc3BvbnNlMuwCCgNNc2cScAoMVXBkYXRlUGFyYW1zEisuc3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUuTXNnVXBkYXRlUGFyYW1zGjMuc3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUuTXNnVXBkYXRlUGFyYW1zUmVzcG9uc2USZwoJVm90ZUdhdWdlEiguc3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUuTXNnVm90ZUdhdWdlGjAuc3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUuTXNnVm90ZUdhdWdlUmVzcG9uc2USggEKEkNvbGxlY3RWb3RlUmV3YXJkcxIxLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLk1zZ0NvbGxlY3RWb3RlUmV3YXJkcxo5LnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLk1zZ0NvbGxlY3RWb3RlUmV3YXJkc1Jlc3BvbnNlGgWA57AqAULuAQoeY29tLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlQgdUeFByb3RvUAFaOmdpdGh1Yi5jb20vc3VucmlzZWxheWVyL3N1bnJpc2UveC9saXF1aWRpdHlpbmNlbnRpdmUvdHlwZXOiAgNTTFiqAhpTdW5yaXNlLkxpcXVpZGl0eWluY2VudGl2ZcoCGlN1bnJpc2VcTGlxdWlkaXR5aW5jZW50aXZl4gImU3VucmlzZVxMaXF1aWRpdHlpbmNlbnRpdmVcR1BCTWV0YWRhdGHqAhtTdW5yaXNlOjpMaXF1aWRpdHlpbmNlbnRpdmViBnByb3RvMw", [file_amino_amino, file_cosmos_msg_v1_msg, file_cosmos_proto_cosmos, file_gogoproto_gogo, file_sunrise_liquidityincentive_params, file_sunrise_liquidityincentive_gauge]);
+  fileDesc("CiNzdW5yaXNlL2xpcXVpZGl0eWluY2VudGl2ZS90eC5wcm90bxIac3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUiiAEKD01zZ1VwZGF0ZVBhcmFtcxIrCglhdXRob3JpdHkYASABKAlCGNK0LRRjb3Ntb3MuQWRkcmVzc1N0cmluZxI4CgZwYXJhbXMYAiABKAsyIi5zdW5yaXNlLmxpcXVpZGl0eWluY2VudGl2ZS5QYXJhbXNCBMjeHwA6DoLnsCoJYXV0aG9yaXR5IhkKF01zZ1VwZGF0ZVBhcmFtc1Jlc3BvbnNlIokBCgxNc2dWb3RlR2F1Z2USKAoGc2VuZGVyGAEgASgJQhjStC0UY29zbW9zLkFkZHJlc3NTdHJpbmcSQgoMcG9vbF93ZWlnaHRzGAIgAygLMiYuc3VucmlzZS5saXF1aWRpdHlpbmNlbnRpdmUuUG9vbFdlaWdodEIEyN4fADoLguewKgZzZW5kZXIiFgoUTXNnVm90ZUdhdWdlUmVzcG9uc2UiTgoVTXNnQ29sbGVjdFZvdGVSZXdhcmRzEigKBnNlbmRlchgBIAEoCUIY0rQtFGNvc21vcy5BZGRyZXNzU3RyaW5nOguC57AqBnNlbmRlciIfCh1Nc2dDb2xsZWN0Vm90ZVJld2FyZHNSZXNwb25zZTLsAgoDTXNnEnAKDFVwZGF0ZVBhcmFtcxIrLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLk1zZ1VwZGF0ZVBhcmFtcxozLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLk1zZ1VwZGF0ZVBhcmFtc1Jlc3BvbnNlEmcKCVZvdGVHYXVnZRIoLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLk1zZ1ZvdGVHYXVnZRowLnN1bnJpc2UubGlxdWlkaXR5aW5jZW50aXZlLk1zZ1ZvdGVHYXVnZVJlc3BvbnNlEoIBChJDb2xsZWN0Vm90ZVJld2FyZHMSMS5zdW5yaXNlLmxpcXVpZGl0eWluY2VudGl2ZS5Nc2dDb2xsZWN0Vm90ZVJld2FyZHMaOS5zdW5yaXNlLmxpcXVpZGl0eWluY2VudGl2ZS5Nc2dDb2xsZWN0Vm90ZVJld2FyZHNSZXNwb25zZRoFgOewKgFC7gEKHmNvbS5zdW5yaXNlLmxpcXVpZGl0eWluY2VudGl2ZUIHVHhQcm90b1ABWjpnaXRodWIuY29tL3N1bnJpc2VsYXllci9zdW5yaXNlL3gvbGlxdWlkaXR5aW5jZW50aXZlL3R5cGVzogIDU0xYqgIaU3VucmlzZS5MaXF1aWRpdHlpbmNlbnRpdmXKAhpTdW5yaXNlXExpcXVpZGl0eWluY2VudGl2ZeICJlN1bnJpc2VcTGlxdWlkaXR5aW5jZW50aXZlXEdQQk1ldGFkYXRh6gIbU3VucmlzZTo6TGlxdWlkaXR5aW5jZW50aXZlYgZwcm90bzM", [file_cosmos_msg_v1_msg, file_cosmos_proto_cosmos, file_gogoproto_gogo, file_sunrise_liquidityincentive_gauge, file_sunrise_liquidityincentive_params]);
 
 /**
  * MsgUpdateParams is the Msg/UpdateParams request type.
@@ -66,6 +65,8 @@ export const MsgUpdateParamsResponseSchema: GenMessage<MsgUpdateParamsResponse> 
   messageDesc(file_sunrise_liquidityincentive_tx, 1);
 
 /**
+ * MsgVoteGauge
+ *
  * @generated from message sunrise.liquidityincentive.MsgVoteGauge
  */
 export type MsgVoteGauge = Message<"sunrise.liquidityincentive.MsgVoteGauge"> & {
@@ -75,9 +76,9 @@ export type MsgVoteGauge = Message<"sunrise.liquidityincentive.MsgVoteGauge"> & 
   sender: string;
 
   /**
-   * @generated from field: repeated sunrise.liquidityincentive.PoolWeight weights = 2;
+   * @generated from field: repeated sunrise.liquidityincentive.PoolWeight pool_weights = 2;
    */
-  weights: PoolWeight[];
+  poolWeights: PoolWeight[];
 };
 
 /**
@@ -88,6 +89,8 @@ export const MsgVoteGaugeSchema: GenMessage<MsgVoteGauge> = /*@__PURE__*/
   messageDesc(file_sunrise_liquidityincentive_tx, 2);
 
 /**
+ * MsgVoteGaugeResponse
+ *
  * @generated from message sunrise.liquidityincentive.MsgVoteGaugeResponse
  */
 export type MsgVoteGaugeResponse = Message<"sunrise.liquidityincentive.MsgVoteGaugeResponse"> & {
@@ -101,6 +104,8 @@ export const MsgVoteGaugeResponseSchema: GenMessage<MsgVoteGaugeResponse> = /*@_
   messageDesc(file_sunrise_liquidityincentive_tx, 3);
 
 /**
+ * MsgCollectVoteRewards
+ *
  * @generated from message sunrise.liquidityincentive.MsgCollectVoteRewards
  */
 export type MsgCollectVoteRewards = Message<"sunrise.liquidityincentive.MsgCollectVoteRewards"> & {
@@ -118,6 +123,8 @@ export const MsgCollectVoteRewardsSchema: GenMessage<MsgCollectVoteRewards> = /*
   messageDesc(file_sunrise_liquidityincentive_tx, 4);
 
 /**
+ * MsgCollectVoteRewardsResponse
+ *
  * @generated from message sunrise.liquidityincentive.MsgCollectVoteRewardsResponse
  */
 export type MsgCollectVoteRewardsResponse = Message<"sunrise.liquidityincentive.MsgCollectVoteRewardsResponse"> & {
@@ -148,6 +155,8 @@ export const Msg: GenService<{
     output: typeof MsgUpdateParamsResponseSchema;
   },
   /**
+   * VoteGauge
+   *
    * @generated from rpc sunrise.liquidityincentive.Msg.VoteGauge
    */
   voteGauge: {
@@ -156,6 +165,8 @@ export const Msg: GenService<{
     output: typeof MsgVoteGaugeResponseSchema;
   },
   /**
+   * CollectVoteRewards
+   *
    * @generated from rpc sunrise.liquidityincentive.Msg.CollectVoteRewards
    */
   collectVoteRewards: {

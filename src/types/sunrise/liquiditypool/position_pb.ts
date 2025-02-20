@@ -4,7 +4,6 @@
 
 import type { GenFile, GenMessage } from "@bufbuild/protobuf/codegenv1";
 import { fileDesc, messageDesc } from "@bufbuild/protobuf/codegenv1";
-import { file_amino_amino } from "../../amino/amino_pb";
 import { file_cosmos_proto_cosmos } from "../../cosmos_proto/cosmos_pb";
 import { file_gogoproto_gogo } from "../../gogoproto/gogo_pb";
 import type { Message } from "@bufbuild/protobuf";
@@ -13,9 +12,11 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file sunrise/liquiditypool/position.proto.
  */
 export const file_sunrise_liquiditypool_position: GenFile = /*@__PURE__*/
-  fileDesc("CiRzdW5yaXNlL2xpcXVpZGl0eXBvb2wvcG9zaXRpb24ucHJvdG8SFXN1bnJpc2UubGlxdWlkaXR5cG9vbCKrAQoIUG9zaXRpb24SCgoCaWQYASABKAQSDwoHYWRkcmVzcxgCIAEoCRIPCgdwb29sX2lkGAMgASgEEhIKCmxvd2VyX3RpY2sYBCABKAMSEgoKdXBwZXJfdGljaxgFIAEoAxJJCglsaXF1aWRpdHkYBiABKAlCNsjeHwDa3h8bY29zbW9zc2RrLmlvL21hdGguTGVnYWN5RGVj0rQtCmNvc21vcy5EZWOo57AqAULWAQoZY29tLnN1bnJpc2UubGlxdWlkaXR5cG9vbEINUG9zaXRpb25Qcm90b1ABWjVnaXRodWIuY29tL3N1bnJpc2VsYXllci9zdW5yaXNlL3gvbGlxdWlkaXR5cG9vbC90eXBlc6ICA1NMWKoCFVN1bnJpc2UuTGlxdWlkaXR5cG9vbMoCFVN1bnJpc2VcTGlxdWlkaXR5cG9vbOICIVN1bnJpc2VcTGlxdWlkaXR5cG9vbFxHUEJNZXRhZGF0YeoCFlN1bnJpc2U6OkxpcXVpZGl0eXBvb2xiBnByb3RvMw", [file_amino_amino, file_cosmos_proto_cosmos, file_gogoproto_gogo]);
+  fileDesc("CiRzdW5yaXNlL2xpcXVpZGl0eXBvb2wvcG9zaXRpb24ucHJvdG8SFXN1bnJpc2UubGlxdWlkaXR5cG9vbCKmAQoIUG9zaXRpb24SCgoCaWQYASABKAQSDwoHYWRkcmVzcxgCIAEoCRIPCgdwb29sX2lkGAMgASgEEhIKCmxvd2VyX3RpY2sYBCABKAMSEgoKdXBwZXJfdGljaxgFIAEoAxJECglsaXF1aWRpdHkYBiABKAlCMcjeHwDa3h8bY29zbW9zc2RrLmlvL21hdGguTGVnYWN5RGVj0rQtCmNvc21vcy5EZWNC1gEKGWNvbS5zdW5yaXNlLmxpcXVpZGl0eXBvb2xCDVBvc2l0aW9uUHJvdG9QAVo1Z2l0aHViLmNvbS9zdW5yaXNlbGF5ZXIvc3VucmlzZS94L2xpcXVpZGl0eXBvb2wvdHlwZXOiAgNTTFiqAhVTdW5yaXNlLkxpcXVpZGl0eXBvb2zKAhVTdW5yaXNlXExpcXVpZGl0eXBvb2ziAiFTdW5yaXNlXExpcXVpZGl0eXBvb2xcR1BCTWV0YWRhdGHqAhZTdW5yaXNlOjpMaXF1aWRpdHlwb29sYgZwcm90bzM", [file_cosmos_proto_cosmos, file_gogoproto_gogo]);
 
 /**
+ * Position
+ *
  * @generated from message sunrise.liquiditypool.Position
  */
 export type Position = Message<"sunrise.liquiditypool.Position"> & {
