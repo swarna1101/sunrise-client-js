@@ -33,3 +33,8 @@ inputs:
       - sunrise/swap/v1/tx.proto
       - sunrise/tokenconverter/v1/query.proto
       - sunrise/tokenconverter/v1/tx.proto
+  - git_repo: https://github.com/cosmos/cosmos-sdk.git
+    branch: v0.52.0-rc.2
+    paths:
+      - x/accounts/proto/cosmos/accounts/v1/query.proto
+      - x/accounts/proto/cosmos/accounts/v1/tx.proto
