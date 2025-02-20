@@ -19,12 +19,16 @@ import {
 import { CometClient, connectComet } from "@cosmjs/tendermint-rpc";
 
 import {
+  AccountsExtension,
   DaExtension,
   FeeExtension,
+  GovV1Extension,
   LiquidityIncentiveExtension,
   LiquidityPoolExtension,
+  setupAccountsExtension,
   setupDaExtension,
   setupFeeExtension,
+  setupGovV1Extension,
   setupLiquidityIncentiveExtension,
   setupLiquidityPoolExtension,
   setupSwapExtension,
@@ -41,6 +45,8 @@ type Extensions = AuthExtension &
   GovExtension &
   IbcExtension &
   // Sunrise
+  AccountsExtension &
+  GovV1Extension &
   DaExtension &
   FeeExtension &
   LiquidityIncentiveExtension &
@@ -78,6 +84,8 @@ export class SunriseClient extends StargateClient {
         setupTxExtension,
         setupGovExtension,
         setupIbcExtension,
+        (base) => setupAccountsExtension(base, this.targetAddress),
+        setupGovV1Extension,
         setupDaExtension,
         setupFeeExtension,
         setupLiquidityIncentiveExtension,
@@ -85,6 +93,18 @@ export class SunriseClient extends StargateClient {
         setupSwapExtension,
         setupTokenConverterExtension,
       );
+    }
+  }
+
+  private targetAddress: string = "";
+
+  setTargetAddress(targetAddress: string) {
+    this.targetAddress = targetAddress;
+    if (this._queryClient) {
+      (this._queryClient as any).accounts = setupAccountsExtension(
+        this._queryClient,
+        targetAddress,
+      ).lockup;
     }
   }
 

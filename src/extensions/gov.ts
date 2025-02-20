@@ -24,9 +24,9 @@ import {
   QueryVotesResponseSchema,
 } from "../types/cosmos/gov";
 
-export type GovExtension = ReturnType<typeof setupGovExtension>;
+export type GovV1Extension = ReturnType<typeof setupGovV1Extension>;
 
-export function setupGovExtension(base: QueryClient) {
+export function setupGovV1Extension(base: QueryClient) {
   const rpc = createProtobufRpcClient(base);
   const service = "sunrise.gov.v1.Query";
 
