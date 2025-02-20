@@ -38,3 +38,6 @@ inputs:
     paths:
       - x/accounts/proto/cosmos/accounts/v1/query.proto
       - x/accounts/proto/cosmos/accounts/v1/tx.proto
+      - x/gov/proto/cosmos/gov/v1/gov.proto
+      - x/gov/proto/cosmos/gov/v1/query.proto
+      - x/gov/proto/cosmos/gov/v1/tx.proto
