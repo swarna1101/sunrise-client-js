@@ -24,8 +24,6 @@ export function queryFactory<Req extends Message, Res extends Message>(
 export function accountsQueryFactory<Req extends Message, Res extends Message>(
   targetAddress: string,
   rpc: ProtobufRpcClient,
-  service: string,
-  method: string,
   reqSchema: GenMessage<Req>,
   resSchema: GenMessage<Res>,
 ): (req: MessageInitShape<GenMessage<Req>>) => Promise<Res> {
@@ -35,7 +33,11 @@ export function accountsQueryFactory<Req extends Message, Res extends Message>(
       AccountQueryRequestSchema,
       create(AccountQueryRequestSchema, { target: targetAddress, request: reqAny }),
     );
-    const resBinary = await rpc.request(service, method, accountReqBinary);
+    const resBinary = await rpc.request(
+      "cosmos.accounts.v1.Query",
+      "AccountQuery",
+      accountReqBinary,
+    );
     const accountRes = fromBinary(AccountQueryResponseSchema, resBinary);
     if (!accountRes.response) {
       throw new Error("Unexpected response");

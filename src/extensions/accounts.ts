@@ -16,39 +16,30 @@ export type AccountsExtension = ReturnType<typeof setupAccountsExtension>;
 
 export function setupAccountsExtension(base: QueryClient, targetAddress: string) {
   const rpc = createProtobufRpcClient(base);
-  const service = "sunrise.accounts.self_delegatable_lockup.v1.Query";
 
   return {
     lockup: {
       lockupAccountInfo: accountsQueryFactory(
         targetAddress,
         rpc,
-        service,
-        "LockupAccountInfo",
         QueryLockupAccountInfoRequestSchema,
         QueryLockupAccountInfoResponseSchema,
       ),
       unbondingEntries: accountsQueryFactory(
         targetAddress,
         rpc,
-        service,
-        "UnbondingEntries",
         QueryUnbondingEntriesRequestSchema,
         QueryUnbondingEntriesResponseSchema,
       ),
       lockingPeriods: accountsQueryFactory(
         targetAddress,
         rpc,
-        service,
-        "LockingPeriods",
         QueryLockingPeriodsRequestSchema,
         QueryLockingPeriodsResponseSchema,
       ),
       spendableAmount: accountsQueryFactory(
         targetAddress,
         rpc,
-        service,
-        "SpendableAmount",
         QuerySpendableAmountRequestSchema,
         QuerySpendableAmountResponseSchema,
       ),
