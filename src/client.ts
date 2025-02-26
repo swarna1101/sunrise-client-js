@@ -101,7 +101,7 @@ export class SunriseClient extends StargateClient {
   setTargetAddress(targetAddress: string) {
     this.targetAddress = targetAddress;
     if (this._queryClient) {
-      (this._queryClient as any).accounts = setupAccountsExtension(
+      (this._queryClient as any).lockup = setupAccountsExtension(
         this._queryClient,
         targetAddress,
       ).lockup;
