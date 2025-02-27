@@ -1,4 +1,4 @@
-import { Message, MessageInitShape } from "@bufbuild/protobuf";
+import { create, Message, MessageInitShape } from "@bufbuild/protobuf";
 import { GenMessage } from "@bufbuild/protobuf/codegenv1";
 import { Any } from "@bufbuild/protobuf/wkt";
 import { Registry } from "@cosmjs/proto-signing";
@@ -6,7 +6,7 @@ import type { EncodeObject, GeneratedType } from "@cosmjs/proto-signing";
 import { defaultRegistryTypes } from "@cosmjs/stargate";
 
 import { convertBufProtocGenEsTypeToPbJsType } from "./internal/registry-adapter";
-import { getTypeUrl } from "./internal/type-url";
+import { getTypeUrl, packAny } from "./internal/type-url";
 import * as accounts from "./types/cosmos/accounts";
 import * as circuit from "./types/cosmos/circuit";
 import * as group from "./types/cosmos/group";
@@ -112,6 +112,14 @@ export function createEncodeObject<T extends Message>(
     typeUrl: getTypeUrl(schema),
     value,
   };
+}
+
+export function createAnyMessage<T extends Message>(
+  schema: GenMessage<Message>,
+  value: MessageInitShape<GenMessage<T>>,
+): Any {
+  const msg = create(schema, value);
+  return packAny(schema, msg);
 }
 
 export function decodeAnyMessage(message: Any) {
