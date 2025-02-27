@@ -115,7 +115,7 @@ export function createEncodeObject<T extends Message>(
 }
 
 export function createAnyMessage<T extends Message>(
-  schema: GenMessage<Message>,
+  schema: GenMessage<T>,
   value: MessageInitShape<GenMessage<T>>,
 ): Any {
   const msg = create(schema, value);
