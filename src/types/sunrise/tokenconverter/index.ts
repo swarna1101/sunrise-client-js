@@ -1,3 +1,3 @@
-export * from "./params_pb";
-export * from "./query_pb";
-export * from "./tx_pb";
+export * from "./v1/params_pb";
+export * from "./v1/query_pb";
+export * from "./v1/tx_pb";

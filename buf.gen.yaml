@@ -10,20 +10,41 @@ plugins:
 
 inputs:
   - git_repo: https://github.com/sunriselayer/sunrise.git
-    branch: main
+    branch: fix/proto-dec
     subdir: proto
     paths:
-      - sunrise/da/metadata.proto
-      - sunrise/da/query.proto
-      - sunrise/da/tx.proto
-      - sunrise/fee/query.proto
-      - sunrise/fee/tx.proto
-      - sunrise/liquidityincentive/query.proto
-      - sunrise/liquidityincentive/tx.proto
-      - sunrise/liquiditypool/query.proto
-      - sunrise/liquiditypool/tx.proto
-      - sunrise/swap/metadata.proto
-      - sunrise/swap/query.proto
-      - sunrise/swap/tx.proto
-      - sunrise/tokenconverter/query.proto
-      - sunrise/tokenconverter/tx.proto
+      - sunrise/accounts/self_delegatable_lockup/v1/lockup.proto
+      - sunrise/accounts/self_delegatable_lockup/v1/query.proto
+      - sunrise/accounts/self_delegatable_lockup/v1/tx.proto
+      - sunrise/accounts/self_delegation_proxy/v1/tx.proto
+      - sunrise/da/v1/query.proto
+      - sunrise/da/v1/tx.proto
+      - sunrise/fee/v1/query.proto
+      - sunrise/fee/v1/tx.proto
+      - sunrise/liquidityincentive/v1/query.proto
+      - sunrise/liquidityincentive/v1/tx.proto
+      - sunrise/liquiditypool/v1/query.proto
+      - sunrise/liquiditypool/v1/tx.proto
+      - sunrise/selfdelegation/v1/query.proto
+      - sunrise/selfdelegation/v1/tx.proto
+      - sunrise/swap/v1/metadata.proto
+      - sunrise/swap/v1/query.proto
+      - sunrise/swap/v1/route.proto
+      - sunrise/swap/v1/tx.proto
+      - sunrise/tokenconverter/v1/query.proto
+      - sunrise/tokenconverter/v1/tx.proto
+  - git_repo: https://github.com/cosmos/cosmos-sdk.git
+    branch: v0.52.0-rc.2
+    paths:
+      - x/accounts/proto/cosmos/accounts/v1/query.proto
+      - x/accounts/proto/cosmos/accounts/v1/tx.proto
+      - x/gov/proto/cosmos/gov/v1/gov.proto
+      - x/gov/proto/cosmos/gov/v1/query.proto
+      - x/gov/proto/cosmos/gov/v1/tx.proto
+      - x/slashing/proto/cosmos/slashing/v1beta1/tx.proto
+      - x/mint/proto/cosmos/mint/v1beta1/tx.proto
+      - x/nft/proto/cosmos/nft/v1beta1/tx.proto
+      - x/group/proto/cosmos/group/v1/tx.proto
+      - x/upgrade/proto/cosmos/upgrade/v1beta1/tx.proto
+      - x/circuit/proto/cosmos/circuit/v1/tx.proto
+      - x/protocolpool/proto/cosmos/protocolpool/v1/tx.proto

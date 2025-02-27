@@ -22,7 +22,7 @@ export type LiquidityIncentiveExtension = ReturnType<typeof setupLiquidityIncent
 
 export function setupLiquidityIncentiveExtension(base: QueryClient) {
   const rpc = createProtobufRpcClient(base);
-  const service = "sunrise.liquidityincentive.Query";
+  const service = "sunrise.liquidityincentive.v1.Query";
 
   return {
     liquidityincentive: {

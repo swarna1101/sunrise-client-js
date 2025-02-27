@@ -4,13 +4,14 @@
 
 import type { GenFile, GenMessage } from "@bufbuild/protobuf/codegenv1";
 import { fileDesc, messageDesc } from "@bufbuild/protobuf/codegenv1";
+import { file_cosmos_proto_cosmos } from "../../../../cosmos_proto/cosmos_pb";
 import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file cosmos/base/query/v1beta1/pagination.proto.
  */
 export const file_cosmos_base_query_v1beta1_pagination: GenFile = /*@__PURE__*/
-  fileDesc("Cipjb3Ntb3MvYmFzZS9xdWVyeS92MWJldGExL3BhZ2luYXRpb24ucHJvdG8SGWNvc21vcy5iYXNlLnF1ZXJ5LnYxYmV0YTEiXwoLUGFnZVJlcXVlc3QSCwoDa2V5GAEgASgMEg4KBm9mZnNldBgCIAEoBBINCgVsaW1pdBgDIAEoBBITCgtjb3VudF90b3RhbBgEIAEoCBIPCgdyZXZlcnNlGAUgASgIIi8KDFBhZ2VSZXNwb25zZRIQCghuZXh0X2tleRgBIAEoDBINCgV0b3RhbBgCIAEoBELhAQodY29tLmNvc21vcy5iYXNlLnF1ZXJ5LnYxYmV0YTFCD1BhZ2luYXRpb25Qcm90b1ABWihnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzL3F1ZXJ5ogIDQ0JRqgIZQ29zbW9zLkJhc2UuUXVlcnkuVjFiZXRhMcoCGUNvc21vc1xCYXNlXFF1ZXJ5XFYxYmV0YTHiAiVDb3Ntb3NcQmFzZVxRdWVyeVxWMWJldGExXEdQQk1ldGFkYXRh6gIcQ29zbW9zOjpCYXNlOjpRdWVyeTo6VjFiZXRhMWIGcHJvdG8z");
+  fileDesc("Cipjb3Ntb3MvYmFzZS9xdWVyeS92MWJldGExL3BhZ2luYXRpb24ucHJvdG8SGWNvc21vcy5iYXNlLnF1ZXJ5LnYxYmV0YTEidAoLUGFnZVJlcXVlc3QSCwoDa2V5GAEgASgMEg4KBm9mZnNldBgCIAEoBBINCgVsaW1pdBgDIAEoBBITCgtjb3VudF90b3RhbBgEIAEoCBIkCgdyZXZlcnNlGAUgASgIQhPatC0PY29zbW9zLXNkayAwLjQzIi8KDFBhZ2VSZXNwb25zZRIQCghuZXh0X2tleRgBIAEoDBINCgV0b3RhbBgCIAEoBELhAQodY29tLmNvc21vcy5iYXNlLnF1ZXJ5LnYxYmV0YTFCD1BhZ2luYXRpb25Qcm90b1ABWihnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzL3F1ZXJ5ogIDQ0JRqgIZQ29zbW9zLkJhc2UuUXVlcnkuVjFiZXRhMcoCGUNvc21vc1xCYXNlXFF1ZXJ5XFYxYmV0YTHiAiVDb3Ntb3NcQmFzZVxRdWVyeVxWMWJldGExXEdQQk1ldGFkYXRh6gIcQ29zbW9zOjpCYXNlOjpRdWVyeTo6VjFiZXRhMWIGcHJvdG8z", [file_cosmos_proto_cosmos]);
 
 /**
  * PageRequest is to be embedded in gRPC request messages for efficient
@@ -62,8 +63,6 @@ export type PageRequest = Message<"cosmos.base.query.v1beta1.PageRequest"> & {
 
   /**
    * reverse is set to true if results are to be returned in the descending order.
-   *
-   * Since: cosmos-sdk 0.43
    *
    * @generated from field: bool reverse = 5;
    */

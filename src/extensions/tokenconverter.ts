@@ -10,7 +10,7 @@ export type TokenConverterExtension = ReturnType<typeof setupTokenConverterExten
 
 export function setupTokenConverterExtension(base: QueryClient) {
   const rpc = createProtobufRpcClient(base);
-  const service = "sunrise.tokenconverter.Query";
+  const service = "sunrise.tokenconverter.v1.Query";
 
   return {
     tokenconverter: {

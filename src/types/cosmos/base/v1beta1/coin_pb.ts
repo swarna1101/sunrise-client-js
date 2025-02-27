@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file cosmos/base/v1beta1/coin.proto.
  */
 export const file_cosmos_base_v1beta1_coin: GenFile = /*@__PURE__*/
-  fileDesc("Ch5jb3Ntb3MvYmFzZS92MWJldGExL2NvaW4ucHJvdG8SE2Nvc21vcy5iYXNlLnYxYmV0YTEiXQoEQ29pbhINCgVkZW5vbRgBIAEoCRJACgZhbW91bnQYAiABKAlCMMjeHwDa3h8VY29zbW9zc2RrLmlvL21hdGguSW500rQtCmNvc21vcy5JbnSo57AqAToE6KAfASJhCgdEZWNDb2luEg0KBWRlbm9tGAEgASgJEkEKBmFtb3VudBgCIAEoCUIxyN4fANreHxtjb3Ntb3NzZGsuaW8vbWF0aC5MZWdhY3lEZWPStC0KY29zbW9zLkRlYzoE6KAfAUK+AQoXY29tLmNvc21vcy5iYXNlLnYxYmV0YTFCCUNvaW5Qcm90b1ABWiJnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzogIDQ0JYqgITQ29zbW9zLkJhc2UuVjFiZXRhMcoCE0Nvc21vc1xCYXNlXFYxYmV0YTHiAh9Db3Ntb3NcQmFzZVxWMWJldGExXEdQQk1ldGFkYXRh6gIVQ29zbW9zOjpCYXNlOjpWMWJldGEx2OEeAIDiHgBiBnByb3RvMw", [file_gogoproto_gogo, file_cosmos_proto_cosmos, file_amino_amino]);
+  fileDesc("Ch5jb3Ntb3MvYmFzZS92MWJldGExL2NvaW4ucHJvdG8SE2Nvc21vcy5iYXNlLnYxYmV0YTEiXQoEQ29pbhINCgVkZW5vbRgBIAEoCRJACgZhbW91bnQYAiABKAlCMMjeHwDa3h8VY29zbW9zc2RrLmlvL21hdGguSW500rQtCmNvc21vcy5JbnSo57AqAToE6KAfASJhCgdEZWNDb2luEg0KBWRlbm9tGAEgASgJEkEKBmFtb3VudBgCIAEoCUIxyN4fANreHxtjb3Ntb3NzZGsuaW8vbWF0aC5MZWdhY3lEZWPStC0KY29zbW9zLkRlYzoE6KAfASJICghJbnRQcm90bxI4CgNpbnQYASABKAlCK8jeHwDa3h8VY29zbW9zc2RrLmlvL21hdGguSW500rQtCmNvc21vcy5JbnQ6AhgBIk4KCERlY1Byb3RvEj4KA2RlYxgBIAEoCUIxyN4fANreHxtjb3Ntb3NzZGsuaW8vbWF0aC5MZWdhY3lEZWPStC0KY29zbW9zLkRlYzoCGAFCvgEKF2NvbS5jb3Ntb3MuYmFzZS52MWJldGExQglDb2luUHJvdG9QAVoiZ2l0aHViLmNvbS9jb3Ntb3MvY29zbW9zLXNkay90eXBlc6ICA0NCWKoCE0Nvc21vcy5CYXNlLlYxYmV0YTHKAhNDb3Ntb3NcQmFzZVxWMWJldGEx4gIfQ29zbW9zXEJhc2VcVjFiZXRhMVxHUEJNZXRhZGF0YeoCFUNvc21vczo6QmFzZTo6VjFiZXRhMdjhHgCA4h4AYgZwcm90bzM", [file_gogoproto_gogo, file_cosmos_proto_cosmos, file_amino_amino]);
 
 /**
  * Coin defines a token with a denomination and an amount.
@@ -68,4 +68,48 @@ export type DecCoin = Message<"cosmos.base.v1beta1.DecCoin"> & {
  */
 export const DecCoinSchema: GenMessage<DecCoin> = /*@__PURE__*/
   messageDesc(file_cosmos_base_v1beta1_coin, 1);
+
+/**
+ * IntProto defines a Protobuf wrapper around an Int object.
+ * Deprecated: Prefer to use math.Int directly. It supports binary Marshal and Unmarshal.
+ *
+ * @generated from message cosmos.base.v1beta1.IntProto
+ * @deprecated
+ */
+export type IntProto = Message<"cosmos.base.v1beta1.IntProto"> & {
+  /**
+   * @generated from field: string int = 1;
+   */
+  int: string;
+};
+
+/**
+ * Describes the message cosmos.base.v1beta1.IntProto.
+ * Use `create(IntProtoSchema)` to create a new message.
+ * @deprecated
+ */
+export const IntProtoSchema: GenMessage<IntProto> = /*@__PURE__*/
+  messageDesc(file_cosmos_base_v1beta1_coin, 2);
+
+/**
+ * DecProto defines a Protobuf wrapper around a Dec object.
+ * Deprecated: Prefer to use math.LegacyDec directly. It supports binary Marshal and Unmarshal.
+ *
+ * @generated from message cosmos.base.v1beta1.DecProto
+ * @deprecated
+ */
+export type DecProto = Message<"cosmos.base.v1beta1.DecProto"> & {
+  /**
+   * @generated from field: string dec = 1;
+   */
+  dec: string;
+};
+
+/**
+ * Describes the message cosmos.base.v1beta1.DecProto.
+ * Use `create(DecProtoSchema)` to create a new message.
+ * @deprecated
+ */
+export const DecProtoSchema: GenMessage<DecProto> = /*@__PURE__*/
+  messageDesc(file_cosmos_base_v1beta1_coin, 3);
 

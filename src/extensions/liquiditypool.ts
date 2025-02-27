@@ -28,7 +28,7 @@ export type LiquidityPoolExtension = ReturnType<typeof setupLiquidityPoolExtensi
 
 export function setupLiquidityPoolExtension(base: QueryClient) {
   const rpc = createProtobufRpcClient(base);
-  const service = "sunrise.liquiditypool.Query";
+  const service = "sunrise.liquiditypool.v1.Query";
 
   return {
     liquiditypool: {
