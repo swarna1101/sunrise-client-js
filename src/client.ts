@@ -25,12 +25,14 @@ import {
   GovV1Extension,
   LiquidityIncentiveExtension,
   LiquidityPoolExtension,
+  SelfDelegationExtension,
   setupAccountsExtension,
   setupDaExtension,
   setupFeeExtension,
   setupGovV1Extension,
   setupLiquidityIncentiveExtension,
   setupLiquidityPoolExtension,
+  setupSelfDelegationExtension,
   setupSwapExtension,
   setupTokenConverterExtension,
   SwapExtension,
@@ -51,6 +53,7 @@ type Extensions = AuthExtension &
   FeeExtension &
   LiquidityIncentiveExtension &
   LiquidityPoolExtension &
+  SelfDelegationExtension &
   SwapExtension &
   TokenConverterExtension;
 
@@ -90,6 +93,7 @@ export class SunriseClient extends StargateClient {
         setupFeeExtension,
         setupLiquidityIncentiveExtension,
         setupLiquidityPoolExtension,
+        setupSelfDelegationExtension,
         setupSwapExtension,
         setupTokenConverterExtension,
       );
