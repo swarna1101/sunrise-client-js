@@ -1,6 +1,6 @@
 import { SunriseClient } from "@sunriselayer/client";
 
-async function queryBlockchain() {
+export async function queryBlockchain() {
   try {
     const cometRpc = "https://sunrise-test-da-1.cauchye.net/";
     const client = await SunriseClient.connect(cometRpc);
@@ -8,7 +8,7 @@ async function queryBlockchain() {
 
     if (!queryClient) {
       console.error("Query client not initialized");
-      return;
+      return null;
     }
 
     // Query various parameters
@@ -19,15 +19,17 @@ async function queryBlockchain() {
     const swapParams = await queryClient.swap.params({});
     const tokenConverterParams = await queryClient.tokenconverter.params({});
 
-    console.log("DA Params:", daParams);
-    console.log("Fee Params:", feeParams);
-    console.log("Liquidity Incentive Params:", liquidityIncentiveParams);
-    console.log("Liquidity Pool Params:", liquidityPoolParams);
-    console.log("Swap Params:", swapParams);
-    console.log("Token Converter Params:", tokenConverterParams);
+    // Return all queried data
+    return {
+      daParams: daParams.params,
+      feeParams: feeParams.params,
+      liquidityIncentiveParams: liquidityIncentiveParams.params,
+      liquidityPoolParams: liquidityPoolParams.params,
+      swapParams: swapParams.params,
+      tokenConverterParams: tokenConverterParams.params,
+    };
   } catch (error) {
     console.error("Error querying blockchain:", error);
+    return null;
   }
 }
-
-queryBlockchain();

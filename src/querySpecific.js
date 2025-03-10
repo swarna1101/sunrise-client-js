@@ -1,6 +1,6 @@
 import { SunriseClient } from "@sunriselayer/client";
 
-async function querySpecificParameters() {
+export async function querySpecificParameters() {
   try {
     const cometRpc = "https://sunrise-test-da-1.cauchye.net/";
     const client = await SunriseClient.connect(cometRpc);

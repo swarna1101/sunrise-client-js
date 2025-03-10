@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌅Sunrise Insights</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+      :root {
+          --sunrise-yellow: #F2BC5B;
+          --sunrise-blue: #619CFF;
+          --light-gray: #f5f5f5;
+          --dark-gray: #333;
+          --medium-gray: #666;
+          --white: #fff;
+          --shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      }
+
+      body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: var(--light-gray);
+          color: var(--dark-gray);
+      }
+
+      .header {
+          background-color: var(--sunrise-yellow);
+          color: var(--white);
+          text-align: center;
+          padding: 2rem;
+          position: relative;
+          overflow: hidden;
+      }
+
+      .header::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 5px;
+          background: linear-gradient(90deg, var(--sunrise-blue) 0%, var(--sunrise-yellow) 100%);
+      }
+
+      .header h1 {
+          margin: 0;
+          font-size: 2.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+
+      .header h1 i {
+          margin-right: 10px;
+      }
+
+      .header p {
+          margin: 0.5rem 0 0;
+          font-size: 1.2rem;
+          opacity: 0.9;
+      }
+
+      .content {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 2rem;
+      }
+
+      .dashboard {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 1.5rem;
+      }
+
+      .card {
+          background-color: var(--white);
+          border-radius: 12px;
+          box-shadow: var(--shadow);
+          overflow: hidden;
+          transition: transform 0.3s ease;
+      }
+
+      .card:hover {
+          transform: translateY(-5px);
+      }
+
+      .card-header {
+          display: flex;
+          align-items: center;
+          background-color: var(--sunrise-blue);
+          color: var(--white);
+          padding: 1rem;
+      }
+
+      .card-header i {
+          font-size: 1.5rem;
+          margin-right: 10px;
+      }
+
+      .card-header h3 {
+          margin: 0;
+          font-size: 1.2rem;
+      }
+
+      .card-body {
+          padding: 1.5rem;
+      }
+
+      .stat {
+          margin-bottom: 1rem;
+      }
+
+      .stat-label {
+          font-size: 0.9rem;
+          color: var(--medium-gray);
+          margin-bottom: 0.2rem;
+      }
+
+      .stat-value {
+          font-size: 1.4rem;
+          font-weight: 600;
+      }
+
+      .stat-description {
+          font-size: 0.85rem;
+          color: var(--medium-gray);
+          margin-top: 0.2rem;
+      }
+
+      .pool-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+      }
+
+      .pool-item {
+          border-left: 3px solid var(--sunrise-blue);
+          padding: 0.75rem;
+          margin-bottom: 0.75rem;
+          background-color: var(--light-gray);
+          border-radius: 0 8px 8px 0;
+      }
+
+      .pool-status {
+          text-align: center;
+          padding: 1rem;
+          background-color: var(--light-gray);
+          border-radius: 8px;
+          margin-top: 1rem;
+          font-style: italic;
+          color: var(--medium-gray);
+      }
+
+      .token-info {
+          display: flex;
+          align-items: center;
+          margin-bottom: 0.5rem;
+      }
+
+      .token-icon {
+          width: 24px;
+          height: 24px;
+          background-color: var(--sunrise-yellow);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 10px;
+          color: var(--white);
+          font-size: 0.8rem;
+      }
+
+      .token-details {
+          flex: 1;
+      }
+
+      .token-name {
+          font-weight: 600;
+      }
+
+      .token-role {
+          font-size: 0.8rem;
+          color: var(--medium-gray);
+      }
+
+      .info-table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 1rem;
+      }
+
+      .info-table th, .info-table td {
+          padding: 0.5rem;
+          text-align: left;
+          border-bottom: 1px solid var(--light-gray);
+      }
+
+      .info-table th {
+          font-weight: 600;
+          color: var(--medium-gray);
+          font-size: 0.9rem;
+      }
+
+      .gauge {
+          height: 8px;
+          background-color: var(--light-gray);
+          border-radius: 4px;
+          margin: 0.5rem 0;
+          overflow: hidden;
+      }
+
+      .gauge-fill {
+          height: 100%;
+          background-color: var(--sunrise-blue);
+          width: 0;
+          transition: width 1s ease-out;
+      }
+
+      .metric-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+      }
+
+      .metric {
+          background-color: var(--light-gray);
+          padding: 1rem;
+          border-radius: 8px;
+          text-align: center;
+      }
+
+      .metric-value {
+          font-size: 1.8rem;
+          font-weight: 600;
+          color: var(--sunrise-blue);
+      }
+
+      .metric-label {
+          font-size: 0.85rem;
+          color: var(--medium-gray);
+          margin-top: 0.3rem;
+      }
+
+      .collateral-info {
+          background-color: var(--light-gray);
+          padding: 1rem;
+          border-radius: 8px;
+          margin-top: 1rem;
+      }
+
+      .collateral-title {
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+      }
+
+      .collateral-item {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 0.25rem;
+      }
+
+      .collateral-name {
+          color: var(--medium-gray);
+      }
+
+      .footer {
+          text-align: center;
+          padding: 1.5rem;
+          background-color: var(--sunrise-blue);
+          color: var(--white);
+          margin-top: 2rem;
+      }
+
+      @media (max-width: 768px) {
+          .dashboard {
+              grid-template-columns: 1fr;
+          }
+
+          .metric-grid {
+              grid-template-columns: 1fr;
+          }
+      }
+  </style>
+</head>
+<body>
+<header class="header">
+  <h1>🌅 Sunrise Insights</h1>
+  <p>Your gateway to understanding the Sunrise ecosystem</p>
+</header>
+
+<main class="content">
+  <div class="dashboard">
+    <!-- Data Availability Card -->
+    <div class="card">
+      <div class="card-header">
+        <i class="fas fa-database"></i>
+        <h3>Data Availability</h3>
+      </div>
+      <div class="card-body">
+        <div class="stat">
+          <div class="stat-label">Replication Factor</div>
+          <div class="stat-value">5</div>
+          <div class="stat-description">Number of nodes storing each piece of data</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-label">Challenge Threshold</div>
+          <div class="stat-value">33%</div>
+          <div class="stat-description">Minimum required percentage for challenges</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-label">Shard Count Range</div>
+          <div class="stat-value">10-255</div>
+          <div class="stat-description">Min-Max number of data shards</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-label">Max Shard Size</div>
+          <div class="stat-value">1,000,000</div>
+          <div class="stat-description">Maximum size of each data shard</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-label">Proof Period</div>
+          <div class="stat-value">10 minutes</div>
+          <div class="stat-description">Time window for submitting proofs</div>
+        </div>
+
+        <div class="collateral-info">
+          <div class="collateral-title">Publish Data Collateral</div>
+          <div class="collateral-item">
+            <span class="collateral-name">urise</span>
+            <span>1,000,000,000</span>
+          </div>
+        </div>
+
+        <div class="collateral-info">
+          <div class="collateral-title">Submit Invalidity Collateral</div>
+          <div class="collateral-item">
+            <span class="collateral-name">urise</span>
+            <span>100,000,000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Liquidity Pools Card -->
+    <div class="card">
+      <div class="card-header">
+        <i class="fas fa-water"></i>
+        <h3>Liquidity Pools</h3>
+      </div>
+      <div class="card-body">
+        <div class="stat">
+          <div class="stat-label">Withdraw Fee Rate</div>
+          <div class="stat-value">1%</div>
+          <div class="stat-description">Fee charged for withdrawals from liquidity pools</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-label">Swap Treasury Tax Rate</div>
+          <div class="stat-value">1%</div>
+          <div class="stat-description">Tax rate collected for the treasury on swaps</div>
+        </div>
+
+        <div class="pool-status">
+          <i class="fas fa-info-circle"></i>
+          No active liquidity pools are currently available.
+          <br><br>
+          Liquidity pools will be shown here once they are created.
+        </div>
+      </div>
+    </div>
+
+    <!-- Token Economy Card -->
+    <div class="card">
+      <div class="card-header">
+        <i class="fas fa-exchange-alt"></i>
+        <h3>Token Economy</h3>
+      </div>
+      <div class="card-body">
+        <div class="token-info">
+          <div class="token-icon">B</div>
+          <div class="token-details">
+            <div class="token-name">VRISE</div>
+            <div class="token-role">Bond Denomination (uvrise)</div>
+          </div>
+        </div>
+
+        <div class="token-info">
+          <div class="token-icon">F</div>
+          <div class="token-details">
+            <div class="token-name">RISE</div>
+            <div class="token-role">Fee Denomination (urise)</div>
+          </div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-label">Swap Interface Fee Rate</div>
+          <div class="stat-value">1%</div>
+          <div class="stat-description">Fee charged on token swaps through the interface</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-label">Fee Burn Ratio</div>
+          <div class="stat-value">50%</div>
+          <div class="stat-description">Percentage of fees that are burned</div>
+        </div>
+
+        <div class="info-table">
+          <table>
+            <tr>
+              <th>Feature</th>
+              <th>Value</th>
+            </tr>
+            <tr>
+              <td>Fee Bypass Denoms</td>
+              <td>uvrise</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Network Parameters Card -->
+    <div class="card">
+      <div class="card-header">
+        <i class="fas fa-cogs"></i>
+        <h3>Network Parameters</h3>
+      </div>
+      <div class="card-body">
+        <div class="metric-grid">
+          <div class="metric">
+            <div class="metric-value">50%</div>
+            <div class="metric-label">Slash Fault Threshold</div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-value">0.1%</div>
+            <div class="metric-label">Slash Fraction</div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-value">120,960</div>
+            <div class="metric-label">Slash Epoch</div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-value">50%</div>
+            <div class="metric-label">Staking Reward Ratio</div>
+          </div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-label">Epoch Blocks</div>
+          <div class="stat-value">5</div>
+          <div class="stat-description">Number of blocks per epoch</div>
+        </div>
+
+        <div class="info-table">
+          <table>
+            <tr>
+              <th>Time Period</th>
+              <th>Duration</th>
+            </tr>
+            <tr>
+              <td>Challenge Period</td>
+              <td>4 minutes</td>
+            </tr>
+            <tr>
+              <td>Proof Period</td>
+              <td>10 minutes</td>
+            </tr>
+            <tr>
+              <td>Rejected Removal Period</td>
+              <td>24 hours</td>
+            </tr>
+            <tr>
+              <td>Verified Removal Period</td>
+              <td>3 days</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  Built with ❤️ for Sunrise Ecosystem | March 10, 2025
+</footer>
+
+<script>
+  // Initialize any dynamic elements or interactive features
+  document.addEventListener("DOMContentLoaded", () => {
+    // For future dynamic functionality
+  });
+</script>
+</body>
+</html>

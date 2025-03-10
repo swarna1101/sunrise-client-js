@@ -1,6 +1,6 @@
 import { SunriseClient } from "@sunriselayer/client";
 
-async function queryTokenConverterParams() {
+export async function queryTokenConverterParams() {
   try {
     const cometRpc = "https://sunrise-test-da-1.cauchye.net/";
     const client = await SunriseClient.connect(cometRpc);
@@ -9,16 +9,16 @@ async function queryTokenConverterParams() {
 
     if (!queryClient) {
       console.error("Query client not initialized");
-      return;
+      return null;
     }
 
     // Query token converter parameters
     const tokenConverterParams = await queryClient.tokenconverter.params({});
 
-    console.log("Token Converter Params:", tokenConverterParams.params);
+    // Return the parameters
+    return tokenConverterParams.params;
   } catch (error) {
     console.error("Error querying token converter params:", error);
+    return null;
   }
 }
-
-queryTokenConverterParams();

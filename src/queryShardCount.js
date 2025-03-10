@@ -1,6 +1,6 @@
 import { SunriseClient } from "@sunriselayer/client";
 
-export async function queryLiquidityPools() {
+export async function queryMaxShardCount() {
   try {
     const cometRpc = "https://sunrise-test-da-1.cauchye.net/";
     const client = await SunriseClient.connect(cometRpc);
@@ -8,16 +8,15 @@ export async function queryLiquidityPools() {
 
     if (!queryClient) {
       console.error("Query client not initialized");
-      return null;
+      return;
     }
 
-    // Query all liquidity pools
-    const poolsResponse = await queryClient.liquiditypool.pools({});
-
-    // Return the pools
-    return poolsResponse.pools;
+    // Query maximum shard count
+    const daParams = await queryClient.da.params({});
+    console.log("Max Shard Count:", daParams.params.maxShardCount);
   } catch (error) {
-    console.error("Error querying liquidity pools:", error);
-    return null;
+    console.error("Error querying max shard count:", error);
   }
 }
+
+queryMaxShardCount();

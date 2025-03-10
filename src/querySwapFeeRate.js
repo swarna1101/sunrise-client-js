@@ -1,6 +1,6 @@
 import { SunriseClient } from "@sunriselayer/client";
 
-export async function queryLiquidityPools() {
+export async function querySwapFeeRate() {
   try {
     const cometRpc = "https://sunrise-test-da-1.cauchye.net/";
     const client = await SunriseClient.connect(cometRpc);
@@ -8,16 +8,15 @@ export async function queryLiquidityPools() {
 
     if (!queryClient) {
       console.error("Query client not initialized");
-      return null;
+      return;
     }
 
-    // Query all liquidity pools
-    const poolsResponse = await queryClient.liquiditypool.pools({});
-
-    // Return the pools
-    return poolsResponse.pools;
+    // Query swap fee rate
+    const swapParams = await queryClient.swap.params({});
+    console.log("Swap Fee Rate:", swapParams.params.interfaceFeeRate);
   } catch (error) {
-    console.error("Error querying liquidity pools:", error);
-    return null;
+    console.error("Error querying swap fee rate:", error);
   }
 }
+
+querySwapFeeRate();
